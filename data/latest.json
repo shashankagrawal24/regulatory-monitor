@@ -1,23 +1,152 @@
 {
+  "version": "v3.1",
   "date": "2026-04-11",
-  "generated": "2026-04-11T04:30:14.530452+05:30",
-  "cutoff": "2026-04-10T04:30:14.530452+05:30",
-  "total": 8,
-  "high_priority": 6,
-  "medium_priority": 2,
+  "generated": "2026-04-11T10:58:51.911890+05:30",
+  "cutoff": "2026-04-10T10:58:51.911890+05:30",
+  "total": 30,
+  "high_priority": 12,
+  "medium_priority": 18,
+  "views": {
+    "retail_users_most_affected": [
+      {
+        "title": "How to pay zero income tax on ₹15.85 lakh salary under new tax regime",
+        "retail_user_impact": 8,
+        "user_impact": "May affect your tax liability or filing process"
+      },
+      {
+        "title": "SIPs hit record high, equity MF inflows jump 56% in March despite sharp stock market selloff, shows AMFI data",
+        "retail_user_impact": 6,
+        "user_impact": "May affect your mutual fund investments or SIPs"
+      },
+      {
+        "title": "8 Years of SIPs but No Growth? Here's What You Missed",
+        "retail_user_impact": 6,
+        "user_impact": "May affect your mutual fund investments or SIPs"
+      },
+      {
+        "title": "Is Rs 2 Crore Enough to Retire? Ask This Instead",
+        "retail_user_impact": 4,
+        "user_impact": "May impact your loan EMIs, FD returns, or savings rates"
+      },
+      {
+        "title": "Credit card fraud is rising: Types, warning signs and expert tips to protect your finances",
+        "retail_user_impact": 4,
+        "user_impact": "May affect your loan eligibility, credit score, or EMIs"
+      }
+    ],
+    "best_content_opportunities": [
+      {
+        "title": "DA hike delayed for first time in a decade — Will it be skipped or deferred? Experts weigh in",
+        "engagement_potential": 7,
+        "content_angle": "Educational explainer on this rates & monetary policy development",
+        "possible_formats": [
+          "reel",
+          "carousel",
+          "blog"
+        ]
+      },
+      {
+        "title": "How to pay zero income tax on ₹15.85 lakh salary under new tax regime",
+        "engagement_potential": 7,
+        "content_angle": "Educational explainer on this taxation development",
+        "possible_formats": [
+          "reel",
+          "carousel",
+          "blog"
+        ]
+      },
+      {
+        "title": "War? Inflation? The market is moving on.",
+        "engagement_potential": 7,
+        "content_angle": "Educational explainer on this rates & monetary policy development",
+        "possible_formats": [
+          "reel",
+          "carousel",
+          "blog"
+        ]
+      },
+      {
+        "title": "Treasuries Fall as Inflation Data Erode Fed Rate-Cut Wager",
+        "engagement_potential": 7,
+        "content_angle": "Calm-down content: What to do (and not do) right now",
+        "possible_formats": [
+          "reel",
+          "carousel",
+          "blog"
+        ]
+      },
+      {
+        "title": "Wall Street: Nasdaq rises, S&amp;P 500 and Dow Jones dip after consumer inflation data; Nvidia gains 2.4%, Broadcom jumps 5%",
+        "engagement_potential": 7,
+        "content_angle": "Educational explainer on this rates & monetary policy development",
+        "possible_formats": [
+          "reel",
+          "carousel",
+          "blog"
+        ]
+      }
+    ],
+    "action_required_items": [
+      {
+        "title": "Small-cap stocks bought by FIIs in the March quarter",
+        "actionability": 6,
+        "action_type": "switch",
+        "action_deadline": ""
+      },
+      {
+        "title": "AP Inter Results 2026 Likely To Be Announced Next Week; Check Manabadi BIEAP Results Date",
+        "actionability": 6,
+        "action_type": "verify",
+        "action_deadline": ""
+      },
+      {
+        "title": "DA hike delayed for first time in a decade — Will it be skipped or deferred? Experts weigh in",
+        "actionability": 3,
+        "action_type": "verify",
+        "action_deadline": ""
+      },
+      {
+        "title": "8 Years of SIPs but No Growth? Here's What You Missed",
+        "actionability": 3,
+        "action_type": "file",
+        "action_deadline": ""
+      },
+      {
+        "title": "US-Israel-Iran War News Live Updates: Trump Claims 'Iranians Have No Cards' Ahead Of Peace Talks In Pakistan",
+        "actionability": 3,
+        "action_type": "update",
+        "action_deadline": ""
+      }
+    ],
+    "most_significant_regulatory": [
+      {
+        "title": "War? Inflation? The market is moving on.",
+        "regulatory_importance": 2,
+        "regulator": "MoF/Other"
+      },
+      {
+        "title": "Is Rs 2 Crore Enough to Retire? Ask This Instead",
+        "regulatory_importance": 2,
+        "regulator": "MoF/Other"
+      },
+      {
+        "title": "Credit card fraud is rising: Types, warning signs and expert tips to protect your finances",
+        "regulatory_importance": 2,
+        "regulator": "MoF/Other"
+      },
+      {
+        "title": "The week in charts: Monetary policy, fertilizer subsidy, weak monsoon forecast",
+        "regulatory_importance": 2,
+        "regulator": "MoF/Other"
+      },
+      {
+        "title": "SIPs hit record high, equity MF inflows jump 56% in March despite sharp stock market selloff, shows AMFI data",
+        "regulatory_importance": 1,
+        "regulator": "AMFI"
+      }
+    ]
+  },
   "updates": [
-    {
-      "regulator": "MoF/Other",
-      "title": "8th Pay Commission Basics: A look at its composition, functioning and latest updates",
-      "summary": "8th Pay Commission updates outline composition, functioning and consultation process for salary and pension revision framework for central government employees and pensioners in the country.",
-      "url": "https://www.livemint.com/money/personal-finance/8th-pay-commission-basics-a-look-at-its-composition-functioning-and-latest-updates-11775829047516.html",
-      "pub_date": "Fri, 10 Apr 2026 20:14:10 +0530",
-      "category": "Pension & NPS",
-      "relevance": "HIGH",
-      "source_type": "news",
-      "circular_ref": "",
-      "action_required": true
-    },
     {
       "regulator": "MoF/Other",
       "title": "DA hike delayed for first time in a decade — Will it be skipped or deferred? Experts weigh in",
@@ -26,9 +155,52 @@
       "pub_date": "Fri, 10 Apr 2026 13:59:36 +0530",
       "category": "Rates & Monetary Policy",
       "relevance": "HIGH",
-      "source_type": "news",
+      "relevance_score": 7,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
       "circular_ref": "",
-      "action_required": true
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "rates",
+        "pension"
+      ],
+      "user_segment_tags": [
+        "retirees"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Educational explainer on this rates & monetary policy development",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "developing",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "ee3c1854",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "inflation",
+        "pension"
+      ]
     },
     {
       "regulator": "MoF/Other",
@@ -38,45 +210,797 @@
       "pub_date": "Fri, 10 Apr 2026 12:40:12 +0530",
       "category": "Taxation",
       "relevance": "HIGH",
-      "source_type": "news",
+      "relevance_score": 16,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
       "circular_ref": "",
-      "action_required": true
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 8,
+      "actionability": 0,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "tax",
+        "pension"
+      ],
+      "user_segment_tags": [
+        "salaried",
+        "retirees",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "May affect your tax liability or filing process",
+      "content_angle": "Educational explainer on this taxation development",
+      "affected_segments": [
+        "taxpayers",
+        "salaried",
+        "equity investors",
+        "HNIs"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "35b56579",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": [
+        "new tax regime",
+        "nps",
+        "tax regime",
+        "income tax"
+      ]
     },
     {
       "regulator": "MoF/Other",
-      "title": "Axis Mutual Fund launches defence index fund; NFO opens 10 April",
-      "summary": "Axis Nifty India Defence Index Fund NFO opens for subscription, tracking defence sector index amid rising global and domestic defence spending and policy support across the country.",
-      "url": "https://www.livemint.com/money/personal-finance/axis-mutual-fund-launches-defence-index-fund-nfo-opens-10-april-should-you-invest-11775795543200.html",
-      "pub_date": "Fri, 10 Apr 2026 10:35:12 +0530",
+      "title": "War? Inflation? The market is moving on.",
+      "summary": "The cease-fire announced on Tuesday led to the best day for the stock market in almost exactly a year. But it’s too soon to look past the war.",
+      "url": "https://www.livemint.com/market/war-inflation-the-market-is-moving-on-11775882374951.html",
+      "pub_date": "Sat, 11 Apr 2026 10:10:48 +0530",
+      "category": "Rates & Monetary Policy",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 2,
+      "retail_user_impact": 2,
+      "actionability": 0,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "rates",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Educational explainer on this rates & monetary policy development",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "d3c05dc5",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "inflation",
+        "stock market"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Treasuries Fall as Inflation Data Erode Fed Rate-Cut Wager",
+      "summary": "Treasuries fell as quickening inflation stemming from the US war on Iran — and the prospect of escalation — eroded wagers that the Federal Reserve will lower interest rates once this year.",
+      "url": "https://www.livemint.com/market/treasuries-fall-as-inflation-data-erode-fed-rate-cut-wager-11775845811039.html",
+      "pub_date": "Sat, 11 Apr 2026 00:00:10 +0530",
+      "category": "Rates & Monetary Policy",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 0,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "rates"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "reaction"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Calm-down content: What to do (and not do) right now",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "6f26355d",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "inflation",
+        "ter"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Wall Street: Nasdaq rises, S&amp;P 500 and Dow Jones dip after consumer inflation data; Nvidia gains 2.4%, Broadcom jumps 5%",
+      "summary": "As of 12:27 p.m. Eastern, the S&amp;amp;P 500 fell 0.1%, the Dow Jones Industrial Average dropped 0.5%, and the Nasdaq Composite rose 0.3%.",
+      "url": "https://www.livemint.com/market/stock-market-news/us-stocks-mostly-rise-after-consumer-inflation-data-11775828377604.html",
+      "pub_date": "Fri, 10 Apr 2026 19:24:53 +0530",
+      "category": "Rates & Monetary Policy",
+      "relevance": "HIGH",
+      "relevance_score": 13,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 0,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "rates"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Educational explainer on this rates & monetary policy development",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "2b3f4a14",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "nasdaq",
+        "inflation",
+        "ria",
+        "ter"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Is Rs 2 Crore Enough to Retire? Ask This Instead",
+      "summary": "Rs 2 crore isn’t a universal retirement number. Calculate your real monthly expenses, inflation impact, and true corpus needed for long-term financial security.",
+      "url": "https://www.valueresearchonline.com/learn/personal-finance/is-rs-2-crore-enough-to-retire-calculate-real-costs/",
+      "pub_date": "Fri, 10 Apr 2026 16:49:16 +0530",
+      "category": "Rates & Monetary Policy",
+      "relevance": "HIGH",
+      "relevance_score": 8,
+      "source_type": "tier2_news",
+      "source_name": "VROnline",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 2,
+      "retail_user_impact": 4,
+      "actionability": 0,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "rates",
+        "pension"
+      ],
+      "user_segment_tags": [
+        "retirees"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Educational explainer on this rates & monetary policy development",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "f055197e",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "retirement",
+        "inflation",
+        "ter"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Credit card fraud is rising: Types, warning signs and expert tips to protect your finances",
+      "summary": "Credit card fraud is a growing threat, often unnoticed until significant damage occurs. Reporting fraud promptly, understanding various fraud types, and consistently monitoring credit activity can help protect individuals from financial losses and maintain peace of mind.",
+      "url": "https://www.livemint.com/money/personal-finance/credit-card-fraud-is-rising-types-warning-signs-and-expert-tips-to-protect-your-finances-11775819501270.html",
+      "pub_date": "Fri, 10 Apr 2026 17:38:44 +0530",
+      "category": "Credit & Lending",
+      "relevance": "HIGH",
+      "relevance_score": 9,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 2,
+      "retail_user_impact": 4,
+      "actionability": 0,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "credit",
+        "protection"
+      ],
+      "user_segment_tags": [
+        "borrowers"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "May affect your loan eligibility, credit score, or EMIs",
+      "content_angle": "Trust-building: How to protect yourself",
+      "affected_segments": [
+        "borrowers",
+        "credit card users"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "bb033386",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "arn",
+        "it act",
+        "credit card"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Small-cap stocks bought by FIIs in the March quarter",
+      "summary": "Amid all the selling by FIIs in the quarter gone by, these select smallcaps bucked the trend and received buying interest.",
+      "url": "https://www.livemint.com/market/stock-market-news/fii-buying-smallcap-stocks-march-quarter-foreign-investors-contrarian-bets-nifty-sensex-11775821929292.html",
+      "pub_date": "Sat, 11 Apr 2026 07:00:31 +0530",
+      "category": "Macro & Economy",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "macro"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Educational explainer on this macro & economy development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "push_notification",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "ac5b53ea",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "fii",
+        "ter"
+      ]
+    },
+    {
+      "regulator": "AMFI",
+      "title": "SIPs hit record high, equity MF inflows jump 56% in March despite sharp stock market selloff, shows AMFI data",
+      "summary": "Investors continue to show strong commitment to systematic investing despite the stock market selloff last month. Equity mutual funds also saw significant buying, particularly in flexi-cap and small-cap categories.&amp;nbsp;",
+      "url": "https://www.livemint.com/market/stock-market-news/sips-hit-record-high-equity-mf-inflows-jump-56-in-march-despite-sharp-stock-market-fall-shows-amfi-data-11775814318105.html",
+      "pub_date": "Fri, 10 Apr 2026 18:30:21 +0530",
       "category": "Mutual Funds",
       "relevance": "HIGH",
-      "source_type": "news",
+      "relevance_score": 20,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
       "circular_ref": "",
-      "action_required": true
+      "action_required": false,
+      "regulatory_importance": 1,
+      "retail_user_impact": 6,
+      "actionability": 0,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "mutual_funds",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "mf_investors",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "4479e08e",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "mf",
+        "mutual funds",
+        "stock market",
+        "mutual fund",
+        "sip",
+        "amfi"
+      ]
     },
     {
       "regulator": "MoF/Other",
-      "title": "PPFAS's Rajeev Thakkar reveals how they bought the March dip.",
-      "summary": "PPFAS has been using volatility to its advantage, deploying wherever it finds opportunities and selling wherever the opportunity comes, says its CIO Rajeev Thakkar",
-      "url": "https://www.livemint.com/money/personal-finance/rajeev-thakkar-ppfas-mutual-fund-deployed-cash-march-market-selloff-opportunities-11775720714627.html",
-      "pub_date": "Fri, 10 Apr 2026 09:00:09 +0530",
-      "category": "Govt Schemes",
+      "title": "When the system itself is the risk",
+      "summary": "Rising margin trading leverage exposes a hidden systemic risk where herd behaviour, not individuals, drives market crashes and forced selling cycles today.",
+      "url": "https://www.valueresearchonline.com/stories/228297/when-the-system-itself-is-the-risk/",
+      "pub_date": "Sat, 11 Apr 2026 10:00:00 +0530",
+      "category": "Credit & Lending",
       "relevance": "HIGH",
-      "source_type": "news",
+      "relevance_score": 14,
+      "source_type": "tier2_news",
+      "source_name": "VROnline",
       "circular_ref": "",
-      "action_required": true
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 0,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "credit",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders",
+        "borrowers"
+      ],
+      "content_tags": [
+        "reaction"
+      ],
+      "user_impact": "May affect your loan eligibility, credit score, or EMIs",
+      "content_angle": "Educational explainer on this credit & lending development",
+      "affected_segments": [
+        "borrowers",
+        "credit card users"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "2febdb10",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "emi",
+        "trading",
+        "margin",
+        "market crash",
+        "margin trading"
+      ]
     },
     {
-      "regulator": "PFRDA",
-      "title": "PFRDA launches NPS Swasthya, enabling subscribers to use retirement funds for healthcare",
-      "summary": "Powered by Medi Assist’s ‘Maven’ infrastructure, the initiative enables eligible NPS subscribers to access a portion of their retirement corpus for hospitalisation expenses, while continuing to benefit from long-term market-linked growth.",
-      "url": "https://www.livemint.com/money/personal-finance/pfrda-launches-nps-swasthya-enabling-subscribers-to-use-retirement-funds-for-healthcare-11775749450870.html",
-      "pub_date": "Fri, 10 Apr 2026 08:34:35 +0530",
-      "category": "Pension & NPS",
+      "regulator": "MoF/Other",
+      "title": "8 Years of SIPs but No Growth? Here's What You Missed",
+      "summary": "Flat SIP returns after 8 years? Learn why absolute returns mislead, how XIRR shows the truth, and whether your mutual fund, timing, or costs are the real issue.",
+      "url": "https://www.valueresearchonline.com/learn/personal-finance/8-years-sip-returns-flat-check-xirr-not-absolute-return/",
+      "pub_date": "Fri, 10 Apr 2026 17:31:23 +0530",
+      "category": "Mutual Funds",
       "relevance": "HIGH",
-      "source_type": "news",
+      "relevance_score": 14,
+      "source_type": "tier2_news",
+      "source_name": "VROnline",
       "circular_ref": "",
-      "action_required": true
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 6,
+      "actionability": 3,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "mutual_funds"
+      ],
+      "user_segment_tags": [
+        "mf_investors"
+      ],
+      "content_tags": [
+        "myth_busting"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "8d4f9d7d",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "ter",
+        "arn",
+        "sip",
+        "mutual fund"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "US-Israel-Iran War News Live Updates: Trump Claims 'Iranians Have No Cards' Ahead Of Peace Talks In Pakistan",
+      "summary": "Trump has already warned of painful consequences if Tehran rejects Washington's peace deal.",
+      "url": "https://www.ndtvprofit.com/world/us-israel-iran-war-news-live-updates-trump-claims-iranians-have-no-cards-ahead-of-peace-talks-in-pakistan-11341676#publisher=newsstand",
+      "pub_date": "Sat, 11 Apr 2026 08:20:15 +0530",
+      "category": "Insurance",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "tier2_news",
+      "source_name": "NDTV_Business",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 2,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "salaried",
+        "insurance_holders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 2,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "3b2ab05c",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "hra",
+        "arn"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "GPF interest rates: How much are the latest interest rates on General Provident Fund? What Finance Ministry said",
+      "summary": "General Provident Fund or GPF is the provident fund meant exclusively for government employees. Under this compulsory savings scheme, every government employee must contribute a portion of their pay to save towards their future.",
+      "url": "https://www.livemint.com/money/personal-finance/gpf-interest-rates-april-june-how-much-are-the-latest-interest-rates-general-provident-fund-what-finance-ministry-said-11775811890829.html",
+      "pub_date": "Fri, 10 Apr 2026 15:08:26 +0530",
+      "category": "Deposits & Savings",
+      "relevance": "MEDIUM",
+      "relevance_score": 4,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 2,
+      "engagement_potential": 6,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "alert"
+      ],
+      "user_impact": "May impact your FD, PPF, or small savings returns",
+      "content_angle": "Educational explainer on this deposits & savings development",
+      "affected_segments": [
+        "conservative investors",
+        "retirees",
+        "salaried"
+      ],
+      "engagement_score": 6,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "e8d10faf",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "ter"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "8th Pay Commission Basics: A look at its composition, functioning and latest updates",
+      "summary": "8th Pay Commission updates outline composition, functioning and consultation process for salary and pension revision framework for central government employees and pensioners in the country.",
+      "url": "https://www.livemint.com/money/personal-finance/8th-pay-commission-basics-a-look-at-its-composition-functioning-and-latest-updates-11775829047516.html",
+      "pub_date": "Fri, 10 Apr 2026 20:14:10 +0530",
+      "category": "Pension & NPS",
+      "relevance": "MEDIUM",
+      "relevance_score": 4,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 4,
+      "topic_tags": [
+        "pension"
+      ],
+      "user_segment_tags": [
+        "salaried",
+        "retirees"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your NPS contributions, withdrawals, or pension planning",
+      "content_angle": "Educational explainer on this pension & nps development",
+      "affected_segments": [
+        "NPS subscribers",
+        "retirees",
+        "salaried"
+      ],
+      "engagement_score": 4,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "developing",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "6523531e",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "pension"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "The week in charts: Monetary policy, fertilizer subsidy, weak monsoon forecast",
+      "summary": "In this weekly Plain Facts compilation, we present to you data-based insights, with easy-to-read charts, to help you delve deeper into the stories reported by Mint in the week gone by.",
+      "url": "https://www.livemint.com/economy/rbi-policy-fertilizer-subsidy-demat-slowdown-el-nino-ports-expansion-11775721341657.html",
+      "pub_date": "Sat, 11 Apr 2026 07:00:50 +0530",
+      "category": "Rates & Monetary Policy",
+      "relevance": "MEDIUM",
+      "relevance_score": 4,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Economy",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 2,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 4,
+      "topic_tags": [
+        "rates"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Educational explainer on this rates & monetary policy development",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 4,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "69ea4e00",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "monetary policy"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "New labour code: What changes for your earned leave and encashment under the latest laws — explained",
+      "summary": "The OSH Code introduces significant changes to leave policies, allowing workers to carry forward up to 30 days of leave and encash excess leave. Here are more details about the provision and who it applies to.",
+      "url": "https://www.livemint.com/money/personal-finance/new-labour-code-what-changes-for-your-earned-leaves-and-encashment-under-the-latest-laws-explained-11775809123608.html",
+      "pub_date": "Fri, 10 Apr 2026 19:56:16 +0530",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "12a400b0",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "arn"
+      ]
     },
     {
       "regulator": "MoF/Other",
@@ -86,21 +1010,1709 @@
       "pub_date": "Fri, 10 Apr 2026 18:52:23 +0530",
       "category": "Macro & Economy",
       "relevance": "MEDIUM",
-      "source_type": "news",
+      "relevance_score": 3,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Economy",
       "circular_ref": "",
-      "action_required": false
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "macro"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Educational explainer on this macro & economy development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "64b35fc0",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "gdp"
+      ]
     },
     {
       "regulator": "MoF/Other",
-      "title": "India inflation likely rose to 3.4% in March 2026: Mint poll",
-      "summary": "While India’s inflation remains low, it is beginning to accelerate, with March CPI projected at 3.4% as rising fuel costs and a fading base effect offset the relief provided by a US-Iran ceasefire.",
-      "url": "https://www.livemint.com/economy/india-inflation-rate-mint-inflation-poll-11775723471164.html",
-      "pub_date": "Fri, 10 Apr 2026 06:00:26 +0530",
-      "category": "Rates & Monetary Policy",
+      "title": "Is Google Pay Pocket Money Feature A 'Scam'? Truth Behind 'Automatic Money Debit' Viral Claims",
+      "summary": "Gpay Pocket Money feature allows controlled access to a primary user's bank account.",
+      "url": "https://www.ndtvprofit.com/trending/is-google-pay-pocket-money-feature-a-scam-truth-behind-automatic-money-debit-viral-claims-11341909#publisher=newsstand",
+      "pub_date": "Sat, 11 Apr 2026 10:09:55 +0530",
+      "category": "Insurance",
       "relevance": "MEDIUM",
-      "source_type": "news",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "NDTV_Business",
       "circular_ref": "",
-      "action_required": false
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "protection"
+      ],
+      "user_segment_tags": [
+        "insurance_holders"
+      ],
+      "content_tags": [
+        "myth_busting"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Trust-building: How to protect yourself",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "claim",
+      "action_deadline": "",
+      "cluster_id": "6f3f9eb8",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "scam"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Sam Altman Breaks Silence After Attack At San Francisco Home, Links It To AI Anxiety",
+      "summary": "The San Francisco Police Department (SFPD) has confirmed the arrest of a 20-year-old man following a dual-pronged attack targeting both the residence and the office of Altman.",
+      "url": "https://www.ndtvprofit.com/business/sam-altman-speaks-out-after-molotov-cocktail-attack-at-san-francisco-home-11341762#publisher=newsstand",
+      "pub_date": "Sat, 11 Apr 2026 10:04:09 +0530",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "NDTV_Business",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "81620ea4",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "ter"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Bengaluru FC vs Kerala Blasters Live Streaming: Likely Lineups; When, Where To Watch BFC vs KBFC Southern Derby?",
+      "summary": "The southern derby arrives with contrasting stakes as Bengaluru FC chase the title, while Kerala Blasters look to avoid becoming the first ISL club in history to be relegated.",
+      "url": "https://www.ndtvprofit.com/sports/football-indian-super-league-isl-bengaluru-fc-vs-kerala-blasters-live-streaming-telecast-lineups-time-where-to-watch-bfc-kbfc-match-online-tv-11339414#publisher=newsstand",
+      "pub_date": "Sat, 11 Apr 2026 10:00:01 +0530",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "NDTV_Business",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "comparison"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "6a14892b",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "ter"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Kim Jong Un Shows Off Friends, Arms Before Trump China Trip",
+      "summary": "On Friday, Kim and Wang reaffirmed close bilateral ties in discussions in Pyongyang.",
+      "url": "https://www.ndtvprofit.com/world/kim-jong-un-shows-off-friends-arms-before-trump-china-trip-11341914#publisher=newsstand",
+      "pub_date": "Sat, 11 Apr 2026 09:59:48 +0530",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "NDTV_Business",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "102378c5",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "ter"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "AP Inter Results 2026 Likely To Be Announced Next Week; Check Manabadi BIEAP Results Date",
+      "summary": "Last year, the results were issued on April 12 at 11 AM. Students can access their scores by entering their login credentials on the official websites, bieap.apcfss.in.",
+      "url": "https://www.ndtvprofit.com/india/ap-inter-results-2026-likely-to-be-announced-next-week-check-manabadi-bieap-results-date-11337691#publisher=newsstand",
+      "pub_date": "Sat, 11 Apr 2026 09:30:33 +0530",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "NDTV_Business",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "push_notification"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "3c99f162",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "ter"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Wall Street Banks Try Out Anthropic's Mythos As US Urges",
+      "summary": "Goldman Sachs Group Inc., Citigroup Inc., Bank of America Corp. and Morgan Stanley are among the banks testing the technology internally.",
+      "url": "https://www.ndtvprofit.com/technology/wall-street-banks-try-out-anthropics-mythos-as-us-urges-11341820#publisher=newsstand",
+      "pub_date": "Sat, 11 Apr 2026 09:27:54 +0530",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "NDTV_Business",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "gold"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "myth_busting"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "bc623820",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "ter"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Man Arrested For Throwing Molotov Cocktail At Altman's Home",
+      "summary": "Altman, 40, lives in San Francisco, and OpenAI is also headquartered in the city.",
+      "url": "https://www.ndtvprofit.com/world/man-arrested-for-throwing-molotov-cocktail-at-altmans-home-11341695#publisher=newsstand",
+      "pub_date": "Sat, 11 Apr 2026 08:32:01 +0530",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "NDTV_Business",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 3,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "459a3901",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "ter"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Where to Park Your Money After Selling a House",
+      "summary": "Sold your house and are unsure where to put the money? A 3 per cent return gap on Rs 1 crore costs you Rs 3 lakh a year. See how to split the proceeds smartly.",
+      "url": "https://www.valueresearchonline.com/stories/228289/sold-your-home-here-s-where-to-put-the-money/",
+      "pub_date": "Fri, 10 Apr 2026 16:00:00 +0530",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "VROnline",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "0c95e550",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "ter"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Oil Posts Biggest Weekly Loss Since 2020 Ahead of Iran-US Talks",
+      "summary": "Oil edged lower in relatively light trading before highly-anticipated talks between Iran and the US, negotiations that will dictate the path ahead for their fragile truce.",
+      "url": "https://www.livemint.com/market/oil-posts-biggest-weekly-loss-since-2020-ahead-of-iran-us-talks-11775853334070.html",
+      "pub_date": "Sat, 11 Apr 2026 02:05:33 +0530",
+      "category": "Capital Markets",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "51f6cc18",
+      "also_covered_by": [
+        "Mint_Market"
+      ],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "trading"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Blackstone Files for IPO Of Data Center Acquisition Firm",
+      "summary": "Blackstone plans to raise about $2 billion from the IPO, which could begin formal marketing later this month, Bloomberg reported earlier Friday.",
+      "url": "https://www.ndtvprofit.com/markets/blackstone-files-for-ipo-of-data-center-acquisition-firm-11341895#publisher=newsstand",
+      "pub_date": "Sat, 11 Apr 2026 09:52:02 +0530",
+      "category": "Capital Markets",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "NDTV_Business",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 1,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "comparison"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "baa3464d",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "ter"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Fed Seeks Details On US Banks' Exposure To Private Credit Firms",
+      "summary": "The Treasury Department is also questioning the insurance industry about exposures to private credit, said people with knowledge of those separate discussions.",
+      "url": "https://www.ndtvprofit.com/business/fed-seeks-details-on-us-banks-exposure-to-private-credit-firms-11341723#publisher=newsstand",
+      "pub_date": "Sat, 11 Apr 2026 08:44:02 +0530",
+      "category": "Insurance",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "tier2_news",
+      "source_name": "NDTV_Business",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 0,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "insurance",
+        "credit"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "8f1b7705",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "insurance"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "PBKS vs SRH IPL 2026 Preview: Bright Skies To Welcome Two Teams — Check Chandigarh's Weather Forecast",
+      "summary": "Punjab Kings and Sunrisers Hyderabad have had contrasting campaigns in this season of the Indian Premier League.",
+      "url": "https://www.ndtvprofit.com/sports/cricket-indian-premier-league-pbks-vs-srh-ipl-2026-match-chandigarh-weather-forecast-today-playing-11-punjab-kings-sunrisers-hyderabad-11337926#publisher=newsstand",
+      "pub_date": "Sat, 11 Apr 2026 08:00:01 +0530",
+      "category": "Credit & Lending",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "tier2_news",
+      "source_name": "NDTV_Business",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "credit"
+      ],
+      "user_segment_tags": [
+        "borrowers"
+      ],
+      "content_tags": [
+        "comparison"
+      ],
+      "user_impact": "May affect your loan eligibility, credit score, or EMIs",
+      "content_angle": "Educational explainer on this credit & lending development",
+      "affected_segments": [
+        "borrowers",
+        "credit card users"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "9cceffad",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "emi"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Fundamental attributes changes in Bank of India Multi Asset Allocation Fund",
+      "summary": "Bank of India Mutual Fund has announced change in the fundamental attributes of its Bank of India Multi Asset Allocation Fund",
+      "url": "https://www.valueresearchonline.com/stories/228296/fundamental-attributes-changes-in-bank-of-india-multi-asset-allocation-fund/",
+      "pub_date": "Fri, 10 Apr 2026 17:19:56 +0530",
+      "category": "Mutual Funds",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "VROnline",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "mutual_funds"
+      ],
+      "user_segment_tags": [
+        "mf_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "d6ed63c3",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "mutual fund"
+      ]
     }
-  ]
+  ],
+  "low_items": [
+    {
+      "regulator": "MoF/Other",
+      "title": "India e-way bills at record 140.6 mn in March, up 12% on year",
+      "summary": "Tax experts said that e-way bill data signals improved reporting of goods movement as well as robust consumption demand.",
+      "url": "https://www.livemint.com/economy/e-way-bills-cross-record-140-6-million-in-march-11775833299198.html",
+      "pub_date": "Fri, 10 Apr 2026 22:13:13 +0530",
+      "category": "Regulatory Update",
+      "relevance": "LOW",
+      "relevance_score": 1,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Economy",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 0,
+      "engagement_potential": 4,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "taxpayers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 4,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "157a5cf7",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Want to invest ₹1 lakh? Here's how FD laddering will help you maximise gains",
+      "summary": "Bank FD laddering is a technique that involves buying multiple FDs maturing at different time periods. Personal finance experts suggest that investors seeking to invest in bank fixed deposits for a longer period may consider a ladder strategy.",
+      "url": "https://www.livemint.com/money/personal-finance/fd-laddering-technique-want-to-invest-1-lakh-heres-how-fd-laddering-will-help-you-maximise-gains-11775815458027.html",
+      "pub_date": "Fri, 10 Apr 2026 16:11:17 +0530",
+      "category": "Deposits & Savings",
+      "relevance": "LOW",
+      "relevance_score": 1,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 6,
+      "actionability": 0,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "deposits"
+      ],
+      "user_segment_tags": [
+        "hni"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your FD, PPF, or small savings returns",
+      "content_angle": "Educational explainer on this deposits & savings development",
+      "affected_segments": [
+        "conservative investors",
+        "retirees",
+        "salaried"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "c08c2014",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Untimely rains hit wheat procurement amid record harvest hopes",
+      "summary": "Unseasonal rains in north India have delayed wheat harvesting and slowed procurement, with arrivals dipping early in the season. While localized crop damage is reported, overall output is expected to remain strong, and prices stable amid a projected bumper harvest.",
+      "url": "https://www.livemint.com/economy/wheat-procurement-india-unseasonal-rains-harvest-11775817584115.html",
+      "pub_date": "Sat, 11 Apr 2026 06:00:49 +0530",
+      "category": "Regulatory Update",
+      "relevance": "LOW",
+      "relevance_score": 1,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Economy",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 2,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "developing",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "15be97c7",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Global Funds Flee Indian Stocks at Record Pace on Growth Fears",
+      "summary": "Global funds are dumping Indian equities at a record clip as an energy shock from the US-Iran war threatens to derail the outlook of the world’s fastest-growing major economy.",
+      "url": "https://www.livemint.com/market/global-funds-flee-indian-stocks-at-record-pace-on-growth-fears-11775878617032.html",
+      "pub_date": "Sat, 11 Apr 2026 09:06:56 +0530",
+      "category": "Macro & Economy",
+      "relevance": "LOW",
+      "relevance_score": 1,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "macro"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Educational explainer on this macro & economy development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "51e0646f",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Why is Ola Electric share price skyrocketing in FY27? Explained",
+      "summary": "Ola Electric share price has skyrocketed from  ₹23.92 apiece to  ₹40.40 per share on the NSE, logging around 70% rise in one month",
+      "url": "https://www.livemint.com/market/stocks-to-buy-today-why-is-ola-electric-share-price-skyrocketing-in-fy27-explained-11775874531785.html",
+      "pub_date": "Sat, 11 Apr 2026 08:56:33 +0530",
+      "category": "Regulatory Update",
+      "relevance": "LOW",
+      "relevance_score": 1,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 2,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "292eb75f",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Gold rate today, 11 April 2026: MCX gold logs 2% weekly gain on US-Iran ceasefire buzz. Is it the right time to buy?",
+      "summary": "Gold price today: The MCX gold rate surged from  ₹1,49,650 per 10 gm to  ₹1,52,690 last week, logging a weekly gain for the second straight session",
+      "url": "https://www.livemint.com/market/commodities/gold-rate-today-11-april-2026-mcx-gold-logs-2-weekly-gain-on-us-iran-ceasefire-buzz-is-it-the-right-time-to-buy-11775869873708.html",
+      "pub_date": "Sat, 11 Apr 2026 07:40:16 +0530",
+      "category": "Regulatory Update",
+      "relevance": "LOW",
+      "relevance_score": 1,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "gold"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "53b6a703",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Ceasefire sends dollar toward weekly drop with US-Iran talks in focus",
+      "summary": "GLOBAL-FOREX:Ceasefire sends dollar toward weekly drop with US-Iran talks in focus",
+      "url": "https://www.livemint.com/market/ceasefire-sends-dollar-toward-weekly-drop-with-us-iran-talks-in-focus-11775849393307.html",
+      "pub_date": "Sat, 11 Apr 2026 00:59:52 +0530",
+      "category": "Macro & Economy",
+      "relevance": "LOW",
+      "relevance_score": 1,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 2,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Educational explainer on this macro & economy development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "f0337d5c",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Soybeans hit two-week high as soymeal jumps; corn, wheat sag",
+      "summary": "GLOBAL-GRAINS/ (UPDATE 2):GRAINS-Soybeans hit two-week high as soymeal jumps; corn, wheat sag",
+      "url": "https://www.livemint.com/market/soybeans-hit-two-week-high-as-soymeal-jumps-corn-wheat-sag-11775846179887.html",
+      "pub_date": "Sat, 11 Apr 2026 00:06:19 +0530",
+      "category": "Regulatory Update",
+      "relevance": "LOW",
+      "relevance_score": 1,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 2,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "b8a3aa71",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Stocks to buy under ₹100: Mehul Kothari of Anand Rathi recommends three shares to buy or sell",
+      "summary": "Stocks to buy under  ₹100: Mehul Kothari recommends three shares to buy or sell — Network18, Motherson Sumi Wiring India, and Suzlon Energy",
+      "url": "https://www.livemint.com/market/stock-market-news/stocks-to-buy-under-rs-100-mehul-kothari-of-anand-rathi-recommends-three-shares-to-buy-or-sell-11775878511904.html",
+      "pub_date": "Sat, 11 Apr 2026 10:07:13 +0530",
+      "category": "Capital Markets",
+      "relevance": "LOW",
+      "relevance_score": 1,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 1,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "8e2a58da",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Wall St mixed, set for weekly gains as investors watch Middle East negotiations",
+      "summary": "USA-STOCKS/ (UPDATE 5, GRAPHIC):US STOCKS-Wall St mixed, set for weekly gains as investors watch Middle East negotiations",
+      "url": "https://www.livemint.com/market/wall-st-mixed-set-for-weekly-gains-as-investors-watch-middle-east-negotiations-11775846305370.html",
+      "pub_date": "Sat, 11 Apr 2026 00:08:24 +0530",
+      "category": "Capital Markets",
+      "relevance": "LOW",
+      "relevance_score": 1,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 1,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "d29ee30e",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Pulse of the Street: Markets log best weekly gain in 5 years on global relief",
+      "summary": "The Sensex recorded its sharpest weekly gain since the week ended 7 February 2021, when the markets had surged over 9% in a rally as covid-19 fears subsided. On Friday, the Nifty 50 rose 1.16% to close at 24,050.60, while the Sensex gained 1.2% to end at 77,550.25.",
+      "url": "https://www.livemint.com/market/pulse-of-the-street-markets-log-best-weekly-gain-in-5-years-on-global-relief-11775825697244.html",
+      "pub_date": "Fri, 10 Apr 2026 22:10:28 +0530",
+      "category": "Capital Markets",
+      "relevance": "LOW",
+      "relevance_score": 1,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "markets"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "5101139e",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": []
+    }
+  ],
+  "uncertain_date_items": [
+    {
+      "regulator": "SEBI",
+      "title": "Notifications under Finance Act- Merger of FMC with SEBI",
+      "summary": "Notifications under Finance Act- Merger of FMC with SEBI",
+      "url": "https://www.sebi.gov.in/legal/acts/aug-2015/notifications-under-finance-act-2015-merger-of-fmc-with-sebi_30609.html",
+      "pub_date": "2015",
+      "category": "Capital Markets",
+      "relevance": "MEDIUM",
+      "relevance_score": 4,
+      "source_type": "official",
+      "source_name": "SEBI",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 6,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "markets"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Explainer: What this capital markets change means for you",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": false,
+      "matched_keywords": [
+        "sebi"
+      ]
+    },
+    {
+      "regulator": "SEBI",
+      "title": "The Finance Act.",
+      "summary": "The Finance Act.",
+      "url": "https://www.sebi.gov.in/legal/acts/may-2015/the-finance-act-2015_33066.html",
+      "pub_date": "2015",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "official",
+      "source_name": "SEBI",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 5,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 3,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": false,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "SEBI",
+      "title": "Securities Laws (Amendment) Act.",
+      "summary": "Securities Laws (Amendment) Act.",
+      "url": "https://www.sebi.gov.in/legal/acts/aug-2014/securities-laws-amendment-act-2014_27855.html",
+      "pub_date": "2014",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "official",
+      "source_name": "SEBI",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 5,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Explainer: What this regulatory update change means for you",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": false,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "SEBI",
+      "title": "Depositories Act 1996 (as amended  by the International Financial Services Centres Authority Act, 2019 w.e.f. October 01, 2020)",
+      "summary": "Depositories Act 1996 (as amended  by the International Financial Services Centres Authority Act, 2019 w.e.f. October 01, 2020)",
+      "url": "https://www.sebi.gov.in/legal/acts/sep-1995/depositories-act-1996-as-amended-by-the-international-financial-services-centres-authority-act-2019-w-e-f-october-01-2020-_1.html",
+      "pub_date": "1996",
+      "category": "Regulatory Update",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "official",
+      "source_name": "SEBI",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 5,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 4,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 4,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "push_notification",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": false,
+      "matched_keywords": [
+        "ter"
+      ]
+    },
+    {
+      "regulator": "SEBI",
+      "title": "Securities and Exchange Board of India Act, 1992 (As amended by the Finance Act, 2021 (13 of 2021) w.e.f. April 1, 2021)",
+      "summary": "Securities and Exchange Board of India Act, 1992 (As amended by the Finance Act, 2021 (13 of 2021) w.e.f. April 1, 2021)",
+      "url": "https://www.sebi.gov.in/legal/acts/jan-1992/securities-and-exchange-board-of-india-act-1992-as-amended-by-the-finance-act-2021-13-of-2021-w-e-f-april-1-2021-_3.html",
+      "pub_date": "1992",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "official",
+      "source_name": "SEBI",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 5,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "push_notification"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": false,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "SEBI",
+      "title": "Securities Contracts (Regulation) Act, 1956 (As amended by the Finance Act, 2021 (13 of 2021) w.e.f. April 1, 2021)",
+      "summary": "Securities Contracts (Regulation) Act, 1956 (As amended by the Finance Act, 2021 (13 of 2021) w.e.f. April 1, 2021)",
+      "url": "https://www.sebi.gov.in/legal/acts/apr-2021/securities-contracts-regulation-act-1956-as-amended-by-the-finance-act-2021-13-of-2021-w-e-f-april-1-2021-_49750.html",
+      "pub_date": "1956",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "official",
+      "source_name": "SEBI",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 5,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "push_notification"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": false,
+      "matched_keywords": []
+    },
+    {
+      "regulator": "RBI",
+      "title": "Master Direction - Reserve Bank of India (Non-resident Investment in Debt Instruments) Directions, 2025 – amendment",
+      "summary": "Master Direction - Reserve Bank of India (Non-resident Investment in Debt Instruments) Directions, 2025 – amendment",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13369&Mode=0",
+      "pub_date": "Master Direction - Reserve Bank of India (Non-resident Investment in Debt Instruments) Directions, 2025 – amendment",
+      "category": "Regulatory Update",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "official",
+      "source_name": "RBI",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 5,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 4,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Explainer: What this regulatory update change means for you",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 4,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "portfolio_review",
+      "date_parsed": false,
+      "matched_keywords": [
+        "ter"
+      ]
+    },
+    {
+      "regulator": "RBI",
+      "title": "Formation of new districts in the State of Andhra Pradesh – Assignment of Lead Bank Responsibility",
+      "summary": "Formation of new districts in the State of Andhra Pradesh – Assignment of Lead Bank Responsibility",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13368&Mode=0",
+      "pub_date": "Formation of new districts in the State of Andhra Pradesh – Assignment of Lead Bank Responsibility",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 4,
+      "source_type": "official",
+      "source_name": "RBI",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 3,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 4,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "salaried"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 4,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": false,
+      "matched_keywords": [
+        "hra"
+      ]
+    },
+    {
+      "regulator": "RBI",
+      "title": "Guidelines to facilitate faster cross-border inward payments",
+      "summary": "Guidelines to facilitate faster cross-border inward payments",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13367&Mode=0",
+      "pub_date": "Guidelines to facilitate faster cross-border inward payments",
+      "category": "Regulatory Update",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "official",
+      "source_name": "RBI",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 3,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 4,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 4,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": false,
+      "matched_keywords": [
+        "ter"
+      ]
+    },
+    {
+      "regulator": "RBI",
+      "title": "Limits for investment in debt and sale of Credit Default Swaps by Foreign Portfolio Investors (FPIs)",
+      "summary": "Limits for investment in debt and sale of Credit Default Swaps by Foreign Portfolio Investors (FPIs)",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13366&Mode=0",
+      "pub_date": "Limits for investment in debt and sale of Credit Default Swaps by Foreign Portfolio Investors (FPIs)",
+      "category": "Credit & Lending",
+      "relevance": "MEDIUM",
+      "relevance_score": 4,
+      "source_type": "official",
+      "source_name": "RBI",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 3,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "credit",
+        "macro"
+      ],
+      "user_segment_tags": [
+        "borrowers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your loan eligibility, credit score, or EMIs",
+      "content_angle": "Educational explainer on this credit & lending development",
+      "affected_segments": [
+        "borrowers",
+        "credit card users"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "portfolio_review",
+      "date_parsed": false,
+      "matched_keywords": [
+        "fpi"
+      ]
+    }
+  ],
+  "exclusion_log": [
+    {
+      "title": "Master Direction on Counterfeit Notes – Detection, Reporting and Monitoring",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13361&Mode=0",
+      "reason": "noise_pattern",
+      "source": "RBI"
+    },
+    {
+      "title": "Master Direction on Incentives for Currency Distribution and Exchange and Penalties / Penal Provisions for Bank Branches",
+      "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13360&Mode=0",
+      "reason": "noise_pattern",
+      "source": "RBI"
+    },
+    {
+      "title": "Former OpenAI Stargate Leaders Plan To Join Meta Platforms",
+      "url": "https://www.ndtvprofit.com/business/former-openai-stargate-leaders-plan-to-join-meta-platforms-11341868#publisher=newsstand",
+      "reason": "not_relevant",
+      "source": "NDTV_Business"
+    },
+    {
+      "title": "Fuel Shortages From Iran War Threaten Asia's Biggest Food Staple",
+      "url": "https://www.ndtvprofit.com/world/fuel-shortages-from-iran-war-threaten-asias-biggest-food-staple-11341802#publisher=newsstand",
+      "reason": "not_relevant",
+      "source": "NDTV_Business"
+    },
+    {
+      "title": "Why Energy Markets Will Be Impacted For Longer Even If Strait Of Hormuz Opens",
+      "url": "https://www.ndtvprofit.com/markets/why-energy-market-will-take-longer-to-stabilise-even-if-the-strait-of-hormuz-opens-11341646#publisher=newsstand",
+      "reason": "not_relevant",
+      "source": "NDTV_Business"
+    },
+    {
+      "title": "Bank Holiday Today: Are Banks Open Or Closed On Saturday, April 11? Details Here",
+      "url": "https://www.ndtvprofit.com/business/bank-holiday-today-are-banks-open-or-closed-on-saturday-april-11-check-here-11338558#publisher=newsstand",
+      "reason": "not_relevant",
+      "source": "NDTV_Business"
+    },
+    {
+      "title": "Sensex fell 11.5%. Investors put in Rs 40,450 crore anyway",
+      "url": "https://www.valueresearchonline.com/stories/228292/sensex-fell-11-5-per-cent-equity-inflows-hit-rs-40450-crore-in-march/",
+      "reason": "not_relevant",
+      "source": "VROnline"
+    }
+  ],
+  "scraper_meta": {
+    "scrapers_run": 8,
+    "sources": "SEBI, RBI, PFRDA, CBDT, IRDAI, AMFI, PIB, 20+ news feeds"
+  }
 }
