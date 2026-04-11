@@ -2,51 +2,50 @@ name: Daily Regulatory Monitor
 
 on:
   schedule:
-    # Run at 7:30 AM IST (2:00 AM UTC) every day
-    - cron: '0 2 * * *'
-  workflow_dispatch:  # Manual trigger
-
-permissions:
-  contents: write
+    - cron: '30 22 * * *'  # 4:00 AM IST (UTC+5:30)
+  workflow_dispatch:        # Manual trigger
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+    - name: Checkout repo
+      uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
 
-      - name: Install dependencies
-        run: pip install requests beautifulsoup4
+    - name: Install dependencies
+      run: pip install -r scraper/requirements.txt
 
-      - name: Run regulatory monitor
-        run: python scraper/monitor.py
+    - name: Run scraper
+      run: cd scraper && python monitor.py
 
-      - name: Commit and push results
-        run: |
-          git config user.name "reg-monitor[bot]"
-          git config user.email "bot@noveltywealth.in"
+    - name: Commit briefing
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        DATE=$(date -u +%Y-%m-%d)
+        HIGH=$(python3 -c "import json; d=json.load(open('data/latest.json')); print(d.get('high_priority',0))" 2>/dev/null || echo "0")
+        TOTAL=$(python3 -c "import json; d=json.load(open('data/latest.json')); print(d.get('total',0))" 2>/dev/null || echo "0")
+        git add data/
+        git diff --cached --quiet || git commit -m "brief: ${DATE} regulatory update (${TOTAL} updates, ${HIGH} high-priority)"
+        git push
 
-          # Get today's date in IST
-          TODAY=$(TZ='Asia/Kolkata' date +%Y-%m-%d)
-
-          # Stage all data files (briefings, trend memory, health)
-          git add data/
-
-          # Check if there are changes to commit
-          if git diff --staged --quiet; then
-            echo "No new updates today"
-          else
-            # Extract summary from latest.json
-            TOTAL=$(python3 -c "import json; d=json.load(open('data/latest.json')); print(d['total'])")
-            HIGH=$(python3 -c "import json; d=json.load(open('data/latest.json')); print(d['high_priority'])")
-            git commit -m "brief: ${TODAY} (${TOTAL} updates, ${HIGH} high-priority)"
-            git push
-          fi
+    - name: Send briefing to Telegram
+      run: |
+        DATE=$(date -u +%Y-%m-%d)
+        FILE="data/briefings/${DATE}.md"
+        if [ -f "$FILE" ]; then
+          # Telegram has a 4096 char limit, so split if needed
+          CONTENT=$(head -c 4000 "$FILE")
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="${CONTENT}" \
+            -d parse_mode="Markdown"
+        else
+          echo "No briefing file found for ${DATE}"
+        fi
