@@ -8,6 +8,8 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout repo
@@ -36,11 +38,11 @@ jobs:
         git push
 
     - name: Send briefing to Telegram
+      if: always()
       run: |
         DATE=$(date -u +%Y-%m-%d)
         FILE="data/briefings/${DATE}.md"
         if [ -f "$FILE" ]; then
-          # Telegram has a 4096 char limit, so split if needed
           CONTENT=$(head -c 4000 "$FILE")
           curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
