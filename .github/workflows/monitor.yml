@@ -45,9 +45,8 @@ jobs:
         if [ -f "$FILE" ]; then
           CONTENT=$(head -c 4000 "$FILE")
           curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
-            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
-            -d text="${CONTENT}" \
-            -d parse_mode="Markdown"
+            --data-urlencode "text=${CONTENT}" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}"
         else
           echo "No briefing file found for ${DATE}"
         fi
