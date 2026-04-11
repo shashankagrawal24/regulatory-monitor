@@ -2,20 +2,21 @@ name: Daily Regulatory Monitor
 
 on:
   schedule:
-    - cron: '30 22 * * *'
-  workflow_dispatch:
+    # Run at 7:30 AM IST (2:00 AM UTC) every day
+    - cron: '0 2 * * *'
+  workflow_dispatch:  # Manual trigger
 
 permissions:
   contents: write
 
 jobs:
-  monitor:
+  scrape:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: scraper
+    timeout-minutes: 15
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -23,26 +24,29 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install requests beautifulsoup4
 
-      - name: Run monitor
-        run: python monitor.py
+      - name: Run regulatory monitor
+        run: python scraper/monitor.py
 
-      - name: Copy outputs to repo data folder
-        working-directory: .
-        run: |
-          mkdir -p data/briefings
-          cp -f scraper/data/latest.json data/latest.json
-          cp -f scraper/data/briefings/*.json data/briefings/ 2>/dev/null || true
-          cp -f scraper/data/briefings/*.md data/briefings/ 2>/dev/null || true
-
-      - name: Commit & push
-        working-directory: .
+      - name: Commit and push results
         run: |
           git config user.name "reg-monitor[bot]"
-          git config user.email "bot@noveltywealth.com"
+          git config user.email "bot@noveltywealth.in"
+
+          # Get today's date in IST
+          TODAY=$(TZ='Asia/Kolkata' date +%Y-%m-%d)
+
+          # Stage all data files (briefings, trend memory, health)
           git add data/
-          git diff --cached --quiet && echo "No changes" && exit 0
-          SUMMARY=$(python -c "import json; d=json.load(open('data/latest.json')); print(f\"{d['total']} updates, {d['high_priority']} high-priority\")" 2>/dev/null || echo "updates")
-          git commit -m "brief: $(date +%Y-%m-%d) ($SUMMARY)"
-          git push
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No new updates today"
+          else
+            # Extract summary from latest.json
+            TOTAL=$(python3 -c "import json; d=json.load(open('data/latest.json')); print(d['total'])")
+            HIGH=$(python3 -c "import json; d=json.load(open('data/latest.json')); print(d['high_priority'])")
+            git commit -m "brief: ${TODAY} (${TOTAL} updates, ${HIGH} high-priority)"
+            git push
+          fi
