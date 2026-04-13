@@ -1,52 +1,36 @@
 name: Daily Regulatory Monitor
-
 on:
   schedule:
-    - cron: '30 22 * * *'  # 4:00 AM IST (UTC+5:30)
-  workflow_dispatch:        # Manual trigger
-
+    - cron: '30 22 * * *'
+  workflow_dispatch:
 jobs:
   scrape:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
     - name: Checkout repo
       uses: actions/checkout@v4
-
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.11'
-
     - name: Install dependencies
       run: pip install -r scraper/requirements.txt
-
     - name: Run scraper
-      run: cd scraper && python monitor.py
-
+      run: python scraper/monitor.py
     - name: Commit briefing
       run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        DATE=$(date -u +%Y-%m-%d)
+        git config user.name "reg-monitor[bot]"
+        git config user.email "bot@noveltywealth.in"
+        DATE=$(TZ='Asia/Kolkata' date +%Y-%m-%d)
         HIGH=$(python3 -c "import json; d=json.load(open('data/latest.json')); print(d.get('high_priority',0))" 2>/dev/null || echo "0")
         TOTAL=$(python3 -c "import json; d=json.load(open('data/latest.json')); print(d.get('total',0))" 2>/dev/null || echo "0")
         git add data/
-        git diff --cached --quiet || git commit -m "brief: ${DATE} regulatory update (${TOTAL} updates, ${HIGH} high-priority)"
+        git diff --cached --quiet || git commit -m "brief: ${DATE} (${TOTAL} updates, ${HIGH} high-priority)"
         git push
-
-    - name: Send briefing to Telegram
+    - name: Send briefing to Slack
       if: always()
-      run: |
-        DATE=$(date -u +%Y-%m-%d)
-        FILE="data/briefings/${DATE}.md"
-        if [ -f "$FILE" ]; then
-          CONTENT=$(head -c 4000 "$FILE")
-          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
-            --data-urlencode "text=${CONTENT}" \
-            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}"
-        else
-          echo "No briefing file found for ${DATE}"
-        fi
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      run: python scraper/slack_notify.py
