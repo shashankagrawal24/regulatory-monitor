@@ -11,5 +11,18 @@
     "gold": 2,
     "insurance": 1,
     "deposits": 1
+  },
+  "2026-04-13": {
+    "pension": 4,
+    "deposits": 4,
+    "tax": 1,
+    "protection": 1,
+    "rates": 5,
+    "macro": 1,
+    "mutual_funds": 2,
+    "markets": 4,
+    "real_estate": 1,
+    "credit": 3,
+    "gold": 1
   }
 }
