@@ -61,5 +61,17 @@
     "macro": 3,
     "insurance": 1,
     "gold": 3
+  },
+  "2026-04-17": {
+    "rates": 4,
+    "gold": 3,
+    "tax": 1,
+    "pension": 4,
+    "mutual_funds": 9,
+    "deposits": 4,
+    "macro": 1,
+    "credit": 1,
+    "insurance": 2,
+    "markets": 9
   }
 }
