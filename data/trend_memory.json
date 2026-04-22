@@ -134,5 +134,17 @@
     "markets": 3,
     "tax": 1,
     "gold": 1
+  },
+  "2026-04-23": {
+    "deposits": 3,
+    "credit": 3,
+    "rates": 4,
+    "tax": 3,
+    "mutual_funds": 7,
+    "markets": 6,
+    "gold": 1,
+    "macro": 5,
+    "insurance": 2,
+    "real_estate": 1
   }
 }
