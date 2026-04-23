@@ -146,5 +146,17 @@
     "macro": 5,
     "insurance": 2,
     "real_estate": 1
+  },
+  "2026-04-24": {
+    "tax": 3,
+    "credit": 5,
+    "rates": 6,
+    "macro": 2,
+    "gold": 2,
+    "markets": 5,
+    "pension": 2,
+    "real_estate": 1,
+    "mutual_funds": 11,
+    "insurance": 1
   }
 }
