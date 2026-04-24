@@ -158,5 +158,17 @@
     "real_estate": 1,
     "mutual_funds": 11,
     "insurance": 1
+  },
+  "2026-04-25": {
+    "rates": 2,
+    "insurance": 2,
+    "pension": 3,
+    "protection": 1,
+    "gold": 4,
+    "mutual_funds": 6,
+    "deposits": 2,
+    "markets": 3,
+    "macro": 2,
+    "credit": 4
   }
 }
