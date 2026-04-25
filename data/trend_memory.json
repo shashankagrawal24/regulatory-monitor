@@ -170,5 +170,18 @@
     "markets": 3,
     "macro": 2,
     "credit": 4
+  },
+  "2026-04-26": {
+    "tax": 4,
+    "markets": 6,
+    "rates": 2,
+    "credit": 6,
+    "gold": 2,
+    "pension": 2,
+    "deposits": 1,
+    "mutual_funds": 4,
+    "insurance": 1,
+    "protection": 1,
+    "macro": 1
   }
 }
