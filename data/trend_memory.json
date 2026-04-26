@@ -183,5 +183,16 @@
     "insurance": 1,
     "protection": 1,
     "macro": 1
+  },
+  "2026-04-27": {
+    "tax": 3,
+    "mutual_funds": 3,
+    "credit": 8,
+    "markets": 5,
+    "pension": 2,
+    "real_estate": 1,
+    "insurance": 1,
+    "deposits": 1,
+    "gold": 2
   }
 }
