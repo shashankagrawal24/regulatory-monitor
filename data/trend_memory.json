@@ -221,5 +221,18 @@
     "credit": 5,
     "pension": 2,
     "protection": 1
+  },
+  "2026-04-30": {
+    "rates": 6,
+    "macro": 3,
+    "gold": 3,
+    "mutual_funds": 6,
+    "deposits": 2,
+    "pension": 4,
+    "protection": 1,
+    "markets": 3,
+    "credit": 4,
+    "real_estate": 1,
+    "insurance": 2
   }
 }
