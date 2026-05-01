@@ -246,5 +246,16 @@
     "pension": 4,
     "insurance": 1,
     "gold": 2
+  },
+  "2026-05-02": {
+    "tax": 3,
+    "deposits": 5,
+    "rates": 3,
+    "gold": 3,
+    "protection": 1,
+    "mutual_funds": 6,
+    "macro": 4,
+    "credit": 4,
+    "markets": 6
   }
 }
