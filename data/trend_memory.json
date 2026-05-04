@@ -282,5 +282,17 @@
     "mutual_funds": 3,
     "real_estate": 1,
     "deposits": 2
+  },
+  "2026-05-05": {
+    "tax": 3,
+    "deposits": 2,
+    "mutual_funds": 5,
+    "rates": 1,
+    "macro": 7,
+    "gold": 2,
+    "credit": 7,
+    "pension": 1,
+    "markets": 3,
+    "protection": 1
   }
 }
