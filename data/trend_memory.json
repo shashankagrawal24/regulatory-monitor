@@ -355,5 +355,14 @@
     "pension": 4,
     "gold": 1,
     "markets": 2
+  },
+  "2026-05-11": {
+    "rates": 1,
+    "macro": 4,
+    "markets": 5,
+    "deposits": 1,
+    "mutual_funds": 4,
+    "credit": 1,
+    "protection": 1
   }
 }
