@@ -363,5 +363,17 @@
     "macro": 8,
     "gold": 7,
     "mutual_funds": 7
+  },
+  "2026-05-13": {
+    "tax": 2,
+    "deposits": 4,
+    "rates": 6,
+    "macro": 6,
+    "gold": 6,
+    "markets": 7,
+    "pension": 5,
+    "mutual_funds": 5,
+    "insurance": 1,
+    "credit": 1
   }
 }
