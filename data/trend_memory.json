@@ -1,13 +1,4 @@
 {
-  "2026-05-11": {
-    "rates": 1,
-    "macro": 4,
-    "markets": 5,
-    "deposits": 1,
-    "mutual_funds": 4,
-    "credit": 1,
-    "protection": 1
-  },
   "2026-05-12": {
     "tax": 2,
     "protection": 1,
@@ -387,5 +378,18 @@
     "insurance": 2,
     "real_estate": 1,
     "gold": 1
+  },
+  "2026-06-11": {
+    "macro": 7,
+    "tax": 4,
+    "mutual_funds": 8,
+    "pension": 2,
+    "deposits": 2,
+    "credit": 4,
+    "rates": 5,
+    "gold": 6,
+    "markets": 12,
+    "real_estate": 1,
+    "protection": 1
   }
 }
