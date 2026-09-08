@@ -29,8 +29,12 @@ jobs:
         git add data/
         git diff --cached --quiet || git commit -m "brief: ${DATE} (${TOTAL} updates, ${HIGH} high-priority)"
         git push
-    - name: Send briefing to Slack
+    # A revoked Slack webhook should not make a successfully generated and
+    # committed briefing look like a monitor failure. The step output still
+    # records the notification error for remediation.
+    - name: Send briefing to Slack (non-blocking)
       if: always()
+      continue-on-error: true
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       run: python scraper/slack_notify.py
