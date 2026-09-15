@@ -29,5 +29,16 @@
     "mutual_funds": 3,
     "deposits": 1,
     "insurance": 5
+  },
+  "2026-09-15": {
+    "rates": 15,
+    "gold": 3,
+    "macro": 5,
+    "mutual_funds": 10,
+    "insurance": 1,
+    "credit": 4,
+    "pension": 2,
+    "deposits": 2,
+    "markets": 10
   }
 }
