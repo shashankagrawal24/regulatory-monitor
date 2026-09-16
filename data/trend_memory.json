@@ -40,5 +40,17 @@
     "pension": 2,
     "deposits": 2,
     "markets": 10
+  },
+  "2026-09-16": {
+    "rates": 7,
+    "macro": 12,
+    "tax": 3,
+    "mutual_funds": 8,
+    "credit": 8,
+    "deposits": 3,
+    "pension": 3,
+    "protection": 2,
+    "markets": 7,
+    "gold": 2
   }
 }
