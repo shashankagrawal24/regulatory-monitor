@@ -52,5 +52,18 @@
     "protection": 2,
     "markets": 7,
     "gold": 2
+  },
+  "2026-09-17": {
+    "tax": 3,
+    "mutual_funds": 8,
+    "insurance": 3,
+    "credit": 13,
+    "pension": 2,
+    "deposits": 4,
+    "rates": 8,
+    "macro": 8,
+    "markets": 12,
+    "real_estate": 1,
+    "gold": 3
   }
 }
