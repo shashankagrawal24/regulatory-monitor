@@ -65,5 +65,17 @@
     "markets": 12,
     "real_estate": 1,
     "gold": 3
+  },
+  "2026-09-18": {
+    "tax": 5,
+    "macro": 10,
+    "rates": 5,
+    "gold": 2,
+    "markets": 9,
+    "deposits": 3,
+    "mutual_funds": 9,
+    "pension": 4,
+    "credit": 9,
+    "insurance": 2
   }
 }
