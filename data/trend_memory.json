@@ -77,5 +77,18 @@
     "pension": 4,
     "credit": 9,
     "insurance": 2
+  },
+  "2026-09-19": {
+    "rates": 2,
+    "insurance": 5,
+    "credit": 14,
+    "tax": 3,
+    "markets": 11,
+    "gold": 3,
+    "macro": 3,
+    "real_estate": 2,
+    "protection": 2,
+    "mutual_funds": 9,
+    "deposits": 1
   }
 }
