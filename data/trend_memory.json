@@ -106,5 +106,18 @@
     "credit": 9,
     "insurance": 3,
     "gold": 3
+  },
+  "2026-09-24": {
+    "rates": 5,
+    "macro": 10,
+    "tax": 2,
+    "credit": 9,
+    "real_estate": 1,
+    "deposits": 3,
+    "pension": 4,
+    "markets": 11,
+    "mutual_funds": 5,
+    "insurance": 4,
+    "gold": 1
   }
 }
