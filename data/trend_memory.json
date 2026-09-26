@@ -120,5 +120,18 @@
     "insurance": 4,
     "gold": 1
   },
-  "2026-09-25": {}
+  "2026-09-25": {},
+  "2026-09-26": {
+    "tax": 3,
+    "macro": 3,
+    "rates": 1,
+    "gold": 2,
+    "mutual_funds": 13,
+    "markets": 7,
+    "insurance": 3,
+    "pension": 3,
+    "credit": 8,
+    "deposits": 5,
+    "real_estate": 1
+  }
 }
