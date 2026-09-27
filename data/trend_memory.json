@@ -133,5 +133,18 @@
     "credit": 8,
     "deposits": 5,
     "real_estate": 1
+  },
+  "2026-09-27": {
+    "tax": 3,
+    "pension": 3,
+    "real_estate": 1,
+    "markets": 10,
+    "macro": 3,
+    "credit": 11,
+    "deposits": 1,
+    "gold": 2,
+    "mutual_funds": 3,
+    "protection": 1,
+    "rates": 1
   }
 }
