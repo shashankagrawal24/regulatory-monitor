@@ -146,5 +146,15 @@
     "mutual_funds": 3,
     "protection": 1,
     "rates": 1
+  },
+  "2026-09-28": {
+    "tax": 2,
+    "mutual_funds": 5,
+    "macro": 6,
+    "rates": 4,
+    "gold": 6,
+    "insurance": 2,
+    "credit": 5,
+    "markets": 11
   }
 }
