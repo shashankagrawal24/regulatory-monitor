@@ -157,5 +157,18 @@
     "credit": 5,
     "markets": 11
   },
-  "2026-09-29": {}
+  "2026-09-29": {},
+  "2026-09-30": {
+    "rates": 3,
+    "pension": 3,
+    "macro": 9,
+    "mutual_funds": 9,
+    "markets": 16,
+    "gold": 4,
+    "deposits": 1,
+    "real_estate": 1,
+    "credit": 6,
+    "insurance": 2,
+    "tax": 1
+  }
 }
