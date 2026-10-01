@@ -170,5 +170,19 @@
     "credit": 6,
     "insurance": 2,
     "tax": 1
+  },
+  "2026-10-01": {
+    "tax": 3,
+    "credit": 9,
+    "pension": 2,
+    "rates": 5,
+    "deposits": 3,
+    "macro": 8,
+    "mutual_funds": 5,
+    "protection": 2,
+    "markets": 10,
+    "insurance": 2,
+    "gold": 2,
+    "real_estate": 1
   }
 }
