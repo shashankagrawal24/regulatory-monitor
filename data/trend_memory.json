@@ -232,5 +232,17 @@
     "pension": 1,
     "credit": 6,
     "real_estate": 1
+  },
+  "2026-10-06": {
+    "tax": 7,
+    "rates": 4,
+    "credit": 9,
+    "macro": 6,
+    "deposits": 2,
+    "pension": 1,
+    "mutual_funds": 8,
+    "markets": 15,
+    "insurance": 3,
+    "gold": 1
   }
 }
