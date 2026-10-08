@@ -257,5 +257,19 @@
     "pension": 2,
     "deposits": 1,
     "protection": 1
+  },
+  "2026-10-08": {
+    "rates": 17,
+    "credit": 10,
+    "gold": 4,
+    "deposits": 6,
+    "insurance": 3,
+    "pension": 1,
+    "mutual_funds": 9,
+    "real_estate": 1,
+    "macro": 1,
+    "protection": 2,
+    "markets": 9,
+    "tax": 1
   }
 }
