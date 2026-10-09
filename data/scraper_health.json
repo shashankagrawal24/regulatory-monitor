@@ -300,13 +300,14 @@
     "News": 74
   },
   "2026-10-09": {
-    "SEBI": 6,
-    "RBI": 23,
-    "PFRDA": 0,
+    "SEBI": 3,
+    "RBI": 4,
+    "PFRDA": 1,
     "CBDT": 0,
     "IRDAI": 0,
     "AMFI": 0,
     "PIB": 0,
-    "News": 80
+    "News": 182,
+    "Exchanges": 0
   }
 }

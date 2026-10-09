@@ -259,16 +259,17 @@
     "tax": 1
   },
   "2026-10-09": {
-    "tax": 10,
-    "rates": 9,
-    "credit": 13,
-    "real_estate": 3,
-    "protection": 2,
+    "rates": 33,
+    "deposits": 5,
+    "mutual_funds": 20,
+    "tax": 15,
+    "credit": 35,
+    "real_estate": 6,
     "markets": 15,
-    "mutual_funds": 15,
-    "insurance": 4,
-    "macro": 4,
-    "gold": 2,
-    "deposits": 1
+    "protection": 1,
+    "gold": 3,
+    "insurance": 13,
+    "macro": 21,
+    "pension": 5
   }
 }

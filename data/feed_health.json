@@ -1,0 +1,549 @@
+{
+ "2026-10-09": {
+  "SEBI_Circulars": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 25,
+   "recent": 3,
+   "relevant": 3
+  },
+  "SEBI_MasterCirculars": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 25,
+   "recent": 0,
+   "relevant": 0
+  },
+  "SEBI_PressReleases": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 25,
+   "recent": 0,
+   "relevant": 0
+  },
+  "SEBI_ConsultationPapers": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 25,
+   "recent": 0,
+   "relevant": 0
+  },
+  "RBI_PressReleases": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 10,
+   "recent": 10,
+   "relevant": 0
+  },
+  "RBI_Notifications": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 10,
+   "recent": 10,
+   "relevant": 4
+  },
+  "RBI_Speeches": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 10,
+   "recent": 0,
+   "relevant": 0
+  },
+  "CBDT_EFiling_News": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 10,
+   "recent": 0,
+   "relevant": 0
+  },
+  "IRDAI_Circulars": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 21,
+   "recent": 0,
+   "relevant": 0
+  },
+  "IRDAI_PressReleases": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 42,
+   "recent": 0,
+   "relevant": 0
+  },
+  "PFRDA_Circulars": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 10,
+   "recent": 1,
+   "relevant": 1
+  },
+  "PFRDA_PressReleases": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 10,
+   "recent": 0,
+   "relevant": 0
+  },
+  "NPSTrust_Circulars": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 20,
+   "recent": 0,
+   "relevant": 0
+  },
+  "AMFI_Circulars": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 46,
+   "recent": 0,
+   "relevant": 0
+  },
+  "PIB": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 20,
+   "recent": 0,
+   "relevant": 0
+  },
+  "NSE_Circulars": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 1,
+   "recent": 1,
+   "relevant": 0
+  },
+  "BSE_Notices": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 6,
+   "recent": 6,
+   "relevant": 0
+  },
+  "Mint_Money": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 35,
+   "recent": 27,
+   "relevant": 24
+  },
+  "Mint_Economy": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 35,
+   "recent": 8,
+   "relevant": 1
+  },
+  "Mint_Market": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 35,
+   "recent": 35,
+   "relevant": 8
+  },
+  "Mint_Insurance": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 35,
+   "recent": 0,
+   "relevant": 0
+  },
+  "ET_Wealth": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 50,
+   "recent": 17,
+   "relevant": 12
+  },
+  "ET_Wealth_Tax": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 50,
+   "recent": 1,
+   "relevant": 1
+  },
+  "ET_Wealth_Invest": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 50,
+   "recent": 5,
+   "relevant": 3
+  },
+  "ET_Wealth_Save": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 50,
+   "recent": 3,
+   "relevant": 3
+  },
+  "ET_Wealth_Borrow": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 50,
+   "recent": 0,
+   "relevant": 0
+  },
+  "ET_Wealth_Spend": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 20,
+   "recent": 0,
+   "relevant": 0
+  },
+  "ET_Wealth_PFNews": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 50,
+   "recent": 1,
+   "relevant": 1
+  },
+  "ET_MF": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 50,
+   "recent": 7,
+   "relevant": 6
+  },
+  "ET_MF_News": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 50,
+   "recent": 5,
+   "relevant": 5
+  },
+  "ET_Banking_Finance": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 50,
+   "recent": 7,
+   "relevant": 4
+  },
+  "ET_BFSI": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 10,
+   "recent": 5,
+   "relevant": 5
+  },
+  "BusinessStandard_Economy": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 35,
+   "recent": 14,
+   "relevant": 2
+  },
+  "BusinessStandard_Markets": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 35,
+   "recent": 29,
+   "relevant": 8
+  },
+  "BusinessStandard_Finance": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 35,
+   "recent": 23,
+   "relevant": 6
+  },
+  "BusinessStandard_PF": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 35,
+   "recent": 8,
+   "relevant": 2
+  },
+  "BusinessStandard_Insurance": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 35,
+   "recent": 3,
+   "relevant": 2
+  },
+  "BusinessStandard_Investment": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 13,
+   "recent": 0,
+   "relevant": 0
+  },
+  "BusinessStandard_Banking": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 35,
+   "recent": 5,
+   "relevant": 1
+  },
+  "CNBCTV18_PF": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 200,
+   "recent": 18,
+   "relevant": 7
+  },
+  "CNBCTV18_Economy": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 200,
+   "recent": 13,
+   "relevant": 5
+  },
+  "BusinessLine_Money": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 60,
+   "recent": 17,
+   "relevant": 8
+  },
+  "BusinessLine_Portfolio": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 60,
+   "recent": 4,
+   "relevant": 3
+  },
+  "BusinessLine_Economy": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 60,
+   "recent": 35,
+   "relevant": 1
+  },
+  "FinancialExpress_Money": {
+   "status": "http_error",
+   "http": 403,
+   "fetched": 0,
+   "recent": 0,
+   "relevant": 0,
+   "detail": "HTTP 403"
+  },
+  "FinancialExpress_Tax": {
+   "status": "http_error",
+   "http": 403,
+   "fetched": 0,
+   "recent": 0,
+   "relevant": 0,
+   "detail": "HTTP 403"
+  },
+  "FinancialExpress_MF": {
+   "status": "http_error",
+   "http": 403,
+   "fetched": 0,
+   "recent": 0,
+   "relevant": 0,
+   "detail": "HTTP 403"
+  },
+  "FinancialExpress_Insurance": {
+   "status": "http_error",
+   "http": 403,
+   "fetched": 0,
+   "recent": 0,
+   "relevant": 0,
+   "detail": "HTTP 403"
+  },
+  "Moneycontrol_PF": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 25,
+   "recent": 25,
+   "relevant": 14
+  },
+  "Moneycontrol_MF": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 1,
+   "recent": 1,
+   "relevant": 0
+  },
+  "NDTV_Business": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 20,
+   "recent": 20,
+   "relevant": 1
+  },
+  "Hindu_Business": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 60,
+   "recent": 27,
+   "relevant": 4
+  },
+  "IndianExpress_Business": {
+   "status": "http_error",
+   "http": 403,
+   "fetched": 0,
+   "recent": 0,
+   "relevant": 0,
+   "detail": "HTTP 403"
+  },
+  "IndianExpress_Banking": {
+   "status": "http_error",
+   "http": 403,
+   "fetched": 0,
+   "recent": 0,
+   "relevant": 0,
+   "detail": "HTTP 403"
+  },
+  "HT_Business": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 13,
+   "recent": 6,
+   "relevant": 0
+  },
+  "TOI_Business": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 20,
+   "recent": 20,
+   "relevant": 4
+  },
+  "BusinessToday": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 114,
+   "recent": 36,
+   "relevant": 5
+  },
+  "VROnline": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 20,
+   "recent": 4,
+   "relevant": 3
+  },
+  "Morningstar_Insights": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 14,
+   "recent": 0,
+   "relevant": 0
+  },
+  "Cafemutual": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 21,
+   "recent": 11,
+   "relevant": 9
+  },
+  "Freefincal": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 20,
+   "recent": 2,
+   "relevant": 1
+  },
+  "PrimeInvestor": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 150,
+   "recent": 1,
+   "relevant": 1
+  },
+  "Zerodha_ZConnect": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 50,
+   "recent": 0,
+   "relevant": 0
+  },
+  "Zerodha_Varsity": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 15,
+   "recent": 0,
+   "relevant": 0
+  },
+  "ETMoney_Learn": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 500,
+   "recent": 0,
+   "relevant": 0
+  },
+  "Finshots": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 15,
+   "recent": 1,
+   "relevant": 0
+  },
+  "Jagoinvestor": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 100,
+   "recent": 0,
+   "relevant": 0
+  },
+  "BasuNivesh": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 8,
+   "recent": 0,
+   "relevant": 0
+  },
+  "Relakhs": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 10,
+   "recent": 0,
+   "relevant": 0
+  },
+  "StableInvestor": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 10,
+   "recent": 0,
+   "relevant": 0
+  },
+  "TaxGuru_IncomeTax": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 100,
+   "recent": 40,
+   "relevant": 9
+  },
+  "TaxGuru": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 100,
+   "recent": 40,
+   "relevant": 4
+  },
+  "Taxscan": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 50,
+   "recent": 39,
+   "relevant": 0
+  },
+  "AsiaInsurancePost": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 10,
+   "recent": 7,
+   "relevant": 5
+  },
+  "CardExpert": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 10,
+   "recent": 0,
+   "relevant": 0
+  },
+  "CardInsider": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 12,
+   "recent": 3,
+   "relevant": 3
+  },
+  "LiveFromALounge": {
+   "status": "ok",
+   "http": 200,
+   "fetched": 10,
+   "recent": 2,
+   "relevant": 1
+  }
+ }
+}
