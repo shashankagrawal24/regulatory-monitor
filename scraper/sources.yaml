@@ -1,0 +1,365 @@
+# =============================================================================
+# Regulatory Monitor: source list
+# =============================================================================
+# To add a website, add one entry below. No code change is needed.
+# Then run:  python scraper/monitor.py --check-sources --only YourSourceName
+#
+# Fields
+#   name       unique id, shown in briefings and in data/feed_health.json
+#   url        feed or page address
+#   type       rss      (RSS or Atom feed, the default)
+#              listing  (HTML page that lists items)
+#   tier       official | tier1_news | tier2_news | blog
+#   group      health bucket: SEBI, RBI, CBDT, IRDAI, PFRDA, AMFI, PIB, Exchanges,
+#              NPS Trust, or News (default)
+#   regulator  fixed label for every item. Leave out to detect it from the text.
+#   lenient    true  = keep every item that is not noise (use for a regulator's own
+#                      circular page, where everything is on-topic)
+#              [a,b] = keep items whose title has one of these words, even if the
+#                      main keyword filter says no
+#   fulltext   false = never open the article page for this source
+#   min_score  keyword score an item needs to get in (default 1). Use 3 for general
+#              market or economy feeds, so only clearly on-topic stories pass.
+#   max_keep   most items one source may add to a single briefing (default 10)
+#   max_items  how many items to read from the top (default 40)
+#   enabled    false = keep the entry but skip it
+#
+# Listing pages only
+#   row        CSS selector for one item (a table row, a card)
+#   link       CSS selector for the item's link. With no `row`, the scraper starts
+#              from these links and looks around each one for a date.
+#   title      CSS selector for the title (default: the best text in the row)
+#   date       CSS selector for the date (default: first date found in the row)
+#
+# Sources with no date at all still work: an item is "new" when it was not on the
+# page during an earlier run. The first run for such a source reports nothing.
+# =============================================================================
+
+settings:
+  workers: 8                # sources scraped in parallel (one request per site at a time)
+  briefing:
+    max_news_items: 60      # news items in the daily brief. Official items are never cut.
+                            # The rest stay in latest.json under "more_items".
+  fulltext:
+    enabled: true
+    max_articles: 80        # article pages opened per run, highest relevance first
+    workers: 6
+
+sources:
+
+  # ---------------------------------------------------------------------------
+  # SEBI
+  # ---------------------------------------------------------------------------
+  - name: SEBI_Circulars
+    url: "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=1&ssid=7&smid=0"
+    type: listing
+    row: "table tr"
+    tier: official
+    group: SEBI
+    regulator: SEBI
+    lenient: true
+
+  - name: SEBI_MasterCirculars
+    url: "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=1&ssid=6&smid=0"
+    type: listing
+    row: "table tr"
+    tier: official
+    group: SEBI
+    regulator: SEBI
+    lenient: [mutual fund, investment adviser, research analyst, portfolio manager, stock broker, depositor, kyc, investor]
+
+  - name: SEBI_PressReleases
+    url: "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6&ssid=23&smid=0"
+    type: listing
+    row: "table tr"
+    tier: official
+    group: SEBI
+    regulator: SEBI
+    lenient: [board meeting, investor, mutual fund, adviser, advisor, framework, norms, caution]
+
+  - name: SEBI_ConsultationPapers
+    url: "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=4&ssid=38&smid=35"
+    type: listing
+    row: "table tr"
+    tier: official
+    group: SEBI
+    regulator: SEBI
+    lenient: [mutual fund, investment adviser, research analyst, investor, retail, kyc, nomination, demat]
+
+  # ---------------------------------------------------------------------------
+  # RBI
+  # ---------------------------------------------------------------------------
+  - name: RBI_PressReleases
+    url: "https://www.rbi.org.in/pressreleases_rss.xml"
+    tier: official
+    group: RBI
+    regulator: RBI
+
+  - name: RBI_Notifications
+    url: "https://www.rbi.org.in/notifications_rss.xml"
+    tier: official
+    group: RBI
+    regulator: RBI
+
+  - name: RBI_Speeches
+    url: "https://www.rbi.org.in/speeches_rss.xml"
+    tier: official
+    group: RBI
+    regulator: RBI
+
+  # ---------------------------------------------------------------------------
+  # CBDT / Income Tax
+  # incometaxindia.gov.in returns HTTP 403 to scripts, so we read the e-filing
+  # portal news page instead. It carries every CBDT circular and notification.
+  # ---------------------------------------------------------------------------
+  - name: CBDT_EFiling_News
+    url: "https://www.incometax.gov.in/iec/foportal/latest-news"
+    type: listing
+    row: ".views-row"
+    tier: official
+    group: CBDT
+    regulator: CBDT
+    lenient: true
+
+  # ---------------------------------------------------------------------------
+  # IRDAI
+  # ---------------------------------------------------------------------------
+  - name: IRDAI_Circulars
+    url: "https://irdai.gov.in/circulars"
+    type: listing
+    row: "table tr"
+    tier: official
+    group: IRDAI
+    regulator: IRDAI
+    lenient: true
+    note: "Site often times out for non-Indian IPs. Verify from GitHub Actions with --check-sources."
+
+  - name: IRDAI_PressReleases
+    url: "https://irdai.gov.in/press-releases"
+    type: listing
+    row: "table tr"
+    tier: official
+    group: IRDAI
+    regulator: IRDAI
+    lenient: true
+
+  # ---------------------------------------------------------------------------
+  # PFRDA and NPS Trust
+  # ---------------------------------------------------------------------------
+  - name: PFRDA_Circulars
+    url: "https://www.pfrda.org.in/regulatory-framework/circulars/active-circulars"
+    type: listing
+    row: ".basic-card"
+    title: ".basic-title"
+    date: ".basic-meta"
+    tier: official
+    group: PFRDA
+    regulator: PFRDA
+    lenient: true
+
+  - name: PFRDA_PressReleases
+    url: "https://www.pfrda.org.in/media/press-releases"
+    type: listing
+    row: ".basic-card"
+    title: ".basic-title"
+    date: ".basic-meta"
+    tier: official
+    group: PFRDA
+    regulator: PFRDA
+    lenient: true
+
+  - name: NPSTrust_Circulars
+    url: "https://npstrust.org.in/circulars"
+    type: listing
+    row: "table tr"
+    tier: official
+    group: PFRDA
+    regulator: NPS Trust
+    lenient: true
+
+  # ---------------------------------------------------------------------------
+  # AMFI
+  # ---------------------------------------------------------------------------
+  - name: AMFI_Circulars
+    url: "https://www.amfiindia.com/circulars"
+    type: listing
+    link: "a[href*='downloads/circulars']"
+    tier: official
+    group: AMFI
+    regulator: AMFI
+    lenient: true
+    fulltext: false
+
+  # ---------------------------------------------------------------------------
+  # PIB (all ministries, English). The feed carries no dates, so the seen store
+  # decides what is new. Strict keyword filter keeps it to finance items.
+  # ---------------------------------------------------------------------------
+  - name: PIB
+    url: "https://www.pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3&reg=3"
+    tier: official
+    group: PIB
+    regulator: MoF/PIB
+
+  # ---------------------------------------------------------------------------
+  # Exchanges
+  # ---------------------------------------------------------------------------
+  - name: NSE_Circulars
+    url: "https://nsearchives.nseindia.com/content/RSS/Circulars.xml"
+    tier: official
+    group: Exchanges
+    regulator: NSE
+    fulltext: false
+
+  - name: BSE_Notices
+    url: "https://www.bseindia.com/data/xml/notices.xml"
+    tier: official
+    group: Exchanges
+    regulator: BSE
+    fulltext: false
+
+  # ---------------------------------------------------------------------------
+  # NEWS: Tier 1 (large business dailies, personal finance desks)
+  # ---------------------------------------------------------------------------
+  - {name: Mint_Money, url: "https://www.livemint.com/rss/money", tier: tier1_news}
+  - {name: Mint_Economy, url: "https://www.livemint.com/rss/economy", tier: tier1_news, min_score: 3}
+  - {name: Mint_Market, url: "https://www.livemint.com/rss/markets", tier: tier1_news, min_score: 3}
+  - {name: Mint_Insurance, url: "https://www.livemint.com/rss/insurance", tier: tier1_news}
+
+  - {name: ET_Wealth, url: "https://economictimes.indiatimes.com/wealth/rssfeeds/837555174.cms", tier: tier1_news}
+  - {name: ET_Wealth_Tax, url: "https://economictimes.indiatimes.com/wealth/tax/rssfeeds/47119912.cms", tier: tier1_news}
+  - {name: ET_Wealth_Invest, url: "https://economictimes.indiatimes.com/wealth/invest/rssfeeds/48997553.cms", tier: tier1_news}
+  - {name: ET_Wealth_Save, url: "https://economictimes.indiatimes.com/wealth/save/rssfeeds/47119915.cms", tier: tier1_news}
+  - {name: ET_Wealth_Borrow, url: "https://economictimes.indiatimes.com/wealth/borrow/rssfeeds/48997485.cms", tier: tier1_news}
+  - {name: ET_Wealth_Spend, url: "https://economictimes.indiatimes.com/wealth/spend/rssfeeds/48997538.cms", tier: tier1_news}
+  - {name: ET_Wealth_PFNews, url: "https://economictimes.indiatimes.com/wealth/personal-finance-news/rssfeeds/49674901.cms", tier: tier1_news}
+  - {name: ET_MF, url: "https://economictimes.indiatimes.com/mf/rssfeeds/359241701.cms", tier: tier1_news}
+  - {name: ET_MF_News, url: "https://economictimes.indiatimes.com/mf/mf-news/rssfeeds/1107225967.cms", tier: tier1_news}
+  - {name: ET_Banking_Finance, url: "https://economictimes.indiatimes.com/industry/banking/finance/rssfeeds/13358259.cms", tier: tier1_news, min_score: 3}
+  - {name: ET_BFSI, url: "https://bfsi.economictimes.indiatimes.com/rss/topstories", tier: tier1_news, min_score: 3}
+
+  - {name: BusinessStandard_Economy, url: "https://www.business-standard.com/rss/economy-102.rss", tier: tier1_news, min_score: 3}
+  - {name: BusinessStandard_Markets, url: "https://www.business-standard.com/rss/markets-106.rss", tier: tier1_news, min_score: 3}
+  - {name: BusinessStandard_Finance, url: "https://www.business-standard.com/rss/finance-103.rss", tier: tier1_news, min_score: 3}
+  - {name: BusinessStandard_PF, url: "https://www.business-standard.com/rss/finance/personal-finance-10313.rss", tier: tier1_news}
+  - {name: BusinessStandard_Insurance, url: "https://www.business-standard.com/rss/finance/insurance-10317.rss", tier: tier1_news}
+  - {name: BusinessStandard_Investment, url: "https://www.business-standard.com/rss/finance/investment-10315.rss", tier: tier1_news}
+  - {name: BusinessStandard_Banking, url: "https://www.business-standard.com/rss/industry/banking-21703.rss", tier: tier1_news, min_score: 3}
+
+  - {name: CNBCTV18_PF, url: "https://www.cnbctv18.com/commonfeeds/v1/cne/rss/personal-finance.xml", tier: tier1_news}
+  - {name: CNBCTV18_Economy, url: "https://www.cnbctv18.com/commonfeeds/v1/cne/rss/economy.xml", tier: tier1_news, min_score: 3}
+
+  - {name: BusinessLine_Money, url: "https://www.thehindubusinessline.com/money-and-banking/feeder/default.rss", tier: tier1_news, min_score: 3}
+  - {name: BusinessLine_Portfolio, url: "https://www.thehindubusinessline.com/portfolio/feeder/default.rss", tier: tier1_news}
+  - {name: BusinessLine_Economy, url: "https://www.thehindubusinessline.com/economy/feeder/default.rss", tier: tier1_news, min_score: 3}
+
+  - name: FinancialExpress_Money
+    url: "https://www.financialexpress.com/money/"
+    type: listing
+    row: "article"
+    tier: tier1_news
+    note: "RSS feed was retired (HTTP 410). Reads the section page instead."
+
+  - name: FinancialExpress_Tax
+    url: "https://www.financialexpress.com/money/income-tax/"
+    type: listing
+    row: "article"
+    tier: tier1_news
+
+  - name: FinancialExpress_MF
+    url: "https://www.financialexpress.com/money/mutual-funds/"
+    type: listing
+    row: "article"
+    tier: tier1_news
+
+  - name: FinancialExpress_Insurance
+    url: "https://www.financialexpress.com/money/insurance/"
+    type: listing
+    row: "article"
+    tier: tier1_news
+
+  # ---------------------------------------------------------------------------
+  # NEWS: Tier 2 (broader coverage)
+  # ---------------------------------------------------------------------------
+  - name: Moneycontrol_PF
+    url: "https://news.google.com/rss/search?q=site:moneycontrol.com/news/business/personal-finance+when:1d&hl=en-IN&gl=IN&ceid=IN:en"
+    tier: tier2_news
+    strip_title_suffix: true
+    fulltext: false
+    note: "Moneycontrol's own RSS feeds are frozen (last item 2016 to 2024). This is the Google News feed for the section. Links open via Google News."
+
+  - name: Moneycontrol_MF
+    url: "https://news.google.com/rss/search?q=site:moneycontrol.com/news/business/mutual-funds+when:1d&hl=en-IN&gl=IN&ceid=IN:en"
+    tier: tier2_news
+    strip_title_suffix: true
+    fulltext: false
+
+  - {name: NDTV_Business, url: "https://feeds.feedburner.com/ndtvprofit-latest", tier: tier2_news, min_score: 3}
+  - {name: Hindu_Business, url: "https://www.thehindu.com/business/feeder/default.rss", tier: tier2_news, min_score: 3}
+  - {name: IndianExpress_Business, url: "https://indianexpress.com/section/business/feed/", tier: tier2_news, min_score: 3}
+  - {name: IndianExpress_Banking, url: "https://indianexpress.com/section/business/banking-and-finance/feed/", tier: tier2_news}
+  - {name: HT_Business, url: "https://www.hindustantimes.com/feeds/rss/business/rssfeed.xml", tier: tier2_news, min_score: 3}
+  - {name: TOI_Business, url: "https://timesofindia.indiatimes.com/rssfeeds/1898055.cms", tier: tier2_news, min_score: 3}
+  - {name: BusinessToday, url: "https://www.businesstoday.in/rssfeeds/?id=home", tier: tier2_news, min_score: 3}
+
+  # ---------------------------------------------------------------------------
+  # MUTUAL FUND AND INVESTING RESEARCH
+  # ---------------------------------------------------------------------------
+  - name: VROnline
+    url: "https://www.valueresearchonline.com/rss/"
+    tier: tier2_news
+    note: "Only the RSS feed is open to scripts. Article pages sit behind a Cloudflare check, so full text is not available."
+
+  - name: Morningstar_Insights
+    url: "https://www.morningstar.in/posts/collection/insights-and-perspectives.aspx"
+    type: listing
+    link: "a[href^='/posts/'][href$='.aspx']:not([href*='/collection/']):not([href*='/author/'])"
+    tier: blog
+
+  - name: Cafemutual
+    url: "https://news.google.com/rss/search?q=site:cafemutual.com+when:2d&hl=en-IN&gl=IN&ceid=IN:en"
+    tier: tier2_news
+    strip_title_suffix: true
+    fulltext: false
+    note: "Cafemutual has no feed. This is the Google News feed for the site. Links open via Google News."
+
+  - {name: Freefincal, url: "https://freefincal.com/feed/", tier: blog}
+  - {name: PrimeInvestor, url: "https://primeinvestor.in/feed/", tier: blog}
+  - {name: Zerodha_ZConnect, url: "https://zerodha.com/z-connect/feed", tier: blog}
+  - {name: Zerodha_Varsity, url: "https://zerodha.com/varsity/feed/", tier: blog}
+  - {name: ETMoney_Learn, url: "https://www.etmoney.com/learn/feed/", tier: blog}
+  - {name: Finshots, url: "https://finshots.in/rss/", tier: blog}
+  - {name: Jagoinvestor, url: "https://www.jagoinvestor.com/feed", tier: blog}
+  - {name: BasuNivesh, url: "https://www.basunivesh.com/feed/", tier: blog}
+  - {name: Relakhs, url: "https://www.relakhs.com/feed/", tier: blog}
+  - {name: StableInvestor, url: "https://stableinvestor.com/feed", tier: blog}
+
+  # ---------------------------------------------------------------------------
+  # TAX AND COMPLIANCE
+  # ---------------------------------------------------------------------------
+  - {name: TaxGuru_IncomeTax, url: "https://taxguru.in/income-tax/feed/", tier: tier2_news, min_score: 4}
+  - {name: TaxGuru, url: "https://taxguru.in/feed/", tier: tier2_news, min_score: 4}
+  - {name: Taxscan, url: "https://www.taxscan.in/feed", tier: tier2_news, min_score: 4}
+
+  # ---------------------------------------------------------------------------
+  # INSURANCE, BANKING AND CREDIT CARDS
+  # ---------------------------------------------------------------------------
+  - {name: AsiaInsurancePost, url: "https://asiainsurancepost.com/feed/", tier: tier2_news}
+  - {name: CardExpert, url: "https://www.cardexpert.in/feed/", tier: blog, lenient: [card, lounge, reward, devaluation, fee]}
+  - {name: CardInsider, url: "https://cardinsider.com/feed/", tier: blog, lenient: [card, lounge, reward, devaluation, fee]}
+  - {name: LiveFromALounge, url: "https://livefromalounge.com/feed/", tier: blog, lenient: [credit card, debit card, reward, devaluation]}
+
+  # ---------------------------------------------------------------------------
+  # Tried and not usable from a script (kept here so nobody re-adds them blindly)
+  # ---------------------------------------------------------------------------
+  # incometaxindia.gov.in        HTTP 403 (replaced by CBDT_EFiling_News)
+  # epfo.gov.in circulars        HTTP 403
+  # npci.org.in circulars        HTTP 403
+  # zeebiz.com, news18.com       HTTP 403 on feeds
+  # technofino.in, tax2win.in    Cloudflare check on feeds
+  # gstcouncil.gov.in            Press release table is filled by JavaScript
+  # egazette.gov.in, dea.gov.in  Connection refused
+  # moneycontrol.com/rss/*      Feeds still load but are frozen (2016 to 2024)
+  # morningstar.in fund-news     Archive page stopped updating in 2022
+  # capitalmind.in/feed          Frozen since Aug 2025
+  # taxmann.com/post/feed        Carries exam notices, not tax news
+  # cleartax, paisabazaar, bankbazaar, groww, scripbox, outlookmoney: no public feed

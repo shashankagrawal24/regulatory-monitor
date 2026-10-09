@@ -1,5 +1,5 @@
 """
-Indian Financial Regulatory & Content Intelligence Monitor v3
+Indian Financial Regulatory & Content Intelligence Monitor v4
 ==============================================================
 Comprehensive daily scraper for:
   1. Regulatory circulars (SEBI, RBI, IRDAI, PFRDA, CBDT, AMFI, PIB)
@@ -30,23 +30,38 @@ Improvements over v2:
   - Expanded keyword taxonomy with synonyms
   - Negative keyword filtering (noise inside relevant titles)
 
+v4 changes:
+  - Sources moved to scraper/sources.yaml (add a site with one entry, no code)
+  - One generic scraper for RSS feeds and HTML listing pages
+  - Date-only sources (most regulators) no longer dropped by the 24h filter
+  - Seen store: no repeats across days, and dateless sources now work
+  - Full article text used for scoring and summaries (never stored)
+  - Per-source health in data/feed_health.json (dead feeds raise an alert)
+  - CLI: --check-sources, --dry-run, --no-fulltext, --only NAME
+
 Output: data/briefings/{date}.json + .md + data/latest.json
 """
 
+import argparse
+import html as html_lib
 import json
 import re
 import logging
+import threading
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
+from email.utils import parsedate_to_datetime
 from datetime import datetime, date, timedelta, timezone
 from pathlib import Path
 from dataclasses import dataclass, field, asdict
 from typing import Optional
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 from difflib import SequenceMatcher
 import time
 import hashlib
 
 import requests
+import yaml
 from bs4 import BeautifulSoup
 
 # ---------------------------------------------------------------------------
@@ -55,12 +70,16 @@ from bs4 import BeautifulSoup
 DATA_DIR = Path("data")
 BRIEFINGS_DIR = DATA_DIR / "briefings"
 LATEST_FILE = DATA_DIR / "latest.json"
-HEALTH_FILE = DATA_DIR / "scraper_health.json"
+HEALTH_FILE = DATA_DIR / "scraper_health.json"        # per-group counts (kept for history)
+FEED_HEALTH_FILE = DATA_DIR / "feed_health.json"      # per-source stats (v4)
+SEEN_FILE = DATA_DIR / "seen_items.json"              # what was already reported (v4)
+SOURCES_FILE = Path(__file__).resolve().parent / "sources.yaml"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
     "Accept-Language": "en-IN,en;q=0.9",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,application/rss+xml;q=0.9,*/*;q=0.8",
 }
 
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -109,6 +128,18 @@ NOISE_PATTERNS = [
     r"(?i)^(notifications|circulars|draft notifications|guidelines|circulars withdrawn)$",
     r"(?i)^(rules|regulations|acts|orders|press releases)$",
     r"(?i)^(master directions|master circulars)$",
+
+    # Regulator housekeeping (v4 — surfaced once official listings were fixed)
+    r"(?i)\b(recruitment|request for proposal|\brfp\b|tender|pre-?bid|corrigendum|expression of interest|empanel)",
+    r"(?i)\b(in the matter of|appeal no\.?|recovery certificate|summons|notice of demand)\b",
+    r"(?i)\b(awareness program|felicitation|opens? a (local|regional) office|hindi (pakhwada|diwas))\b",
+    r"(?i)\b(auction of (state )?government securities|treasury bills?:|money market operations|result of the .*auction)\b",
+
+    r"(?i)^(attachment|annexure|enclosure)\b",
+    r"(?i)\b(variable rate (reverse )?repo|vrrr?\b|turnover data|weekly statistical supplement|reserve money for the week|sectoral deployment of bank credit)",
+    r"(?i)\b(imposes monetary penalty|directions under section 35|cancels the licen[cs]e|certificate of registration)\b",
+    r"(?i)\b(surveillance measure|\b(st-|lt-)?asm\b|\bgsm\b|mwpl|client limits|mock trading|availability of .* on nse)\b",
+    r"(?i)\b(surrender of trading member|trade for trade|listing of (equity shares|units|securities)|suspension of trading|change in name of)\b",
 
     # Corporate governance (not retail)
     r"(?i)\b(board meeting|agm|egm|shareholder meeting)\b.*(?:limited|ltd)",
@@ -274,12 +305,28 @@ KEYWORD_TAXONOMY = [
     ("RBI digital", 2, ["CBDC", "digital rupee"]),
 ]
 
-# Build flat lookup for fast matching
-_KEYWORD_LOOKUP: list[tuple[str, int]] = []
+# Build flat lookup for fast matching (one entry per keyword, highest weight wins)
+_kw_weights: dict[str, int] = {}
 for canonical, weight, variants in KEYWORD_TAXONOMY:
-    _KEYWORD_LOOKUP.append((canonical.lower(), weight))
-    for v in variants:
-        _KEYWORD_LOOKUP.append((v.lower(), weight))
+    for kw in [canonical, *variants]:
+        _kw_weights[kw.lower()] = max(weight, _kw_weights.get(kw.lower(), 0))
+_KEYWORD_LOOKUP: list[tuple[str, int]] = list(_kw_weights.items())
+
+# v4: match whole words only. Plain substring matching scored "premium" as EMI,
+# "criteria" as RIA, "arbitration" as ITR and "international" as NAV.
+_KEYWORD_PATTERNS: list[tuple[str, int, "re.Pattern"]] = [
+    (kw, weight, re.compile(rf"(?<![a-z0-9]){re.escape(kw)}s?(?![a-z0-9])"))
+    for kw, weight in _KEYWORD_LOOKUP
+]
+
+
+def match_keywords(text: str) -> list[tuple[str, int]]:
+    """Whole-word keyword matches in `text` as (keyword, weight)."""
+    lowered = text.lower()
+    hits = [(kw, weight) for kw, weight, pattern in _KEYWORD_PATTERNS if pattern.search(lowered)]
+    names = {kw for kw, _ in hits}
+    # "mutual fund" already matches "mutual funds"; do not count the plural twice
+    return [(kw, w) for kw, w in hits if not (kw.endswith("s") and kw[:-1] in names)]
 
 # Category-to-segments mapping
 SEGMENT_MAP = {
@@ -314,10 +361,9 @@ def compute_relevance_score(title: str, description: str = "", source_type: str 
     score = 0
     matched_keywords = []
 
-    for kw, weight in _KEYWORD_LOOKUP:
-        if kw in combined:
-            score += weight
-            matched_keywords.append(kw)
+    for kw, weight in match_keywords(combined):
+        score += weight
+        matched_keywords.append(kw)
 
     # Multi-keyword bonus: more matches = more relevant
     unique_matches = len(set(matched_keywords))
@@ -379,6 +425,15 @@ def soft_suppression_penalty(title: str) -> int:
         if re.search(pattern, title):
             penalty -= 2
     return penalty
+
+
+def keyword_score(title: str, description: str = "") -> int:
+    """
+    Relevance from keywords alone, with no source-tier bonus.
+    v4: used as the entry gate. The tier bonus used to let every item from an
+    official or tier-1 source through, even with zero keyword matches.
+    """
+    return compute_relevance_score(title, description, "news")
 
 
 def is_relevant(title: str, description: str = "", source_type: str = "news") -> bool:
@@ -531,36 +586,59 @@ class RegUpdate:
     date_parsed: bool = True
     matched_keywords: list = field(default_factory=list)
 
+    # === FULL TEXT (v4) — derived signals only, the article body is never stored ===
+    fulltext_status: str = ""       # ok / feed / paywalled / blocked / not_html / error / "" (not attempted)
+    word_count: int = 0
+    fulltext_keywords: list = field(default_factory=list)
+
 
 # ---------------------------------------------------------------------------
 # DATE PARSING (v3 — datetime precision with timezone)
 # ---------------------------------------------------------------------------
-def parse_datetime(text: str) -> Optional[datetime]:
-    """Parse into a timezone-aware datetime. Returns None if unparseable."""
-    text = text.strip()
-    formats = [
-        "%a, %d %b %Y %H:%M:%S %z",
-        "%a, %d %b %Y %H:%M:%S %Z",
-        "%Y-%m-%dT%H:%M:%S%z",
-        "%Y-%m-%dT%H:%M:%SZ",
-        "%Y-%m-%dT%H:%M:%S.%f%z",
-        "%d %b %Y %H:%M:%S",
-        "%d-%b-%Y %H:%M:%S",
-    ]
-    for fmt in formats:
-        try:
-            dt = datetime.strptime(text, fmt)
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=IST)
-            return dt
-        except ValueError:
-            continue
+def parse_datetime_precise(text: str) -> tuple[Optional[datetime], bool]:
+    """
+    Parse into a timezone-aware datetime.
+    Returns (datetime, has_time). has_time is False when the source only gave a date.
+    Naive timestamps are treated as IST.
+    """
+    text = (text or "").strip()
+    if not text:
+        return None, False
 
-    # Fall back to date-only formats (assume start of day IST)
+    def aware(dt: datetime) -> datetime:
+        return dt if dt.tzinfo else dt.replace(tzinfo=IST)
+
+    def timed(dt: datetime) -> tuple[datetime, bool]:
+        dt = aware(dt)
+        # Exactly midnight means the source only knows the day (NSE, some CMS feeds)
+        return dt, not (dt.hour == 0 and dt.minute == 0 and dt.second == 0)
+
+    # RFC 822 (most RSS feeds). Handles GMT / +0530 / missing zone correctly.
+    if re.search(r"\d{1,2}:\d{2}", text):
+        try:
+            return timed(parsedate_to_datetime(text))
+        except (TypeError, ValueError, IndexError):
+            pass
+        try:
+            return timed(datetime.fromisoformat(text.replace("Z", "+00:00")))
+        except ValueError:
+            pass
+        for fmt in ("%d %b %Y %H:%M:%S", "%d-%b-%Y %H:%M:%S", "%Y-%m-%d %H:%M:%S",
+                    "%d %b %Y %H:%M", "%B %d, %Y %H:%M", "%b %d, %Y %H:%M", "%d-%m-%Y %H:%M"):
+            try:
+                return timed(datetime.strptime(text, fmt))
+            except ValueError:
+                continue
+
     d = parse_date_only(text)
     if d:
-        return datetime(d.year, d.month, d.day, 0, 0, 0, tzinfo=IST)
-    return None
+        return datetime(d.year, d.month, d.day, 0, 0, 0, tzinfo=IST), False
+    return None, False
+
+
+def parse_datetime(text: str) -> Optional[datetime]:
+    """Parse into a timezone-aware datetime. Returns None if unparseable."""
+    return parse_datetime_precise(text)[0]
 
 
 def parse_date_only(text: str) -> Optional[date]:
@@ -573,17 +651,22 @@ def parse_date_only(text: str) -> Optional[date]:
     ]
     for fmt in formats:
         try:
-            return datetime.strptime(text, fmt).date()
+            d = datetime.strptime(text, fmt).date()
         except ValueError:
             continue
+        return d if 2000 <= d.year <= 2100 else None
 
     # Extract date-like substring
+    # (v4: the "!= text" guards stop an endless loop on text that looks like
+    # a date but is not one, e.g. "12 Regular 2026")
     m = re.search(r'(\d{1,2}[\s\-/\.]\w{3,9}[\s\-/\.,]+\d{4})', text)
-    if m:
-        return parse_date_only(m.group(1))
+    if m and m.group(1) != text:
+        found = parse_date_only(m.group(1))
+        if found:
+            return found
 
     m = re.search(r'(\w{3,9}\s+\d{1,2},?\s+\d{4})', text)
-    if m:
+    if m and m.group(1) != text:
         return parse_date_only(m.group(1))
 
     return None
@@ -593,64 +676,138 @@ def is_within_24h(date_text: str, cutoff: datetime) -> tuple[bool, bool]:
     """
     Returns (is_recent, date_was_parsed).
     If date can't be parsed, returns (False, False).
+
+    v4 fix: when a source gives a date with no time (most regulator pages),
+    compare calendar days. Before this, "8 Oct" was read as 8 Oct 00:00 and
+    always fell just outside a 24h window, so official circulars never showed up.
+    Repeats across days are prevented by the seen store.
     """
-    dt = parse_datetime(date_text)
+    dt, has_time = parse_datetime_precise(date_text)
     if dt is None:
         return False, False
-    return dt >= cutoff, True
+    now = datetime.now(IST)
+    if dt > now + timedelta(days=2):
+        return False, True      # future date = an effective date, not a publish date
+    if has_time:
+        return dt >= cutoff, True
+    return dt.date() >= cutoff.astimezone(IST).date(), True
 
 
 # ---------------------------------------------------------------------------
 # BASE FETCHER (v3 — with retry + backoff)
 # ---------------------------------------------------------------------------
+_host_locks: dict[str, threading.Lock] = {}
+_host_last: dict[str, float] = {}
+_host_guard = threading.Lock()
+HOST_DELAY = 1.0   # seconds between two requests to the same site
+
+
+def _polite_wait(url: str):
+    """Serialize and space out requests per host, so parallel runs stay polite."""
+    host = urlparse(url).netloc
+    with _host_guard:
+        lock = _host_locks.setdefault(host, threading.Lock())
+    with lock:
+        wait = HOST_DELAY - (time.time() - _host_last.get(host, 0))
+        if wait > 0:
+            time.sleep(wait)
+        _host_last[host] = time.time()
+
+
 class BaseFetcher:
     MAX_RETRIES = 2
     RETRY_DELAY = 3  # seconds
 
-    def get(self, url: str, timeout: int = 20) -> Optional[str]:
+    def fetch(self, url: str, timeout: int = 20) -> tuple[int, Optional[bytes]]:
+        """GET with retry. Returns (http_status, body bytes or None). Status 0 = no response."""
+        status = 0
         for attempt in range(self.MAX_RETRIES + 1):
             try:
+                _polite_wait(url)
                 resp = requests.get(url, headers=HEADERS, timeout=timeout)
+                status = resp.status_code
+                if status in (401, 403, 404, 410, 451):
+                    return status, None     # retrying will not help
+                if status in (418, 429):    # rate limiter (RBI answers 418 when hit too fast)
+                    time.sleep(8 * (attempt + 1))
                 resp.raise_for_status()
-                return resp.text
+                return status, resp.content
             except Exception as e:
                 if attempt < self.MAX_RETRIES:
-                    log.warning(f"  Retry {attempt+1}/{self.MAX_RETRIES} for {url}: {e}")
                     time.sleep(self.RETRY_DELAY * (attempt + 1))
                 else:
-                    log.warning(f"  Failed after {self.MAX_RETRIES+1} attempts: {url} -- {e}")
-                    return None
+                    log.debug(f"  Failed after {self.MAX_RETRIES+1} attempts: {url} -- {e}")
+        return status, None
+
+    def get(self, url: str, timeout: int = 20) -> Optional[str]:
+        _, content = self.fetch(url, timeout)
+        return content.decode("utf-8", errors="replace") if content is not None else None
 
     def soup(self, url: str) -> Optional[BeautifulSoup]:
-        text = self.get(url)
-        return BeautifulSoup(text, "html.parser") if text else None
+        _, content = self.fetch(url)
+        return BeautifulSoup(content, "html.parser") if content else None
 
-    def parse_rss(self, url: str) -> list[dict]:
-        text = self.get(url)
-        if not text:
-            return []
-        items = []
-        try:
-            root = ET.fromstring(text)
-            ns = {"atom": "http://www.w3.org/2005/Atom"}
-            for item in root.findall(".//item"):
-                items.append({
-                    "title": (item.findtext("title") or "").strip(),
-                    "link": (item.findtext("link") or "").strip(),
-                    "date": (item.findtext("pubDate") or "").strip(),
-                    "description": (item.findtext("description") or "").strip(),
-                })
-            for entry in root.findall(".//atom:entry", ns):
-                link_el = entry.find("atom:link", ns)
-                items.append({
-                    "title": (entry.findtext("atom:title", "", ns)).strip(),
-                    "link": link_el.get("href", "") if link_el is not None else "",
-                    "date": (entry.findtext("atom:updated", "", ns)).strip(),
-                    "description": (entry.findtext("atom:summary", "", ns)).strip(),
-                })
-        except ET.ParseError as e:
-            log.warning(f"  RSS parse error for {url}: {e}")
+
+def _local(tag: str) -> str:
+    return tag.rsplit("}", 1)[-1].lower() if isinstance(tag, str) else ""
+
+
+def parse_feed(content: bytes) -> list[dict]:
+    """
+    Parse RSS 2.0 / Atom / RDF into dicts: title, link, date, description, content.
+    Works on raw bytes (so encodings and BOMs are handled) and falls back to a
+    forgiving parser when the XML is malformed.
+    """
+    items = []
+    try:
+        root = ET.fromstring(content.lstrip())
+    except ET.ParseError:
+        soup = BeautifulSoup(content, "xml")
+        for node in soup.find_all(["item", "entry"]):
+            def text_of(*names):
+                for n in names:
+                    el = node.find(n)
+                    if el is not None and el.get_text(strip=True):
+                        return el.get_text(strip=True)
+                return ""
+            link_el = node.find("link")
+            link = (link_el.get("href") or link_el.get_text(strip=True)) if link_el is not None else ""
+            items.append({
+                "title": text_of("title"), "link": link,
+                "date": text_of("pubDate", "published", "updated", "date"),
+                "description": text_of("description", "summary"),
+                "content": text_of("encoded", "content"),
+            })
         return items
+
+    for node in root.iter():
+        if _local(node.tag) not in ("item", "entry"):
+            continue
+        rec = {"title": "", "link": "", "date": "", "description": "", "content": ""}
+        for child in node:
+            name, text = _local(child.tag), (child.text or "").strip()
+            if name == "title" and not rec["title"]:
+                rec["title"] = text
+            elif name == "link":
+                href = child.get("href")
+                if href and child.get("rel", "alternate") == "alternate":
+                    rec["link"] = href.strip()
+                elif text and not rec["link"]:
+                    rec["link"] = text
+            elif name in ("pubdate", "published", "date") and text:
+                rec["date"] = text
+            elif name == "updated" and text and not rec["date"]:
+                rec["date"] = text
+            elif name in ("description", "summary") and not rec["description"]:
+                rec["description"] = text
+            elif name in ("encoded", "content") and text:
+                rec["content"] = text
+        if not rec["link"]:
+            guid = next((c.text for c in node if _local(c.tag) in ("guid", "id") and c.text), "")
+            if guid and guid.strip().startswith("http"):
+                rec["link"] = guid.strip()
+        items.append(rec)
+    return items
 
 
 # ---------------------------------------------------------------------------
@@ -953,21 +1110,11 @@ def build_update(
     else:
         urgency = "awareness"
 
-    # Source tier
-    if source_type == "official":
-        source_tier = "official"
-    elif source_name in ("Mint_Money", "Mint_Economy", "Mint_Market", "ET_MF", "ET_Tax", "ET_Invest",
-                          "ET_Insurance", "ET_Save", "BusinessStandard_Economy", "BusinessStandard_Markets",
-                          "BusinessStandard_PF", "CNBCTV18"):
-        source_tier = "tier1_news"
-    else:
-        source_tier = "tier2_news"
+    # Source tier (v4: comes straight from sources.yaml)
+    source_tier = source_type if source_type in ("official", "tier1_news", "tier2_news", "blog") else "tier2_news"
 
     # Matched keywords
-    matched = []
-    for kw, weight in _KEYWORD_LOOKUP:
-        if kw in combined:
-            matched.append(kw)
+    matched = [kw for kw, _ in match_keywords(combined)]
 
     # Action required: now based on actionability score, not just relevance level
     action_req = actionability_score >= 5 or (level == "HIGH" and action_type != "none")
@@ -1012,477 +1159,563 @@ def build_update(
 
 
 # ---------------------------------------------------------------------------
-# SEBI SCRAPER
+# SOURCE CONFIG (v4 — sources live in scraper/sources.yaml, not in code)
 # ---------------------------------------------------------------------------
-class SEBIScraper(BaseFetcher):
-    CIRCULARS_URL = "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=1&ssid=1&smid=0"
-    PRESS_URL = "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&ssid=0&smid=0"
-    BASE = "https://www.sebi.gov.in"
+VALID_TIERS = ("official", "tier1_news", "tier2_news", "blog")
 
-    def scrape(self, cutoff: datetime) -> list[RegUpdate]:
-        log.info("Scraping SEBI circulars + press releases...")
-        updates = []
 
-        for url, label in [(self.CIRCULARS_URL, "circular"), (self.PRESS_URL, "press")]:
-            s = self.soup(url)
-            if not s:
-                continue
+@dataclass
+class Source:
+    name: str
+    url: str
+    type: str = "rss"               # rss | listing
+    tier: str = "tier2_news"        # official | tier1_news | tier2_news | blog
+    group: str = "News"             # health roll-up bucket (SEBI, RBI, ..., News)
+    regulator: str = ""             # fixed regulator label; empty = detect from text
+    enabled: bool = True
+    max_items: int = 40
+    lenient: object = False         # True = keep every non-noise item; list = fallback keywords
+    min_score: int = 1              # keyword score an item needs to get in (raise for noisy feeds)
+    max_keep: int = 10              # most items one source may contribute per run (best first)
+    fulltext: bool = True           # allow article body fetch for this source
+    strip_title_suffix: bool = False  # drop trailing " - Publisher" (aggregator feeds)
+    # listing-only options
+    row: str = ""                   # CSS selector for one row/card per item
+    link: str = ""                  # CSS selector for the item link (default: first <a href>)
+    title: str = ""                 # CSS selector for the title (default: best text in row)
+    date: str = ""                  # CSS selector for the date (default: first date found in row)
+    base: str = ""                  # base URL for relative links (default: source url)
+    note: str = ""
 
-            rows = s.select("table tr, .listingTable tr")
-            for row in rows[:30]:
-                cells = row.find_all("td")
-                if len(cells) < 2:
-                    continue
 
-                date_text = cells[0].get_text(strip=True)
-                link_el = row.find("a")
-                if not link_el:
-                    continue
-
-                title = link_el.get_text(strip=True)
-                href = link_el.get("href", "")
-                if href and not href.startswith("http"):
-                    href = urljoin(self.BASE, href)
-
-                recent, parsed = is_within_24h(date_text, cutoff)
-                if not recent and parsed:
-                    continue
-
-                if not passes_filters(title, "", href, "SEBI", "official"):
-                    continue
-
-                circ_ref = ""
-                ref_match = re.search(r'SEBI/HO/[\w/\-]+', title)
-                if ref_match:
-                    circ_ref = ref_match.group()
-
-                updates.append(build_update(
-                    regulator="SEBI",
-                    title=title,
-                    description=title,
-                    url=href,
-                    pub_date=date_text,
-                    source_type="official",
-                    source_name="SEBI",
-                    circular_ref=circ_ref,
-                    date_parsed=parsed,
-                ))
-
-        log.info(f"  SEBI: {len(updates)} relevant items")
-        return updates
+def load_sources(path: Path = SOURCES_FILE) -> tuple[list[Source], dict]:
+    """Read sources.yaml. Returns (enabled sources, settings dict)."""
+    raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    settings = raw.get("settings", {}) or {}
+    known = set(Source.__dataclass_fields__)
+    sources, names = [], set()
+    for entry in raw.get("sources", []) or []:
+        unknown = set(entry) - known
+        if unknown:
+            log.warning(f"  sources.yaml: {entry.get('name', '?')} has unknown keys {sorted(unknown)} (ignored)")
+        src = Source(**{k: v for k, v in entry.items() if k in known})
+        if src.name in names:
+            raise ValueError(f"sources.yaml: duplicate source name '{src.name}'")
+        if src.tier not in VALID_TIERS:
+            raise ValueError(f"sources.yaml: {src.name} has invalid tier '{src.tier}'")
+        if src.type not in ("rss", "listing"):
+            raise ValueError(f"sources.yaml: {src.name} has invalid type '{src.type}'")
+        names.add(src.name)
+        if src.enabled:
+            sources.append(src)
+    return sources, settings
 
 
 # ---------------------------------------------------------------------------
-# RBI SCRAPER
+# SEEN STORE (v4 — remembers what was already reported)
 # ---------------------------------------------------------------------------
-class RBIScraper(BaseFetcher):
-    RSS_URL = "https://www.rbi.org.in/pressreleases_rss.xml"
-    NOTIF_URL = "https://www.rbi.org.in/Scripts/NotificationUser.aspx"
-    BASE = "https://www.rbi.org.in"
+class SeenStore:
+    """
+    Remembers the first day each item was reported, per source.
 
-    def scrape(self, cutoff: datetime) -> list[RegUpdate]:
-        log.info("Scraping RBI...")
-        updates = []
+    Why this exists:
+      1. Many regulator pages give a date but no time. Those items are accepted
+         for "yesterday or today", so without memory they would repeat for two days.
+      2. Some sources give no date at all (PIB feed, some listing pages). For those,
+         "new" means "not seen on a previous run".
+    """
+    KEEP_DAYS = 90
 
-        for item in self.parse_rss(self.RSS_URL)[:20]:
-            title, desc, date_text = item["title"], item["description"], item["date"]
-            recent, parsed = is_within_24h(date_text, cutoff)
-            if not recent and parsed:
-                continue
-            if not passes_filters(title, desc, "", "RBI", "official"):
-                continue
+    def __init__(self, path: Path, today: date):
+        self.path = path
+        self.today = today.isoformat()
+        self._lock = threading.Lock()
+        self.data: dict[str, dict[str, str]] = {}
+        if path.exists():
+            try:
+                self.data = json.loads(path.read_text())
+            except Exception:
+                log.warning(f"  Could not read {path}; starting with an empty seen store")
+        self._known_sources = set(self.data)
 
-            clean_desc = re.sub(r'<[^>]+>', '', desc).strip()
-            updates.append(build_update(
-                regulator="RBI", title=title, description=clean_desc,
-                url=item["link"], pub_date=date_text,
-                source_type="official", source_name="RBI",
-                date_parsed=parsed,
-            ))
+    @staticmethod
+    def key(title: str, url: str) -> str:
+        return hashlib.md5(f"{url}|{title.strip().lower()[:120]}".encode()).hexdigest()[:16]
 
-        s = self.soup(self.NOTIF_URL)
-        if s:
-            for row in s.select("table tr")[:30]:
-                cells = row.find_all("td")
-                if len(cells) < 2:
-                    continue
-                date_text = cells[0].get_text(strip=True)
-                link_el = row.find("a")
-                if not link_el:
-                    continue
+    def is_bootstrap(self, source: str) -> bool:
+        """True the first time a source is ever scraped."""
+        return source not in self._known_sources
 
-                title = link_el.get_text(strip=True)
-                href = link_el.get("href", "")
-                if href and not href.startswith("http"):
-                    href = urljoin(self.BASE + "/Scripts/", href)
+    def reported_before_today(self, source: str, key: str) -> bool:
+        first = self.data.get(source, {}).get(key)
+        return first is not None and first < self.today
 
-                recent, parsed = is_within_24h(date_text, cutoff)
-                if not recent and parsed:
-                    continue
-                if not passes_filters(title, "", href, "RBI", "official"):
-                    continue
+    def mark(self, source: str, key: str):
+        with self._lock:
+            self.data.setdefault(source, {}).setdefault(key, self.today)
 
-                updates.append(build_update(
-                    regulator="RBI", title=title, description=title,
-                    url=href, pub_date=date_text,
-                    source_type="official", source_name="RBI",
-                    date_parsed=parsed,
-                ))
-
-        log.info(f"  RBI: {len(updates)} relevant items")
-        return updates
+    def save(self):
+        cutoff = (date.fromisoformat(self.today) - timedelta(days=self.KEEP_DAYS)).isoformat()
+        pruned = {
+            src: {k: d for k, d in items.items() if d >= cutoff}
+            for src, items in self.data.items()
+        }
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        self.path.write_text(json.dumps(pruned, indent=1, sort_keys=True))
 
 
 # ---------------------------------------------------------------------------
-# PFRDA SCRAPER
+# GENERIC SOURCE SCRAPER (v4 — one scraper for every RSS feed and listing page)
 # ---------------------------------------------------------------------------
-class PFRDAScraper(BaseFetcher):
-    URL = "https://www.pfrda.org.in/index1.cshtml?lsid=1063"
-    BASE = "https://www.pfrda.org.in"
+OFFICIAL_GRACE_DAYS = 2
 
-    def scrape(self, cutoff: datetime) -> list[RegUpdate]:
-        log.info("Scraping PFRDA...")
-        updates = []
-        s = self.soup(self.URL)
-        if not s:
-            return updates
-
-        for row in s.select("table tr")[:20]:
-            cells = row.find_all("td")
-            if len(cells) < 2:
-                continue
-            date_text = cells[0].get_text(strip=True)
-            link_el = row.find("a")
-            if not link_el:
-                continue
-
-            title = link_el.get_text(strip=True)
-            href = link_el.get("href", "")
-            if href and not href.startswith("http"):
-                href = urljoin(self.BASE, href)
-
-            recent, parsed = is_within_24h(date_text, cutoff)
-            if not recent and parsed:
-                continue
-            if not passes_filters(title, "", href, "PFRDA", "official"):
-                continue
-
-            updates.append(build_update(
-                regulator="PFRDA", title=title, description=title,
-                url=href, pub_date=date_text,
-                source_type="official", source_name="PFRDA",
-                date_parsed=parsed,
-            ))
-
-        log.info(f"  PFRDA: {len(updates)} relevant items")
-        return updates
+_DATE_IN_TEXT = re.compile(
+    r"(\d{4}-\d{2}-\d{2}"
+    r"|\d{1,2}(?:st|nd|rd|th)?[\s\-/.](?:\d{1,2}|[A-Za-z]{3,9})[\s\-/.,]+\d{4}"
+    r"|[A-Za-z]{3,9}\.?\s+\d{1,2}(?:st|nd|rd|th)?,?\s+\d{4})"
+)
+_GENERIC_LINK_TEXT = re.compile(r"(?i)^(click here|download|view|read more|more|pdf|details|open|link)\b")
 
 
-# ---------------------------------------------------------------------------
-# CBDT SCRAPER (NEW in v3)
-# ---------------------------------------------------------------------------
-class CBDTScraper(BaseFetcher):
-    """Scrapes incometaxindia.gov.in for notifications and circulars."""
-    CIRCULARS_URL = "https://incometaxindia.gov.in/Pages/communications/circulars.aspx"
-    NOTIF_URL = "https://incometaxindia.gov.in/Pages/communications/notifications.aspx"
-    PRESS_URL = "https://incometaxindia.gov.in/Pages/communications/press-releases.aspx"
-    BASE = "https://incometaxindia.gov.in"
+def find_date_in_text(text: str) -> str:
+    """Return the first substring of `text` that parses as a date, else ''."""
+    for m in _DATE_IN_TEXT.finditer(text):
+        candidate = re.sub(r"(?<=\d)(st|nd|rd|th)\b", "", m.group(1))
+        if parse_date_only(candidate):
+            return candidate
+    return ""
 
-    def scrape(self, cutoff: datetime) -> list[RegUpdate]:
-        log.info("Scraping CBDT (Income Tax)...")
-        updates = []
 
-        for url, label in [
-            (self.CIRCULARS_URL, "circular"),
-            (self.NOTIF_URL, "notification"),
-            (self.PRESS_URL, "press"),
-        ]:
-            s = self.soup(url)
-            if not s:
-                continue
+def detect_regulator(text: str) -> str:
+    t = text.upper()
+    for needle, label in [
+        ("SEBI", "SEBI"), ("RBI", "RBI"), ("RESERVE BANK", "RBI"), ("IRDAI", "IRDAI"), ("IRDA", "IRDAI"),
+        ("PFRDA", "PFRDA"), ("CBDT", "CBDT"), ("INCOME TAX DEPARTMENT", "CBDT"),
+        ("AMFI", "AMFI"), ("EPFO", "EPFO"), ("GST COUNCIL", "GST Council"), ("PIB", "PIB"),
+    ]:
+        if re.search(rf"\b{re.escape(needle)}\b", t):
+            return label
+    return "MoF/Other"
 
-            rows = s.select("table tr, .result-list li, .list-group-item")
-            for row in rows[:25]:
-                cells = row.find_all("td")
-                link_el = row.find("a")
 
-                if cells and len(cells) >= 2:
-                    date_text = cells[0].get_text(strip=True)
-                    if not link_el:
-                        link_el = cells[-1].find("a") or cells[1].find("a")
-                elif link_el:
-                    # Try to find date in row text
-                    row_text = row.get_text(strip=True)
-                    date_match = re.search(r'(\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{4})', row_text)
-                    date_text = date_match.group(1) if date_match else ""
+@dataclass
+class SourceResult:
+    """Per-source run stats, written to data/feed_health.json."""
+    name: str
+    group: str
+    status: str = "ok"          # ok | empty | stale | http_error | parse_error | error
+    http: int = 0
+    fetched: int = 0            # raw items found on the feed/page
+    recent: int = 0             # of those, inside the time window
+    relevant: int = 0           # of those, passed relevance filters
+    detail: str = ""
+    updates: list = field(default_factory=list)
+
+
+class SourceScraper(BaseFetcher):
+    """Scrapes one Source (RSS feed or HTML listing page) into RegUpdate items."""
+
+    def __init__(self, seen: Optional[SeenStore] = None):
+        self.seen = seen
+        # url -> article text that came inside the feed itself (content:encoded)
+        self.feed_bodies: dict[str, str] = {}
+
+    # -- public -------------------------------------------------------------
+    def scrape(self, src: Source, cutoff: datetime) -> SourceResult:
+        res = SourceResult(name=src.name, group=src.group)
+        status, content = self.fetch(src.url)
+        res.http = status
+        if content is None:
+            res.status = "http_error"
+            res.detail = f"HTTP {status}" if status else "no response"
+            return res
+
+        try:
+            raw_items = self._rss_items(content) if src.type == "rss" else self._listing_items(content, src)
+        except Exception as e:  # a broken page must never take the run down
+            res.status = "parse_error"
+            res.detail = str(e)[:150]
+            return res
+
+        res.fetched = len(raw_items)
+        if not raw_items:
+            res.status = "empty"
+            res.detail = "page loaded but no items found (layout or feed URL may have changed)"
+            return res
+
+        # A feed that still loads but stopped publishing is as dead as a 404
+        if src.tier != "official":
+            dates = [parse_datetime(i.get("date", "")) for i in raw_items]
+            dates = [d for d in dates if d]
+            limit = STALE_AFTER_DAYS_BLOG if src.tier == "blog" else STALE_AFTER_DAYS
+            if dates and max(dates) < cutoff - timedelta(days=limit):
+                res.status = "stale"
+                res.detail = f"newest item is from {max(dates).date().isoformat()}"
+
+        bootstrap = self.seen.is_bootstrap(src.name) if self.seen else False
+        for item in raw_items[: src.max_items]:
+            upd = self._to_update(item, src, cutoff, bootstrap, res)
+            if upd:
+                res.updates.append(upd)
+        res.relevant = len(res.updates)
+        if len(res.updates) > src.max_keep:
+            res.updates.sort(key=lambda u: -u.relevance_score)
+            for dropped in res.updates[src.max_keep:]:
+                log_exclusion(dropped.title, dropped.url, "source_cap", src.name)
+            res.updates = res.updates[: src.max_keep]
+        return res
+
+    # -- item extraction ----------------------------------------------------
+    def _rss_items(self, content: bytes) -> list[dict]:
+        return parse_feed(content)
+
+    def _listing_items(self, content: bytes, src: Source) -> list[dict]:
+        try:
+            soup = BeautifulSoup(content, "html.parser")
+        except RecursionError:      # very deeply nested pages
+            soup = BeautifulSoup(content, "lxml")
+        base = src.base or src.url
+        items, used = [], set()
+
+        if src.row:
+            rows = soup.select(src.row)
+            pairs = []
+            for row in rows:
+                if row.name == "a" and row.get("href"):
+                    link_el = row
+                elif src.link:
+                    link_el = row.select_one(src.link)
                 else:
-                    continue
-
-                if not link_el:
-                    continue
-
-                title = link_el.get_text(strip=True)
-                href = link_el.get("href", "")
-                if href and not href.startswith("http"):
-                    href = urljoin(self.BASE, href)
-
-                if not date_text:
-                    continue
-
-                recent, parsed = is_within_24h(date_text, cutoff)
-                if not recent and parsed:
-                    continue
-                if is_noise(title):
-                    log_exclusion(title, href, "noise_pattern", "CBDT")
-                    continue
-
-                # CBDT items are almost always tax-relevant, but still filter
-                if not is_relevant(title, "", "official"):
-                    # For CBDT, lower the bar — it's a tax source
-                    if not any(w in title.lower() for w in ["tax", "income", "tds", "itr", "notification", "circular", "section", "cbdt"]):
-                        log_exclusion(title, href, "not_relevant_even_lenient", "CBDT")
-                        continue
-
-                updates.append(build_update(
-                    regulator="CBDT", title=title, description=title,
-                    url=href, pub_date=date_text,
-                    source_type="official", source_name="CBDT",
-                    date_parsed=parsed,
-                ))
-
-        log.info(f"  CBDT: {len(updates)} relevant items")
-        return updates
-
-
-# ---------------------------------------------------------------------------
-# IRDAI SCRAPER (NEW in v3)
-# ---------------------------------------------------------------------------
-class IRDAIScraper(BaseFetcher):
-    """Scrapes irdai.gov.in for circulars and press releases."""
-    CIRCULARS_URL = "https://irdai.gov.in/circulars"
-    PRESS_URL = "https://irdai.gov.in/press-releases"
-    BASE = "https://irdai.gov.in"
-
-    def scrape(self, cutoff: datetime) -> list[RegUpdate]:
-        log.info("Scraping IRDAI...")
-        updates = []
-
-        for url, label in [(self.CIRCULARS_URL, "circular"), (self.PRESS_URL, "press")]:
-            s = self.soup(url)
-            if not s:
-                continue
-
-            # IRDAI uses various listing formats
-            rows = s.select("table tr, .journal-content-article tr, .list-group-item, .portlet-body tr")
-            for row in rows[:25]:
-                cells = row.find_all("td")
-                link_el = row.find("a")
-
-                if cells and len(cells) >= 2:
-                    date_text = cells[0].get_text(strip=True)
-                    if not link_el:
-                        for cell in cells:
-                            link_el = cell.find("a")
-                            if link_el:
-                                break
-                elif link_el:
-                    row_text = row.get_text(strip=True)
-                    date_match = re.search(r'(\d{1,2}[/\-\.]\d{1,2}[/\-\.]\d{4})', row_text)
-                    date_text = date_match.group(1) if date_match else ""
+                    link_el = row.find("a", href=True)
+                pairs.append((row, link_el))
+        else:
+            # No row selector: start from the links and climb to the nearest
+            # ancestor that carries a date (works for card and div layouts).
+            pairs = []
+            for link_el in soup.select(src.link or "a[href]"):
+                row = link_el
+                for _ in range(5):
+                    if row.parent is None or row.parent.name in ("body", "html", "[document]"):
+                        break
+                    row = row.parent
+                    if find_date_in_text(row.get_text(" ", strip=True)[:600]):
+                        break
                 else:
-                    continue
+                    row = link_el
+                pairs.append((row, link_el))
 
-                if not link_el:
-                    continue
+        for row, link_el in pairs:
+            row_text = row.get_text(" ", strip=True)
+            if src.date:
+                date_el = row.select_one(src.date)
+                date_text = find_date_in_text(date_el.get_text(" ", strip=True)) if date_el else ""
+            else:
+                date_text = find_date_in_text(row_text[:800])
 
-                title = link_el.get_text(strip=True)
-                href = link_el.get("href", "")
-                if href and not href.startswith("http"):
-                    href = urljoin(self.BASE, href)
+            href = link_el.get("href", "").strip() if link_el is not None else ""
+            if href.lower().startswith(("javascript:", "#", "mailto:")):
+                href = ""
+            url = urljoin(base, href) if href else ""
 
-                if not date_text:
-                    continue
+            if src.title:
+                t_el = row.select_one(src.title)
+                title = t_el.get_text(" ", strip=True) if t_el else ""
+            else:
+                title = self._best_title(row, link_el, date_text)
+            title = re.sub(r"\s+", " ", title).strip()
+            if len(title) < 12:
+                continue
 
-                recent, parsed = is_within_24h(date_text, cutoff)
-                if not recent and parsed:
-                    continue
-                if is_noise(title):
-                    log_exclusion(title, href, "noise_pattern", "IRDAI")
-                    continue
-                if not is_relevant(title, "", "official"):
-                    # For IRDAI, lower bar — insurance source
-                    if not any(w in title.lower() for w in ["insurance", "irdai", "irda", "premium", "claim", "policy", "circular"]):
-                        log_exclusion(title, href, "not_relevant_even_lenient", "IRDAI")
-                        continue
+            dedup_key = (title.lower(), url)
+            if dedup_key in used:
+                continue
+            used.add(dedup_key)
+            items.append({
+                "title": title, "link": url or src.url, "date": date_text,
+                "description": "", "content": "",
+            })
+        return items
 
-                updates.append(build_update(
-                    regulator="IRDAI", title=title, description=title,
-                    url=href, pub_date=date_text,
-                    source_type="official", source_name="IRDAI",
-                    date_parsed=parsed,
-                ))
+    @staticmethod
+    def _best_title(row, link_el, date_text: str) -> str:
+        link_text = link_el.get_text(" ", strip=True) if link_el is not None else ""
+        if len(link_text) >= 20 and not _GENERIC_LINK_TEXT.match(link_text):
+            return link_text
+        pieces = [s.strip() for s in row.stripped_strings]
+        pieces = [
+            p for p in pieces
+            if len(p) >= 12 and p != date_text and not _GENERIC_LINK_TEXT.match(p)
+            and not re.fullmatch(r"[\d\s\-/.,:]+", p)
+        ]
+        return max(pieces, key=len)[:300] if pieces else link_text
 
-        log.info(f"  IRDAI: {len(updates)} relevant items")
-        return updates
+    # -- filtering + build --------------------------------------------------
+    def _to_update(self, item: dict, src: Source, cutoff: datetime,
+                   bootstrap: bool, res: SourceResult) -> Optional[RegUpdate]:
+        title = html_lib.unescape(item.get("title", "")).strip()
+        if src.strip_title_suffix:
+            title = re.sub(r"\s+[-|–]\s+[^-|–]{2,40}$", "", title)
+        url = item.get("link", "").strip()
+        date_text = item.get("date", "").strip()
+        desc = clean_html_text(item.get("description", ""))[:500]
+        if not title:
+            return None
+
+        key = SeenStore.key(title, url)
+        recent, parsed = is_within_24h(date_text, cutoff)
+        if parsed and not recent and src.tier == "official" and self.seen is not None:
+            # Regulators often upload a circular a day or two after the date printed
+            # on it. Look back a little further; the seen store prevents repeats.
+            recent, _ = is_within_24h(date_text, cutoff - timedelta(days=OFFICIAL_GRACE_DAYS))
+
+        if parsed:
+            if not recent:
+                return None
+            res.recent += 1
+            if self.seen and self.seen.reported_before_today(src.name, key):
+                return None
+        else:
+            # No usable date. "New" = not seen on an earlier run.
+            if self.seen is None:
+                return None
+            if self.seen.reported_before_today(src.name, key):
+                return None
+            if bootstrap:
+                # First ever run for this source: we cannot tell old from new.
+                # Remember everything, report nothing (avoids a flood of stale items).
+                self.seen.mark(src.name, key)
+                return None
+            res.recent += 1
+
+        # Relevance gate
+        is_official = src.tier == "official"
+        if is_noise(title):
+            log_exclusion(title, url, "noise_pattern", src.name)
+            return None
+        if keyword_score(title, desc) < max(int(src.min_score), 1):
+            keep = False
+            if src.lenient is True:
+                keep = True
+            elif isinstance(src.lenient, list):
+                keep = any(str(w).lower() in title.lower() for w in src.lenient)
+            if not keep:
+                log_exclusion(title, url, "not_relevant", src.name)
+                return None
+
+        regulator = src.regulator or detect_regulator(f"{title} {desc}")
+        circ_ref = extract_circular_ref(f"{title} {desc}") if is_official else ""
+        pub_date = date_text if parsed else f"first seen {self.seen.today}"
+
+        body = clean_html_text(item.get("content", ""))
+        if len(body) >= 600 and url:
+            self.feed_bodies[url] = body
+
+        if self.seen:
+            self.seen.mark(src.name, key)
+
+        upd = build_update(
+            regulator=regulator, title=title, description=desc or title,
+            url=url, pub_date=pub_date, source_type=src.tier, source_name=src.name,
+            circular_ref=circ_ref, date_parsed=True,
+        )
+        if is_official and upd.relevance in ("LOW", "NONE"):
+            # A regulator's own notice that passed the gate is never background noise.
+            upd.relevance = "MEDIUM"
+        return upd
+
+
+_CIRCULAR_REF_PATTERNS = [
+    r"SEBI/HO/[\w/\-()]+\d",
+    r"RBI/\d{4}-\d{2,4}/\d+",
+    r"IRDAI?/[A-Z&]+/[\w/\-]+\d",
+    r"PFRDA[/\-][\w/\-]+\d",
+    r"(?i)\b(?:circular|notification)\s+no\.?\s*[\w\-/]+/\d{4}(?:-\d{2})?",
+    r"\b\d{2,3}[A-Z]?/\s?(?:BP|MEM-COR)/\s?[\w ]+/\s?\d{4}-\d{2}",
+]
+
+
+def extract_circular_ref(text: str) -> str:
+    for pattern in _CIRCULAR_REF_PATTERNS:
+        m = re.search(pattern, text)
+        if m:
+            return re.sub(r"\s+", " ", m.group()).strip(" .,")[:80]
+    return ""
+
+
+def clean_html_text(text: str) -> str:
+    if not text:
+        return ""
+    if "<" in text:
+        text = BeautifulSoup(text, "html.parser").get_text(" ", strip=True)
+    return re.sub(r"\s+", " ", html_lib.unescape(text)).strip()
 
 
 # ---------------------------------------------------------------------------
-# AMFI SCRAPER (NEW in v3)
+# FULL ARTICLE TEXT (v4 — used for scoring and summaries, never stored)
 # ---------------------------------------------------------------------------
-class AMFIScraper(BaseFetcher):
-    """Scrapes amfiindia.com for circulars."""
-    CIRCULARS_URL = "https://www.amfiindia.com/Themes/Theme1/downloads/AMFI_Circulars.aspx"
-    BASE = "https://www.amfiindia.com"
+_PAYWALL_MARKERS = [
+    "subscribe to read", "subscribe to continue", "this story is for subscribers",
+    "premium article", "already a subscriber", "login to read", "sign in to read",
+    "to continue reading", "exclusive to subscribers", "become a member to read",
+]
+_BLOCK_MARKERS = ["just a moment...", "attention required", "access denied", "are you a robot", "captcha"]
 
-    def scrape(self, cutoff: datetime) -> list[RegUpdate]:
-        log.info("Scraping AMFI...")
-        updates = []
-        s = self.soup(self.CIRCULARS_URL)
-        if not s:
-            return updates
 
-        rows = s.select("table tr, .gridView tr")
-        for row in rows[:20]:
-            cells = row.find_all("td")
-            if len(cells) < 2:
+class ArticleFetcher(BaseFetcher):
+    """
+    Downloads an article page and extracts the body text.
+
+    The text is held in memory for scoring and for a short summary only.
+    It is never written to data/ (publisher copyright).
+    If a site blocks the request or shows a paywall, we fall back to the
+    headline and feed summary. We do not try to get around either.
+    """
+    MAX_RETRIES = 0
+
+    def fetch_article(self, url: str) -> tuple[str, str]:
+        """Returns (status, text). status: ok | paywalled | blocked | not_html | error."""
+        if re.search(r"(?i)\.(pdf|docx?|xlsx?|zip)(\?|$)", url) or "news.google.com" in url:
+            return "not_html", ""
+        status, content = self.fetch(url, timeout=15)
+        if content is None:
+            return ("blocked" if status in (401, 403, 429, 451) else "error"), ""
+        head = content[:3000].decode("utf-8", errors="ignore").lower()
+        if content[:5] == b"%PDF-":
+            return "not_html", ""
+        if any(m in head for m in _BLOCK_MARKERS):
+            return "blocked", ""
+
+        soup = BeautifulSoup(content, "html.parser")
+        text, free = self._from_json_ld(soup)
+        if len(text) < 400:
+            text = self._from_dom(soup) or text
+        text = re.sub(r"\s+", " ", text).strip()
+
+        page_text = soup.get_text(" ", strip=True).lower()
+        paywalled = free is False or (
+            len(text) < 1200 and any(m in page_text for m in _PAYWALL_MARKERS)
+        )
+        if len(text) < 200:
+            return ("paywalled" if paywalled else "error"), text
+        return ("paywalled" if paywalled else "ok"), text
+
+    @staticmethod
+    def _from_json_ld(soup) -> tuple[str, Optional[bool]]:
+        best, free = "", None
+
+        def walk(node):
+            nonlocal best, free
+            if isinstance(node, dict):
+                body = node.get("articleBody")
+                if isinstance(body, str) and len(body) > len(best):
+                    best = body
+                if "isAccessibleForFree" in node:
+                    val = str(node["isAccessibleForFree"]).lower()
+                    if val in ("false", "0"):
+                        free = False
+                    elif free is None:
+                        free = True
+                for v in node.values():
+                    walk(v)
+            elif isinstance(node, list):
+                for v in node:
+                    walk(v)
+
+        for script in soup.find_all("script", type="application/ld+json"):
+            try:
+                walk(json.loads(script.string or ""))
+            except Exception:
                 continue
-            date_text = cells[0].get_text(strip=True)
-            link_el = row.find("a")
-            if not link_el:
-                continue
+        return clean_html_text(best), free
 
-            title = link_el.get_text(strip=True)
-            href = link_el.get("href", "")
-            if href and not href.startswith("http"):
-                href = urljoin(self.BASE, href)
+    @staticmethod
+    def _from_dom(soup) -> str:
+        for tag in soup(["script", "style", "nav", "header", "footer", "aside", "form", "noscript", "figure"]):
+            tag.decompose()
+        candidates = soup.select(
+            "[itemprop='articleBody'], article, .article-body, .story-content, .storyDetails, "
+            ".entry-content, .post-content, .content_wrapper, .artText, main"
+        )
 
-            recent, parsed = is_within_24h(date_text, cutoff)
-            if not recent and parsed:
-                continue
-            if is_noise(title):
-                log_exclusion(title, href, "noise_pattern", "AMFI")
-                continue
+        def para_text(el) -> str:
+            return " ".join(
+                p.get_text(" ", strip=True) for p in el.find_all("p")
+                if len(p.get_text(strip=True)) > 40
+            )
 
-            updates.append(build_update(
-                regulator="AMFI", title=title, description=title,
-                url=href, pub_date=date_text,
-                source_type="official", source_name="AMFI",
-                date_parsed=parsed,
-            ))
-
-        log.info(f"  AMFI: {len(updates)} relevant items")
-        return updates
+        best = max((para_text(c) for c in candidates), key=len, default="")
+        if len(best) < 400:
+            best = max(best, para_text(soup), key=len)
+        return best
 
 
-# ---------------------------------------------------------------------------
-# PIB SCRAPER (NEW in v3)
-# ---------------------------------------------------------------------------
-class PIBScraper(BaseFetcher):
-    """Scrapes PIB RSS for finance ministry press releases."""
-    RSS_URL = "https://pib.gov.in/RssMain.aspx?ModId=6&Lang=1&Regid=3"  # Finance Ministry
-    BASE = "https://pib.gov.in"
-
-    def scrape(self, cutoff: datetime) -> list[RegUpdate]:
-        log.info("Scraping PIB (Finance Ministry)...")
-        updates = []
-
-        for item in self.parse_rss(self.RSS_URL)[:20]:
-            title = item["title"]
-            desc = re.sub(r'<[^>]+>', '', item.get("description", "")).strip()
-            date_text = item.get("date", "")
-
-            recent, parsed = is_within_24h(date_text, cutoff)
-            if not recent and parsed:
-                continue
-            if not passes_filters(title, desc, "", "PIB", "official"):
-                continue
-
-            updates.append(build_update(
-                regulator="MoF/PIB", title=title, description=desc,
-                url=item["link"], pub_date=date_text,
-                source_type="official", source_name="PIB",
-                date_parsed=parsed,
-            ))
-
-        log.info(f"  PIB: {len(updates)} relevant items")
-        return updates
+def first_sentences(text: str, max_chars: int = 320) -> str:
+    """A short lead (1 to 2 sentences) for the summary field."""
+    out = ""
+    for sentence in re.split(r"(?<=[.!?])\s+(?=[A-Z₹\"'(])", text):
+        if len(out) + len(sentence) > max_chars:
+            break
+        out = f"{out} {sentence}".strip()
+        if len(out) > 140:
+            break
+    return out or text[:max_chars].rsplit(" ", 1)[0] + "..."
 
 
-# ---------------------------------------------------------------------------
-# NEWS SCRAPER (v3 — expanded to 20+ feeds with source tiers)
-# ---------------------------------------------------------------------------
-class NewsScraper(BaseFetcher):
-    FEEDS = {
-        # Tier 1 — high-quality personal finance sources
-        "Mint_Money": ("https://www.livemint.com/rss/money", "tier1_news"),
-        "Mint_Economy": ("https://www.livemint.com/rss/economy", "tier1_news"),
-        "Mint_Market": ("https://www.livemint.com/rss/markets", "tier1_news"),
-        "ET_MF": ("https://economictimes.indiatimes.com/wealth/mutual-funds/rssfeeds/46267806.cms", "tier1_news"),
-        "ET_Tax": ("https://economictimes.indiatimes.com/wealth/tax/rssfeeds/46266529.cms", "tier1_news"),
-        "ET_Invest": ("https://economictimes.indiatimes.com/wealth/invest/rssfeeds/46267805.cms", "tier1_news"),
-        "ET_Insurance": ("https://economictimes.indiatimes.com/wealth/insure/rssfeeds/46267684.cms", "tier1_news"),
-        "ET_Save": ("https://economictimes.indiatimes.com/wealth/save/rssfeeds/46267453.cms", "tier1_news"),
-        "ET_RealEstate": ("https://economictimes.indiatimes.com/wealth/real-estate/rssfeeds/46268020.cms", "tier1_news"),
-        "BusinessStandard_Economy": ("https://www.business-standard.com/rss/economy-102.rss", "tier1_news"),
-        "BusinessStandard_Markets": ("https://www.business-standard.com/rss/markets-106.rss", "tier1_news"),
-        "BusinessStandard_PF": ("https://www.business-standard.com/rss/pf-702.rss", "tier1_news"),
-        "CNBCTV18": ("https://www.cnbctv18.com/commonfeeds/v1/cne/rss/economy-gcppn.xml", "tier1_news"),
+def enrich_with_fulltext(u: RegUpdate, body: str, status: str):
+    """
+    Use the article body to sharpen an item. Only derived fields are kept:
+    scores, tags, regulator, circular reference, deadline, and a short lead.
+    """
+    u.fulltext_status = status
+    if not body:
+        return
+    u.word_count = len(body.split())
+    lead = body[:1500]
+    lowered = body.lower()
+    context = f"{u.title} {u.summary} {lead}"
 
-        # Tier 2 — broader coverage
-        "Moneycontrol": ("https://www.moneycontrol.com/rss/MCtopnews.xml", "tier2_news"),
-        "Moneycontrol_MF": ("https://www.moneycontrol.com/rss/mutualfunds.xml", "tier2_news"),
-        "Moneycontrol_Tax": ("https://www.moneycontrol.com/rss/incometax.xml", "tier2_news"),
-        "NDTV_Business": ("https://feeds.feedburner.com/ndtvprofit-latest", "tier2_news"),
-        "FE_PF": ("https://www.financialexpress.com/money/feed/", "tier2_news"),
-        "FE_Economy": ("https://www.financialexpress.com/economy/feed/", "tier2_news"),
-        "VROnline": ("https://www.valueresearchonline.com/rss/", "tier2_news"),
-    }
+    # Summary: only replace when the feed gave us nothing beyond the headline
+    if len(u.summary) < 60 or u.summary.strip().lower() == u.title.strip().lower():
+        u.summary = first_sentences(body)
 
-    def scrape(self, cutoff: datetime) -> list[RegUpdate]:
-        log.info("Scraping news feeds (20+ sources)...")
-        updates = []
+    # Regulator and circular reference often sit in the body, not the headline
+    if u.regulator == "MoF/Other":
+        u.regulator = detect_regulator(context)
+    if not u.circular_ref:
+        u.circular_ref = extract_circular_ref(body[:6000])
 
-        for source_name, (feed_url, source_tier) in self.FEEDS.items():
-            items = self.parse_rss(feed_url)
-            for item in items[:15]:
-                title = item.get("title", "")
-                desc = re.sub(r'<[^>]+>', '', item.get("description", "")).strip()[:500]
-                date_text = item.get("date", "")
+    # Bounded relevance boost: strong keywords the article keeps coming back to
+    already = set(u.matched_keywords)
+    strong = []
+    for kw, weight in _KEYWORD_LOOKUP:
+        if weight >= 3 and kw not in already and kw not in strong and len(kw) > 3:
+            if len(re.findall(rf"\b{re.escape(kw)}\b", lowered)) >= 3:
+                strong.append(kw)
+    u.fulltext_keywords = strong[:8]
+    if strong:
+        u.relevance_score += min(len(strong), 2)
+        u.relevance = score_to_level(u.relevance_score)
 
-                recent, parsed = is_within_24h(date_text, cutoff)
-                if not recent and parsed:
-                    continue
+    # Actionability and deadline: take the stronger reading
+    act, act_type, deadline = compute_actionability(u.title, f"{u.summary} {lead}")
+    if act > u.actionability:
+        u.actionability = act
+        if u.action_type in ("", "none"):
+            u.action_type = act_type
+    if deadline and not u.action_deadline:
+        u.action_deadline = deadline
+    u.action_required = u.actionability >= 5 or (u.relevance == "HIGH" and u.action_type != "none")
 
-                # For news, also allow items where date couldn't be parsed
-                # (RSS feeds usually have dates, so missing = probably old — skip)
-                if not parsed and date_text:
-                    continue
-
-                if not is_relevant(title, desc, source_tier):
-                    log_exclusion(title, item.get("link", ""), "not_relevant", source_name)
-                    continue
-                if is_noise(title):
-                    log_exclusion(title, item.get("link", ""), "noise_pattern", source_name)
-                    continue
-
-                regulator = self._detect_regulator(f"{title} {desc}")
-
-                updates.append(build_update(
-                    regulator=regulator, title=title, description=desc,
-                    url=item.get("link", ""), pub_date=date_text,
-                    source_type=source_tier, source_name=source_name,
-                    date_parsed=parsed,
-                ))
-
-        log.info(f"  News: {len(updates)} relevant items")
-        return updates
-
-    def _detect_regulator(self, text: str) -> str:
-        t = text.upper()
-        for reg in ["SEBI", "RBI", "IRDAI", "IRDA", "PFRDA", "CBDT", "AMFI", "EPFO", "PIB"]:
-            if reg in t:
-                return reg.replace("IRDA", "IRDAI")
-        return "MoF/Other"
+    # Tags: union with what the body supports
+    combined = context.lower()
+    u.topic_tags = sorted(set(u.topic_tags) | set(generate_topic_tags(combined)))
+    seg = set(u.user_segment_tags) | set(generate_user_segment_tags(combined))
+    if len(seg) > 1:
+        seg.discard("all_investors")
+    u.user_segment_tags = sorted(seg)
+    maturity, eg = detect_story_maturity(u.title, f"{u.summary} {lead[:600]}")
+    if maturity != "confirmed":
+        u.story_maturity, u.evergreen_or_breaking = maturity, eg
 
 
 # ---------------------------------------------------------------------------
@@ -1555,7 +1788,11 @@ def clean_title(title: str) -> str:
 # ---------------------------------------------------------------------------
 # MARKDOWN BRIEFING (v3 — with content ideation)
 # ---------------------------------------------------------------------------
-def format_md(updates: list[RegUpdate], now: datetime, date_str: str, uncertain_date_items: list[RegUpdate]) -> str:
+def format_md(updates: list[RegUpdate], now: datetime, date_str: str, uncertain_date_items: list[RegUpdate],
+              results: Optional[list] = None, source_alerts: Optional[list] = None,
+              more_count: int = 0, hours: int = 24) -> str:
+    results = results or []
+    source_alerts = source_alerts or []
     lines = []
     lines.append(f"# Daily Regulatory & Content Intelligence Brief — {date_str}")
     lines.append(f"*Generated: {now.strftime('%Y-%m-%d %H:%M IST')} | Novelty Wealth*\n")
@@ -1569,10 +1806,23 @@ def format_md(updates: list[RegUpdate], now: datetime, date_str: str, uncertain_
     med = [u for u in updates if u.relevance == "MEDIUM"]
 
     # Pulse
-    lines.append(f"**Today's Pulse:** {len(high)} high-priority | {len(med)} medium | {len(updates)} total\n")
+    official = [u for u in updates if u.source_tier == "official"]
+    lines.append(f"**Today's Pulse:** {len(high)} high-priority | {len(med)} medium | {len(updates)} total "
+                 f"| {len(official)} from official regulator sources\n")
 
     if high:
         lines.append(f"> **Top action:** {high[0].title[:100]}\n")
+
+    # === OFFICIAL REGULATOR UPDATES (v4) ===
+    if official:
+        lines.append("## 🏛️ Official Regulator Updates\n")
+        lines.append("| Regulator | Update | Date | Ref | Priority | Source |")
+        lines.append("|-----------|--------|------|-----|----------|--------|")
+        for u in official:
+            title = u.title[:110].replace("|", "/")
+            lines.append(f"| {u.regulator} | {title} | {u.pub_date[:22]} | {u.circular_ref or '-'} "
+                         f"| {u.relevance} | [{u.source_name}]({u.url}) |")
+        lines.append("")
 
     # === TOP 3 CONTENT OPPORTUNITIES ===
     by_engagement = sorted(updates, key=lambda u: -u.engagement_potential)[:3]
@@ -1619,6 +1869,10 @@ def format_md(updates: list[RegUpdate], now: datetime, date_str: str, uncertain_
             lines.append(f"| {i} | {u.regulator} | {u.title[:70]} | {u.category} | {u.regulatory_importance} | {u.retail_user_impact} | {u.actionability} | {u.engagement_potential} | {src} |")
         lines.append("")
 
+    if more_count:
+        lines.append(f"*{more_count} more news items ranked below the briefing cap. "
+                     f"They are in the JSON under `more_items`.*\n")
+
     # === UNCERTAIN DATE ITEMS ===
     if uncertain_date_items:
         lines.append("## ⚠️ Date Unverified — Manual Review Needed\n")
@@ -1627,9 +1881,26 @@ def format_md(updates: list[RegUpdate], now: datetime, date_str: str, uncertain_
             lines.append(f"- **[{u.regulator}]** {u.title[:80]} — [Source]({u.url})")
         lines.append("")
 
+    # === SOURCE HEALTH (v4) ===
+    if source_alerts:
+        dead = [a for a in source_alerts if a.get("dead")]
+        lines.append("## 🩺 Source Health\n")
+        lines.append(f"*{len(source_alerts)} of {len(results)} sources returned nothing today"
+                     f"{f', {len(dead)} for 3+ runs in a row' if dead else ''}. "
+                     f"Details in `data/feed_health.json`.*\n")
+        for a in sorted(source_alerts, key=lambda a: -a["days_failing"])[:15]:
+            mark = "DEAD" if a.get("dead") else "check"
+            lines.append(f"- **{a['source']}** ({a['group']}): {a['status']}, HTTP {a['http']}, "
+                         f"{a['days_failing']} run(s) [{mark}]")
+        lines.append("")
+
     # Footer
-    lines.append(f"\n---\n*Covers: SEBI, RBI, IRDAI, PFRDA, CBDT, AMFI, PIB/MoF | Last 24 hours*")
-    lines.append(f"*Sources: 7 regulators + 20 news feeds | Clustered & deduplicated*")
+    groups = list(dict.fromkeys(r.group for r in results if r.group != "News"))
+    n_news = sum(1 for r in results if r.group == "News")
+    n_ok = sum(1 for r in results if r.status == "ok")
+    lines.append(f"\n---\n*Covers: {', '.join(groups) or 'configured regulators'} | Last {hours} hours*")
+    lines.append(f"*Sources: {len(results)} configured ({len(results) - n_news} official pages and feeds, "
+                 f"{n_news} news and research feeds), {n_ok} responding | Clustered & deduplicated*")
     lines.append(f"*Novelty Wealth (SEBI RIA: INA000019415)*")
 
     return "\n".join(lines)
@@ -1638,41 +1909,76 @@ def format_md(updates: list[RegUpdate], now: datetime, date_str: str, uncertain_
 # ---------------------------------------------------------------------------
 # SCRAPER HEALTH MONITORING (v3)
 # ---------------------------------------------------------------------------
-def update_health(scraper_results: dict[str, int], health_file: Path):
-    """Track per-scraper result counts to detect structural failures."""
-    history = {}
-    if health_file.exists():
+def _load_history(path: Path) -> dict:
+    if path.exists():
         try:
-            history = json.loads(health_file.read_text())
+            return json.loads(path.read_text())
         except Exception:
-            history = {}
+            pass
+    return {}
 
-    today_key = date.today().isoformat()
-    if today_key not in history:
-        history[today_key] = {}
-    history[today_key].update(scraper_results)
 
-    # Keep last 30 days
-    cutoff_key = (date.today() - timedelta(days=30)).isoformat()
-    history = {k: v for k, v in history.items() if k >= cutoff_key}
+def _trim_history(history: dict, today: date, days: int = 30) -> dict:
+    cutoff_key = (today - timedelta(days=days)).isoformat()
+    return {k: v for k, v in history.items() if k >= cutoff_key}
 
+
+def update_health(scraper_results: dict[str, int], health_file: Path, today: Optional[date] = None):
+    """Per-group relevant-item counts (kept so the existing history stays comparable)."""
+    today = today or datetime.now(IST).date()
+    history = _load_history(health_file)
+    history.setdefault(today.isoformat(), {}).update(scraper_results)
+    history = _trim_history(history, today)
     health_file.write_text(json.dumps(history, indent=2))
 
-    # Alert on consecutive zeros
+
+DEAD_AFTER_DAYS = 3
+STALE_AFTER_DAYS = 30        # news feed whose newest item is older than this = frozen feed
+STALE_AFTER_DAYS_BLOG = 180  # blogs post less often
+
+
+def update_feed_health(results: list["SourceResult"], health_file: Path, today: date) -> list[dict]:
+    """
+    Per-source health (v4). Records what every single feed or page returned and
+    flags the ones that look broken.
+
+    A source is "dead" when it has returned zero raw items (or an error) for
+    DEAD_AFTER_DAYS runs in a row. Zero *relevant* items is normal for a quiet
+    regulator and is not an alert; zero *fetched* items means the URL or the
+    page layout changed.
+    """
+    history = _load_history(health_file)
+    history[today.isoformat()] = {
+        r.name: {"status": r.status, "http": r.http, "fetched": r.fetched,
+                 "recent": r.recent, "relevant": r.relevant, **({"detail": r.detail} if r.detail else {})}
+        for r in results
+    }
+    history = _trim_history(history, today)
+    health_file.write_text(json.dumps(history, indent=1))
+
     alerts = []
-    for scraper_name in scraper_results:
-        consecutive_zeros = 0
-        for day_key in sorted(history.keys(), reverse=True):
-            if history[day_key].get(scraper_name, 0) == 0:
-                consecutive_zeros += 1
+    days = sorted(history.keys(), reverse=True)
+    for r in results:
+        streak = 0
+        for day_key in days:
+            entry = history[day_key].get(r.name)
+            if entry is None:
+                break
+            if entry.get("fetched", 0) == 0 or entry.get("status") == "stale":
+                streak += 1
             else:
                 break
-        if consecutive_zeros >= 3:
-            alerts.append(f"⚠️  {scraper_name} has returned 0 results for {consecutive_zeros} consecutive days — possible page structure change")
-
-    for alert in alerts:
-        log.warning(alert)
-
+        if r.status != "ok":
+            alerts.append({
+                "source": r.name, "group": r.group, "status": r.status, "http": r.http,
+                "days_failing": streak, "dead": streak >= DEAD_AFTER_DAYS, "detail": r.detail,
+            })
+    for a in alerts:
+        if a["dead"]:
+            log.warning(f"⚠️  DEAD SOURCE: {a['source']} has returned nothing for {a['days_failing']} runs "
+                        f"({a['status']}, HTTP {a['http']}). Fix or disable it in sources.yaml.")
+        elif a["status"] == "stale":
+            log.warning(f"⚠️  STALE SOURCE: {a['source']} still loads but stopped publishing ({a['detail']}).")
     return alerts
 
 
@@ -1680,43 +1986,104 @@ def update_health(scraper_results: dict[str, int], health_file: Path):
 # ORCHESTRATOR (v3)
 # ---------------------------------------------------------------------------
 class RegulatoryMonitor:
-    def __init__(self):
+    def __init__(self, dry_run: bool = False, fulltext: bool = True, only: Optional[list[str]] = None,
+                 hours: int = 24):
         # Runtime computation (not import-time)
         self.now = datetime.now(IST)
         self.today = self.now.date()
-        self.cutoff = self.now - timedelta(hours=24)
+        self.hours = hours
+        self.cutoff = self.now - timedelta(hours=hours)
         self.date_str = self.today.isoformat()
         self.updates: list[RegUpdate] = []
+        self.low_items: list[RegUpdate] = []
+        self.more_items: list[RegUpdate] = []       # news that ranked below the briefing cap
         self.uncertain_date_items: list[RegUpdate] = []
+        self.dry_run = dry_run
+        self.use_fulltext = fulltext
+        self.sources, self.settings = load_sources()
+        if only:
+            wanted = {o.lower() for o in only}
+            self.sources = [s for s in self.sources if s.name.lower() in wanted or s.group.lower() in wanted]
+        self.source_by_name = {s.name: s for s in self.sources}
+        self.results: list[SourceResult] = []
+        self.source_alerts: list[dict] = []
+        self.fulltext_stats: dict[str, int] = {}
 
+    # -- scraping -----------------------------------------------------------
+    def scrape_all(self, seen: Optional[SeenStore]) -> SourceScraper:
+        scraper = SourceScraper(seen)
+        workers = int(self.settings.get("workers", 8))
+
+        def one(src: Source) -> SourceResult:
+            try:
+                return scraper.scrape(src, self.cutoff)
+            except Exception as e:
+                return SourceResult(name=src.name, group=src.group, status="error", detail=str(e)[:150])
+
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            self.results = list(pool.map(one, self.sources))
+
+        for r in self.results:
+            flag = "" if r.status == "ok" else f"  <-- {r.status} {r.detail}"
+            log.info(f"  {r.name:<28} fetched={r.fetched:<4} recent={r.recent:<4} relevant={r.relevant:<4}{flag}")
+        return scraper
+
+    def fetch_fulltext(self, scraper: SourceScraper):
+        """Pull article bodies for shortlisted news items and refine their scores."""
+        cfg = self.settings.get("fulltext", {}) or {}
+        if not self.use_fulltext or not cfg.get("enabled", True):
+            return
+        max_articles = int(cfg.get("max_articles", 80))
+        fetcher = ArticleFetcher()
+
+        targets = []
+        for u in self.updates:
+            src = self.source_by_name.get(u.source_name)
+            if u.source_tier == "official" or src is None or not src.fulltext or not u.url:
+                continue
+            targets.append(u)
+
+        # Highest-relevance items get the fetch budget first
+        need_fetch = [u for u in targets if u.url not in scraper.feed_bodies]
+        need_fetch.sort(key=lambda u: -u.relevance_score)
+        budget = {id(u) for u in need_fetch[:max_articles]}
+
+        def one(u: RegUpdate):
+            body = scraper.feed_bodies.get(u.url, "")
+            if body:
+                return u, "feed", body          # the feed already carried the article
+            if id(u) in budget:
+                status, text = fetcher.fetch_article(u.url)
+                return u, status, text
+            return u, "", ""
+
+        with ThreadPoolExecutor(max_workers=int(cfg.get("workers", 6))) as pool:
+            for u, status, body in pool.map(one, targets):
+                if status:
+                    enrich_with_fulltext(u, body, status)
+                    self.fulltext_stats[status] = self.fulltext_stats.get(status, 0) + 1
+        log.info(f"Full text: {self.fulltext_stats or 'nothing fetched'}")
+
+    # -- main ---------------------------------------------------------------
     def run(self):
         log.info("=" * 60)
-        log.info(f"Regulatory & Content Intelligence Monitor v3 — {self.date_str}")
-        log.info(f"Cutoff: {self.cutoff.strftime('%Y-%m-%d %H:%M IST')}")
+        log.info(f"Regulatory & Content Intelligence Monitor v4 — {self.date_str}")
+        log.info(f"Cutoff: {self.cutoff.strftime('%Y-%m-%d %H:%M IST')} | Sources: {len(self.sources)}"
+                 f"{' | DRY RUN' if self.dry_run else ''}")
         log.info("=" * 60)
 
-        scrapers = [
-            ("SEBI", SEBIScraper()),
-            ("RBI", RBIScraper()),
-            ("PFRDA", PFRDAScraper()),
-            ("CBDT", CBDTScraper()),
-            ("IRDAI", IRDAIScraper()),
-            ("AMFI", AMFIScraper()),
-            ("PIB", PIBScraper()),
-            ("News", NewsScraper()),
-        ]
+        seen = SeenStore(SEEN_FILE, self.today)
+        scraper = self.scrape_all(seen)
+        all_items = [u for r in self.results for u in r.updates]
 
-        scraper_counts = {}
-        all_items = []
-
-        for name, scraper in scrapers:
-            try:
-                items = scraper.scrape(self.cutoff)
-                scraper_counts[name] = len(items)
-                all_items.extend(items)
-            except Exception as e:
-                log.error(f"  {name} scraper failed: {e}")
-                scraper_counts[name] = -1  # -1 = error
+        # Per-group counts (-1 = every source in the group failed)
+        scraper_counts: dict[str, int] = {}
+        for group in dict.fromkeys(r.group for r in self.results):
+            group_results = [r for r in self.results if r.group == group]
+            if all(r.status in ("http_error", "error", "parse_error") for r in group_results):
+                scraper_counts[group] = -1
+            else:
+                scraper_counts[group] = sum(r.relevant for r in group_results)
 
         # Separate uncertain-date items
         self.uncertain_date_items = [u for u in all_items if not u.date_parsed]
@@ -1731,12 +2098,18 @@ class RegulatoryMonitor:
         for u in self.updates:
             u.title = clean_title(u.title)
 
-        # Sort: HIGH first, then by engagement score, then by source tier
+        # Full article text for shortlisted items (may move items between levels)
+        self.updates = [u for u in self.updates if u.relevance != "NONE"]
+        self.fetch_fulltext(scraper)
+
+        # Sort: HIGH first, then official before news, then by engagement score
         tier_order = {"official": 0, "tier1_news": 1, "tier2_news": 2, "blog": 3}
         level_order = {"HIGH": 0, "MEDIUM": 1, "LOW": 2}
         self.updates.sort(key=lambda u: (
             level_order.get(u.relevance, 3),
+            0 if u.source_tier == "official" else 1,
             -u.engagement_score,
+            -u.relevance_score,
             tier_order.get(u.source_tier, 9),
         ))
 
@@ -1746,29 +2119,67 @@ class RegulatoryMonitor:
         # Drop LOW from primary output
         self.updates = [u for u in self.updates if u.relevance in ("HIGH", "MEDIUM")]
 
+        # Briefing cap (v4): more sources must not mean an unreadable brief.
+        # Official items always stay. News beyond the cap is kept in the JSON
+        # under "more_items", ranked, so nothing is lost.
+        max_news = int((self.settings.get("briefing", {}) or {}).get("max_news_items", 60))
+        kept, news_seen = [], 0
+        for u in self.updates:
+            if u.source_tier == "official":
+                kept.append(u)
+            elif news_seen < max_news:
+                kept.append(u)
+                news_seen += 1
+            else:
+                self.more_items.append(u)
+        self.updates = kept
+
+        high_n = sum(1 for u in self.updates if u.relevance == "HIGH")
+        official_n = sum(1 for u in self.updates if u.source_tier == "official")
+
+        if self.dry_run:
+            log.info("=" * 60)
+            log.info(f"DRY RUN: {len(self.updates)} updates ({high_n} high-priority, {official_n} official). Nothing written.")
+            return
+
+        DATA_DIR.mkdir(parents=True, exist_ok=True)
+        # Health first, so the briefing itself can show which sources are down
+        update_health(scraper_counts, HEALTH_FILE, self.today)
+        self.source_alerts = update_feed_health(self.results, FEED_HEALTH_FILE, self.today)
+
         # Write outputs
         self._write()
+        seen.save()
 
         # Update trend memory (v3.1)
         self._update_trend_memory()
 
-        # Health monitoring
-        health_alerts = update_health(scraper_counts, HEALTH_FILE)
-
-        high_n = sum(1 for u in self.updates if u.relevance == "HIGH")
         exclusions = get_exclusion_log()
         log.info("=" * 60)
-        log.info(f"Done: {len(self.updates)} updates ({high_n} high-priority)")
+        log.info(f"Done: {len(self.updates)} updates ({high_n} high-priority, {official_n} from official sources)")
         if self.low_items:
             log.info(f"  + {len(self.low_items)} LOW items stored for trend tracking")
         if self.uncertain_date_items:
             log.info(f"  + {len(self.uncertain_date_items)} items with unparseable dates (flagged for review)")
         if exclusions:
             log.info(f"  + {len(exclusions)} items excluded (logged for filter tuning)")
-        if health_alerts:
-            for alert in health_alerts:
-                log.info(f"  {alert}")
+        if self.source_alerts:
+            dead = [a["source"] for a in self.source_alerts if a["dead"]]
+            log.info(f"  + {len(self.source_alerts)} sources returned nothing today"
+                     f"{' | DEAD: ' + ', '.join(dead) if dead else ''}")
         log.info("=" * 60)
+
+    def check_sources(self):
+        """Probe every source and print a table. Writes nothing."""
+        log.info(f"Checking {len(self.sources)} sources (no files are written)...")
+        self.scrape_all(SeenStore(SEEN_FILE, self.today))
+        bad = [r for r in self.results if r.status != "ok"]
+        print(f"\n{'SOURCE':<30}{'GROUP':<12}{'STATUS':<13}{'HTTP':<6}{'FETCHED':<9}{'RECENT':<8}{'RELEVANT'}")
+        for r in sorted(self.results, key=lambda r: (r.status == "ok", r.group, r.name)):
+            print(f"{r.name:<30}{r.group:<12}{r.status:<13}{r.http:<6}{r.fetched:<9}{r.recent:<8}{r.relevant}")
+        print(f"\n{len(self.results) - len(bad)} of {len(self.results)} sources OK."
+              + (f" Not OK: {', '.join(r.name for r in bad)}" if bad else ""))
+        return 0
 
     def _update_trend_memory(self):
         """Maintain rolling 7-day + 30-day topic tag counts for trend detection."""
@@ -1817,7 +2228,7 @@ class RegulatoryMonitor:
         by_regulatory = sorted(self.updates, key=lambda u: -u.regulatory_importance)[:5]
 
         output = {
-            "version": "v3.1",
+            "version": "v4.0",
             "date": self.date_str,
             "generated": self.now.isoformat(),
             "cutoff": self.cutoff.isoformat(),
@@ -1848,23 +2259,33 @@ class RegulatoryMonitor:
             },
 
             "updates": [asdict(u) for u in self.updates],
+            "more_items": [asdict(u) for u in self.more_items[:150]],
             "low_items": [asdict(u) for u in self.low_items[:20]],
             "uncertain_date_items": [asdict(u) for u in self.uncertain_date_items[:10]],
             "exclusion_log": get_exclusion_log()[:50],
+            "official_items": sum(1 for u in self.updates if u.source_tier == "official"),
             "scraper_meta": {
-                "scrapers_run": 8,
-                "sources": "SEBI, RBI, PFRDA, CBDT, IRDAI, AMFI, PIB, 20+ news feeds",
+                "sources_configured": len(self.results),
+                "sources_ok": sum(1 for r in self.results if r.status == "ok"),
+                "official_sources": sum(1 for s in self.sources if s.tier == "official"),
+                "news_sources": sum(1 for s in self.sources if s.tier != "official"),
+                "fulltext": self.fulltext_stats,
+                "source_alerts": self.source_alerts,
+                "per_source": {r.name: {"fetched": r.fetched, "recent": r.recent, "relevant": r.relevant,
+                                        "status": r.status} for r in self.results},
             },
         }
 
-        with open(LATEST_FILE, "w") as f:
+        with open(LATEST_FILE, "w", encoding="utf-8") as f:
             json.dump(output, f, indent=2, ensure_ascii=False)
 
-        with open(BRIEFINGS_DIR / f"{self.date_str}.json", "w") as f:
+        with open(BRIEFINGS_DIR / f"{self.date_str}.json", "w", encoding="utf-8") as f:
             json.dump(output, f, indent=2, ensure_ascii=False)
 
-        md = format_md(self.updates, self.now, self.date_str, self.uncertain_date_items)
-        with open(BRIEFINGS_DIR / f"{self.date_str}.md", "w") as f:
+        md = format_md(self.updates, self.now, self.date_str, self.uncertain_date_items,
+                       results=self.results, source_alerts=self.source_alerts,
+                       more_count=len(self.more_items), hours=self.hours)
+        with open(BRIEFINGS_DIR / f"{self.date_str}.md", "w", encoding="utf-8") as f:
             f.write(md)
 
         log.info(f"  Written: {LATEST_FILE}")
@@ -1872,5 +2293,25 @@ class RegulatoryMonitor:
 
 
 # ---------------------------------------------------------------------------
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser(description="Indian financial regulatory monitor")
+    parser.add_argument("--check-sources", action="store_true",
+                        help="probe every source in sources.yaml and print a health table (writes nothing)")
+    parser.add_argument("--dry-run", action="store_true", help="run the full pipeline but write no files")
+    parser.add_argument("--no-fulltext", action="store_true", help="skip article body fetching")
+    parser.add_argument("--only", nargs="+", metavar="NAME",
+                        help="limit the run to these source names or groups (e.g. SEBI VROnline)")
+    parser.add_argument("--hours", type=int, default=24,
+                        help="look-back window in hours (default 24). Use 72 to catch up after a missed run")
+    args = parser.parse_args(argv)
+
+    monitor = RegulatoryMonitor(dry_run=args.dry_run, fulltext=not args.no_fulltext, only=args.only,
+                                hours=args.hours)
+    if args.check_sources:
+        return monitor.check_sources()
+    monitor.run()
+    return 0
+
+
 if __name__ == "__main__":
-    RegulatoryMonitor().run()
+    raise SystemExit(main())
