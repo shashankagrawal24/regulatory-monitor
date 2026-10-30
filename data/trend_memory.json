@@ -1,5 +1,4 @@
 {
-  "2026-09-29": {},
   "2026-09-30": {
     "rates": 3,
     "pension": 3,
@@ -404,5 +403,19 @@
     "protection": 5,
     "insurance": 4,
     "real_estate": 2
+  },
+  "2026-10-30": {
+    "deposits": 8,
+    "gold": 4,
+    "mutual_funds": 27,
+    "protection": 9,
+    "pension": 12,
+    "tax": 20,
+    "markets": 25,
+    "macro": 20,
+    "rates": 19,
+    "real_estate": 3,
+    "credit": 13,
+    "insurance": 8
   }
 }
