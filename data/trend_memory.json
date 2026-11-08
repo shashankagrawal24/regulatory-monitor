@@ -1,18 +1,4 @@
 {
-  "2026-10-08": {
-    "rates": 17,
-    "credit": 10,
-    "gold": 4,
-    "deposits": 6,
-    "insurance": 3,
-    "pension": 1,
-    "mutual_funds": 9,
-    "real_estate": 1,
-    "macro": 1,
-    "protection": 2,
-    "markets": 9,
-    "tax": 1
-  },
   "2026-10-09": {
     "rates": 33,
     "deposits": 5,
@@ -429,5 +415,19 @@
     "real_estate": 2,
     "protection": 6,
     "deposits": 3
+  },
+  "2026-11-08": {
+    "deposits": 5,
+    "tax": 17,
+    "macro": 10,
+    "markets": 35,
+    "mutual_funds": 20,
+    "rates": 5,
+    "credit": 19,
+    "pension": 4,
+    "insurance": 15,
+    "gold": 6,
+    "real_estate": 3,
+    "protection": 4
   }
 }
