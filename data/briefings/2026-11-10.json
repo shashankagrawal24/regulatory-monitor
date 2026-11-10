@@ -1,0 +1,5452 @@
+{
+  "version": "v4.0",
+  "date": "2026-11-10",
+  "generated": "2026-11-10T09:45:43.627941+05:30",
+  "cutoff": "2026-11-09T09:45:43.627941+05:30",
+  "total": 68,
+  "high_priority": 52,
+  "medium_priority": 16,
+  "views": {
+    "retail_users_most_affected": [
+      {
+        "title": "Received cash from customers and deposited it in your bank account? When can income tax authorities tax it",
+        "retail_user_impact": 8,
+        "user_impact": "May affect your tax liability or filing process"
+      },
+      {
+        "title": "Diwali bonus and gifts: Know income tax exemption limit and rules for salaried employees",
+        "retail_user_impact": 6,
+        "user_impact": "May affect your tax liability or filing process"
+      },
+      {
+        "title": "ITRs filed 2 years after accident cannot establish claimant's Pre-Accident Income: Allahabad HC [Read Order]",
+        "retail_user_impact": 6,
+        "user_impact": "May affect your tax liability or filing process"
+      },
+      {
+        "title": "Received Diwali bonus or cash from your employer? Know ₹15,000 exemption limit and when income tax applies | Explained",
+        "retail_user_impact": 6,
+        "user_impact": "May affect your tax liability or filing process"
+      },
+      {
+        "title": "Senior citizen FD rates: Suryoday Bank offers 8.6% on five-year deposits; compare rates at SBI, HDFC Bank and others",
+        "retail_user_impact": 6,
+        "user_impact": "May impact your FD, PPF, or small savings returns"
+      }
+    ],
+    "best_content_opportunities": [
+      {
+        "title": "LTCG tax: India taxes capital gains. These countries don't: Singapore, Hong Kong and more",
+        "engagement_potential": 9,
+        "content_angle": "Educational explainer on this taxation development",
+        "possible_formats": [
+          "reel",
+          "carousel",
+          "push_notification",
+          "blog"
+        ]
+      },
+      {
+        "title": "Diwali bonus and gifts: Know income tax exemption limit and rules for salaried employees",
+        "engagement_potential": 7,
+        "content_angle": "Educational explainer on this taxation development",
+        "possible_formats": [
+          "reel",
+          "carousel",
+          "blog"
+        ]
+      },
+      {
+        "title": "Indian Rupee Makes Strong Comeback Against Dollar! How Trump, FIIs & RBI Changed The Game",
+        "engagement_potential": 7,
+        "content_angle": "Educational explainer on this macro & economy development",
+        "possible_formats": [
+          "reel",
+          "carousel",
+          "push_notification",
+          "blog"
+        ]
+      },
+      {
+        "title": "Received cash from customers and deposited it in your bank account? When can income tax authorities tax it",
+        "engagement_potential": 7,
+        "content_angle": "Educational explainer on this taxation development",
+        "possible_formats": [
+          "reel",
+          "carousel",
+          "blog"
+        ]
+      },
+      {
+        "title": "ITRs filed 2 years after accident cannot establish claimant's Pre-Accident Income: Allahabad HC [Read Order]",
+        "engagement_potential": 7,
+        "content_angle": "Educational explainer on this taxation development",
+        "possible_formats": [
+          "reel",
+          "carousel",
+          "blog"
+        ]
+      }
+    ],
+    "action_required_items": [
+      {
+        "title": "Income Tax | Section 12 of the Income-tax Act, 2025: Political Parties, Electoral Trusts & Donor Deductions",
+        "actionability": 8,
+        "action_type": "file",
+        "action_deadline": ""
+      },
+      {
+        "title": "Nifty 50 ETFs or index funds? Compare returns, expense ratios and tracking errors before choosing where to invest",
+        "actionability": 8,
+        "action_type": "file",
+        "action_deadline": ""
+      },
+      {
+        "title": "Planning a destination wedding? Know what insurance covers and what it doesn't",
+        "actionability": 8,
+        "action_type": "verify",
+        "action_deadline": ""
+      },
+      {
+        "title": "Crypto cold wallets explained: Risks, recovery options and safety precautions",
+        "actionability": 8,
+        "action_type": "switch",
+        "action_deadline": ""
+      },
+      {
+        "title": "How should a 40-year old invest Rs. 1 Crore cash for retirement?",
+        "actionability": 8,
+        "action_type": "file",
+        "action_deadline": ""
+      }
+    ],
+    "most_significant_regulatory": [
+      {
+        "title": "Guidelines in pursuance of amendment to SEBI KYC (Know Your Client) Registration Agency (KRA) Regulations, 2011",
+        "regulatory_importance": 6,
+        "regulator": "NSE"
+      },
+      {
+        "title": "Adjustment of Futures and Options contracts in the security OIL & NATURAL GAS CORPORATION LIMITED (ONGC)",
+        "regulatory_importance": 5,
+        "regulator": "NSE"
+      },
+      {
+        "title": "Availability of SAMCO EQUITY SAVINGS FUND FUND for ongoing transactions on BSE StAR MF Platform",
+        "regulatory_importance": 5,
+        "regulator": "BSE"
+      },
+      {
+        "title": "Introduction of All Day SIP in Certain Schemes of Tata Mutual Fund on BSE StAR MF Platform - Update",
+        "regulatory_importance": 3,
+        "regulator": "BSE"
+      },
+      {
+        "title": "The Spouse-Transfer Tax “Hack” That Can Cost You Twice",
+        "regulatory_importance": 3,
+        "regulator": "SEBI"
+      }
+    ]
+  },
+  "updates": [
+    {
+      "regulator": "BSE",
+      "title": "Introduction of All Day SIP in Certain Schemes of Tata Mutual Fund on BSE StAR MF Platform - Update",
+      "summary": "Introduction of All Day SIP in Certain Schemes of Tata Mutual Fund on BSE StAR MF Platform - Update",
+      "url": "https://www.bseindia.com/downloads/UploadDocs/Notices/20261109-26/20261109-26.pdf",
+      "pub_date": "Mon, 09 Nov 2026 13:23:32 GMT",
+      "category": "Mutual Funds",
+      "relevance": "HIGH",
+      "relevance_score": 12,
+      "source_type": "official",
+      "source_name": "BSE_Notices",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 3,
+      "retail_user_impact": 4,
+      "actionability": 3,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "mutual_funds"
+      ],
+      "user_segment_tags": [
+        "mf_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "5bc06d9b",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "sip",
+        "mutual fund",
+        "mf"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "NSE",
+      "title": "Guidelines in pursuance of amendment to SEBI KYC (Know Your Client) Registration Agency (KRA) Regulations, 2011",
+      "summary": "Guidelines in pursuance of amendment to SEBI KYC (Know Your Client) Registration Agency (KRA) Regulations, 2011",
+      "url": "https://nsearchives.nseindia.com/content/circulars/ISC77375.pdf",
+      "pub_date": "Mon, 9 Nov 2026 00:00:00 +0530",
+      "category": "Investor Protection",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "official",
+      "source_name": "NSE_Circulars",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 6,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "protection",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "Affects how your investments are protected and administered",
+      "content_angle": "Explainer: What this investor protection change means for you",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "e61736ad",
+      "also_covered_by": [
+        "BSE_Notices"
+      ],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "sebi",
+        "kyc"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "NSE",
+      "title": "Adjustment of Futures and Options contracts in the security OIL & NATURAL GAS CORPORATION LIMITED (ONGC)",
+      "summary": "Adjustment of Futures and Options contracts in the security OIL & NATURAL GAS CORPORATION LIMITED (ONGC)",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CMPT77348.pdf",
+      "pub_date": "Mon, 9 Nov 2026 00:00:00 +0530",
+      "category": "Regulatory Update",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "official",
+      "source_name": "NSE_Circulars",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 5,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 5,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "11074cc4",
+      "also_covered_by": [
+        "BSE_Notices"
+      ],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "options",
+        "futures"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "BSE",
+      "title": "Availability of SAMCO EQUITY SAVINGS FUND FUND for ongoing transactions on BSE StAR MF Platform",
+      "summary": "Availability of SAMCO EQUITY SAVINGS FUND FUND for ongoing transactions on BSE StAR MF Platform",
+      "url": "https://www.bseindia.com/downloads/UploadDocs/Notices/20261109-29/20261109-29.pdf",
+      "pub_date": "Mon, 09 Nov 2026 13:41:01 GMT",
+      "category": "Mutual Funds",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "official",
+      "source_name": "BSE_Notices",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 5,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "markets"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 2,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "3d92e8c0",
+      "also_covered_by": [
+        "BSE_Notices"
+      ],
+      "source_tier": "official",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "mf"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "LTCG tax: India taxes capital gains. These countries don't: Singapore, Hong Kong and more",
+      "summary": "After a pause of 14 long years, it was reintroduced in 2018 by then finance minister Arun Jaitley, who argued that the 'return on investment in equity is already quite attractive' and there's a strong case for bringing long-term capital gains from listed equities into the tax net.",
+      "url": "https://www.livemint.com/money/personal-finance/ltcg-tax-india-taxes-capital-gains-these-countries-dont-singapore-hong-kong-and-more-11794215773712.html",
+      "pub_date": "Mon, 09 Nov 2026 15:21:36 +0530",
+      "category": "Taxation",
+      "relevance": "HIGH",
+      "relevance_score": 10,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 2,
+      "retail_user_impact": 4,
+      "actionability": 6,
+      "engagement_potential": 9,
+      "topic_tags": [
+        "gold",
+        "markets",
+        "mutual_funds",
+        "tax"
+      ],
+      "user_segment_tags": [
+        "mf_investors",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your tax liability or filing process",
+      "content_angle": "Educational explainer on this taxation development",
+      "affected_segments": [
+        "taxpayers",
+        "salaried",
+        "equity investors",
+        "HNIs"
+      ],
+      "engagement_score": 9,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "push_notification",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "0532a24a",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": [
+        "ltcg",
+        "capital gain"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 633,
+      "fulltext_keywords": [
+        "capital gains",
+        "tax rate"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Diwali bonus and gifts: Know income tax exemption limit and rules for salaried employees",
+      "summary": "Under Income-tax rules, employer gifts under 15,000 rupees in a year are tax-free, while cash bonuses are fully taxable as salary income and may affect tax rebate eligibility.",
+      "url": "https://www.cnbctv18.com/personal-finance/diwali-bonus-and-gifts-know-income-tax-exemption-limit-and-rules-for-salaried-employees-20030616.htm",
+      "pub_date": "Mon, 9 Nov 2026 21:11:58 +0530",
+      "category": "Taxation",
+      "relevance": "HIGH",
+      "relevance_score": 18,
+      "source_type": "tier1_news",
+      "source_name": "CNBCTV18_PF",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 6,
+      "actionability": 3,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "macro",
+        "tax"
+      ],
+      "user_segment_tags": [
+        "salaried",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your tax liability or filing process",
+      "content_angle": "Educational explainer on this taxation development",
+      "affected_segments": [
+        "taxpayers",
+        "salaried",
+        "equity investors",
+        "HNIs"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "9fb33216",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": [
+        "income tax",
+        "rupee",
+        "income-tax",
+        "tax rebate",
+        "rebate"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 680,
+      "fulltext_keywords": [
+        "new tax regime",
+        "tax regime",
+        "standard deduction"
+      ]
+    },
+    {
+      "regulator": "RBI",
+      "title": "Indian Rupee Makes Strong Comeback Against Dollar! How Trump, FIIs & RBI Changed The Game",
+      "summary": "The Indian Rupee is staging a remarkable comeback against the US Dollar, strengthening from ₹95.26 on October 29 to around ₹93.85 on November 9. But what triggered this sudden turnaround? The recovery follows a major political shift in the United States, easing tensions with Iran, falling crude oil prices and renewed foreign institutional investor (FII) inflows into Indian stock markets. After months of intervention by the Reserve Bank of India (RBI), global developments are finally providing re",
+      "url": "https://www.businesstoday.in/bt-tv/whats-hot/video/indian-rupee-makes-strong-comeback-against-dollar-how-trump-fiis-rbi-changed-the-game-566534-2026-11-09?utm_source=rssfeed",
+      "pub_date": "2026-11-09T17:22:02+05:30",
+      "category": "Macro & Economy",
+      "relevance": "HIGH",
+      "relevance_score": 11,
+      "source_type": "tier2_news",
+      "source_name": "BusinessToday",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 1,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "gold",
+        "macro",
+        "markets",
+        "rates"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "reaction"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Educational explainer on this macro & economy development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "push_notification",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "e5e48a4d",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "oil price",
+        "rupee",
+        "stock market",
+        "fii",
+        "crude oil"
+      ],
+      "fulltext_status": "paywalled",
+      "word_count": 149,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "CBDT",
+      "title": "Received cash from customers and deposited it in your bank account? When can income tax authorities tax it",
+      "summary": "An insurance agent's ₹35.09 lakh cash deposits during demonetisation were treated as unexplained income. ITAT Jaipur deleted the addition after accepting records showing the money came from policyholder premiums.",
+      "url": "https://www.livemint.com/money/personal-finance/received-cash-from-customers-and-deposited-it-in-your-bank-account-when-can-income-tax-authorities-tax-it-11794244686185.html",
+      "pub_date": "Mon, 09 Nov 2026 22:53:51 +0530",
+      "category": "Taxation",
+      "relevance": "HIGH",
+      "relevance_score": 10,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 8,
+      "actionability": 6,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "credit",
+        "insurance",
+        "tax"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "May affect your tax liability or filing process",
+      "content_angle": "Educational explainer on this taxation development",
+      "affected_segments": [
+        "taxpayers",
+        "salaried",
+        "equity investors",
+        "HNIs"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "53f98426",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": [
+        "premium",
+        "income tax",
+        "insurance"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 690,
+      "fulltext_keywords": [
+        "income-tax"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "ITRs filed 2 years after accident cannot establish claimant's Pre-Accident Income: Allahabad HC [Read Order]",
+      "summary": "The income tax returns filed two years post-accident cannot establish pre-accident income without supporting evidence.",
+      "url": "https://www.taxscan.in/income-tax/itrs-filed-2-years-after-accident-cannot-establish-claimants-pre-accident-income-allahabad-hc-read-order",
+      "pub_date": "Mon, 09 Nov 2026 11:55:31 GMT",
+      "category": "Taxation",
+      "relevance": "HIGH",
+      "relevance_score": 10,
+      "source_type": "tier2_news",
+      "source_name": "Taxscan",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 6,
+      "actionability": 6,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "credit",
+        "insurance",
+        "mutual_funds",
+        "tax"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your tax liability or filing process",
+      "content_angle": "Educational explainer on this taxation development",
+      "affected_segments": [
+        "taxpayers",
+        "salaried",
+        "equity investors",
+        "HNIs"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "ad943eab",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": [
+        "income tax return",
+        "itr",
+        "income tax"
+      ],
+      "fulltext_status": "paywalled",
+      "word_count": 260,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Gold, silver extend gains as softer oil prices ease inflation concerns",
+      "summary": "Gold crossed $4,100 per ounce in the international market. However, expectations that the US Federal Reserve could maintain a tight monetary policy stance capped some of the gains",
+      "url": "https://www.business-standard.com/markets/commodities/gold-silver-extend-gains-as-softer-oil-prices-ease-inflation-concerns-126110900378_1.html",
+      "pub_date": "Mon, 09 Nov 2026 12:10:43 +0530",
+      "category": "Rates & Monetary Policy",
+      "relevance": "HIGH",
+      "relevance_score": 9,
+      "source_type": "tier1_news",
+      "source_name": "BusinessStandard_Markets",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "gold",
+        "macro",
+        "markets",
+        "rates"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Educational explainer on this rates & monetary policy development",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "f1038527",
+      "also_covered_by": [
+        "HT_Business"
+      ],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "inflation",
+        "monetary policy",
+        "oil price"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 502,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Wall Street bounces back from AI sell-off, Nasdaq rallies over 3%, but Nvidia plunges 9% on Jensen Huang controversy",
+      "summary": "US stocks rebounded Monday after their worst weekly performance in nearly two years, with the Dow, S&amp;P 500 and Nasdaq rising as lower oil prices and bargain-buying lifted sentiment. Investors turned their attention to upcoming inflation data and earnings from AI-related companies.",
+      "url": "https://www.livemint.com/market/stock-market-news/wall-street-bounces-back-from-ai-sell-off-nasdaq-rallies-over-3-but-nvidia-plunges-9-on-jensen-huang-controversy-11794238373887.html",
+      "pub_date": "Mon, 09 Nov 2026 21:19:00 +0530",
+      "category": "Rates & Monetary Policy",
+      "relevance": "HIGH",
+      "relevance_score": 8,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 3,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "macro",
+        "rates"
+      ],
+      "user_segment_tags": [
+        "salaried",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Educational explainer on this rates & monetary policy development",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 7,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "1a0940d4",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "nasdaq",
+        "inflation",
+        "oil price"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 497,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Income Tax | Section 12 of the Income-tax Act, 2025: Political Parties, Electoral Trusts & Donor Deductions",
+      "summary": "Section 12 and Schedule VIII exemptions for political parties and electoral trusts, 95% distribution rule and donor deductions under Sections 136–137. The post Section 12 of the Income-tax Act, 2025: Political Parties, Electoral Trusts & Donor Deductions appeared first on TaxGuru .",
+      "url": "https://taxguru.in/income-tax/section-12-income-tax-act-2025-political-parties-electoral-trusts-donor-deductions.html",
+      "pub_date": "Mon, 09 Nov 2026 09:40:38 +0000",
+      "category": "Taxation",
+      "relevance": "HIGH",
+      "relevance_score": 8,
+      "source_type": "tier2_news",
+      "source_name": "TaxGuru_IncomeTax",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 2,
+      "retail_user_impact": 4,
+      "actionability": 8,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "tax"
+      ],
+      "user_segment_tags": [
+        "taxpayers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your tax liability or filing process",
+      "content_angle": "Educational explainer on this taxation development",
+      "affected_segments": [
+        "taxpayers",
+        "salaried",
+        "equity investors",
+        "HNIs"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "29f090cb",
+      "also_covered_by": [
+        "TaxGuru"
+      ],
+      "source_tier": "tier2_news",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": [
+        "income-tax",
+        "income tax"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 1450,
+      "fulltext_keywords": [
+        "tax regime"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "F&F payout tax rules: Switched jobs, received full and final settlement? Know which components are taxable",
+      "summary": "When employment ends, employers settle outstanding dues after the last working day and deduct applicable TDS. Here's how each component of the payout is taxed.",
+      "url": "https://www.livemint.com/money/personal-finance/ff-payout-tax-rules-switched-jobs-received-full-and-final-settlement-know-which-components-are-taxable-11794230428281.html",
+      "pub_date": "Mon, 09 Nov 2026 19:49:07 +0530",
+      "category": "Taxation",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 6,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "credit",
+        "tax"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders",
+        "salaried",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "comparison"
+      ],
+      "user_impact": "May affect your tax liability or filing process",
+      "content_angle": "Educational explainer on this taxation development",
+      "affected_segments": [
+        "taxpayers",
+        "salaried",
+        "equity investors",
+        "HNIs"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "9b3501fb",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": [
+        "tds",
+        "employment"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 483,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "PSU Banks Set For Re-Rating? Deven Choksey Explains Two Key Triggers For Samvat 2083",
+      "summary": "PSU bank stocks are gaining momentum at the start of Samvat 2083, but can the rally sustain? Market expert Deven Choksey, MD, Dr Choksey Finserv Private Limited, explains the two key factors that could drive a re-rating in public sector banks. Softer crude oil prices and easing inflation expectations could reduce interest rate pressures and limit mark-to-market losses on banks' bond portfolios. He also points to the possibility of a second round of public sector bank consolidation, which could c",
+      "url": "https://www.businesstoday.in/bt-tv/market-today/video/psu-banks-set-for-re-rating-deven-choksey-explains-two-key-triggers-for-samvat-2083-566533-2026-11-09?utm_source=rssfeed",
+      "pub_date": "2026-11-09T20:29:56+05:30",
+      "category": "Rates & Monetary Policy",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "tier2_news",
+      "source_name": "BusinessToday",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 2,
+      "retail_user_impact": 2,
+      "actionability": 0,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "macro",
+        "markets",
+        "rates"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "comparison"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Educational explainer on this rates & monetary policy development",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "e00a4dc3",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "inflation",
+        "oil price",
+        "crude oil"
+      ],
+      "fulltext_status": "paywalled",
+      "word_count": 106,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Persistent cost inflation delays the treat for Britannia investors",
+      "summary": "Higher raw-material costs and fresh competition are clouding Britannia’s margin outlook, even as rural demand and general trade volumes recover.",
+      "url": "https://www.livemint.com/market/mark-to-market/britannia-industries-biscuit-industry-input-cost-inflation-gross-margin-ebitda-margin-grammage-cuts-price-hikes-11794211688592.html",
+      "pub_date": "Mon, 09 Nov 2026 14:31:27 +0530",
+      "category": "Rates & Monetary Policy",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 3,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "credit",
+        "insurance",
+        "rates"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Educational explainer on this rates & monetary policy development",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "45b5c9f2",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "inflation",
+        "margin"
+      ],
+      "fulltext_status": "paywalled",
+      "word_count": 765,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Asian stocks rise amid falling oil prices on hopes of US-Iran talks",
+      "summary": "Asian markets gained as Brent crude slipped 1% to $91.56 a barrel after Trump signalled a pause in further military strikes against Iran, easing inflation concerns ahead of key US price data",
+      "url": "https://www.business-standard.com/markets/news/asian-stocks-rise-amid-falling-oil-prices-on-hopes-of-us-iran-talks-126111000080_1.html",
+      "pub_date": "Tue, 10 Nov 2026 09:11:31 +0530",
+      "category": "Rates & Monetary Policy",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "BusinessStandard_Markets",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 7,
+      "topic_tags": [
+        "credit",
+        "insurance",
+        "markets",
+        "rates"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "reaction"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Calm-down content: What to do (and not do) right now",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 7,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "reel",
+        "carousel",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "7ca4cae3",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "inflation",
+        "oil price"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 662,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Received Diwali bonus or cash from your employer? Know ₹15,000 exemption limit and when income tax applies | Explained",
+      "summary": "With Diwali celebrations over, salaried employees should understand how employers' festive gifts, vouchers and cash bonuses are taxed. The rules prescribe different tax treatments for these benefits, which can affect employees' taxable income and overall tax liability.",
+      "url": "https://www.livemint.com/money/personal-finance/received-diwali-bonus-or-cash-from-your-employer-know-15-000-exemption-limit-and-when-income-tax-applies-explained-11794275279531.html",
+      "pub_date": "Tue, 10 Nov 2026 08:39:48 +0530",
+      "category": "Taxation",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 6,
+      "actionability": 6,
+      "engagement_potential": 6,
+      "topic_tags": [
+        "tax"
+      ],
+      "user_segment_tags": [
+        "salaried",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "explainer",
+        "comparison"
+      ],
+      "user_impact": "May affect your tax liability or filing process",
+      "content_angle": "Educational explainer on this taxation development",
+      "affected_segments": [
+        "taxpayers",
+        "salaried",
+        "equity investors",
+        "HNIs"
+      ],
+      "engagement_score": 6,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "b409fdad",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": [
+        "income tax"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 656,
+      "fulltext_keywords": [
+        "income-tax"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Senior citizen FD rates: Suryoday Bank offers 8.6% on five-year deposits; compare rates at SBI, HDFC Bank and others",
+      "summary": "Senior citizens can earn up to 8.6% on five-year FDs. Suryoday Small Finance Bank offers the highest rate, followed by Jana and DCB Bank at 8%. Here is a comparison of FD rates across small finance, private and public sector banks.",
+      "url": "https://www.livemint.com/money/personal-finance/senior-citizen-fd-rates-suryoday-bank-offers-8-6-on-five-year-deposits-compare-rates-at-sbi-hdfc-bank-and-others-11794246408961.html",
+      "pub_date": "Mon, 09 Nov 2026 23:44:17 +0530",
+      "category": "Deposits & Savings",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 6,
+      "actionability": 6,
+      "engagement_potential": 6,
+      "topic_tags": [
+        "deposits",
+        "pension"
+      ],
+      "user_segment_tags": [
+        "families",
+        "retirees"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your FD, PPF, or small savings returns",
+      "content_angle": "Educational explainer on this deposits & savings development",
+      "affected_segments": [
+        "conservative investors",
+        "retirees",
+        "salaried"
+      ],
+      "engagement_score": 6,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "fcb52677",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "family_finance",
+      "date_parsed": true,
+      "matched_keywords": [
+        "fd rate"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 553,
+      "fulltext_keywords": [
+        "fd interest"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Nifty50 to hit 28,000 in 2027? 3 factors that could drive Dalal street's next run",
+      "summary": "Dalal Street is experiencing a remarkable surge, leading to a revised Nifty 50 target of 28,000 points by 2027. This positive shift is driven by optimistic earnings projections and lower crude oil prices. Additionally, recent inflows from foreign portfolio investors have strengthened market confidence, while expectations of reduced capital spending in artificial intelligence add to this growth narrative. Overall, Indian equities seem poised for a robust economic future.",
+      "url": "https://timesofindia.indiatimes.com/business/india-business/nifty50-to-hit-28000-in-2027-3-factors-that-could-drive-dalal-streets-next-run/articleshow/135672832.cms",
+      "pub_date": "2026-11-09T11:49:30+05:30",
+      "category": "Macro & Economy",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "tier2_news",
+      "source_name": "TOI_Business",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 2,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 6,
+      "topic_tags": [
+        "macro",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Educational explainer on this macro & economy development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 6,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "push_notification",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "eef6ee65",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "oil price",
+        "crude oil"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 617,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "SEBI",
+      "title": "The Spouse-Transfer Tax “Hack” That Can Cost You Twice",
+      "summary": "When couples start planning their finances early in marriage, one idea shows up in family discussions and personal finance videos again and again: split income to save tax. About the author: Jay Sheth is a SEBI-registered investment adviser and a member of Fee-only India, a group of fixed-fee-only advisors. You can contact him via his website, shwealth.in.... The post The Spouse-Transfer Tax “Hack” That Can Cost You Twice appeared first on freefincal .",
+      "url": "https://freefincal.com/the-spouse-transfer-tax-hack-that-can-cost-you-twice/",
+      "pub_date": "Mon, 09 Nov 2026 07:30:51 +0000",
+      "category": "Investor Protection",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "blog",
+      "source_name": "Freefincal",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 3,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 6,
+      "topic_tags": [
+        "markets",
+        "mutual_funds",
+        "pension"
+      ],
+      "user_segment_tags": [
+        "families",
+        "retirees",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Affects how your investments are protected and administered",
+      "content_angle": "Educational explainer on this investor protection development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 6,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "18150f97",
+      "also_covered_by": [],
+      "source_tier": "blog",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": [
+        "investment adviser",
+        "sebi"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 1055,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "NPS returns: Choosing a pension fund for retirement? Why subscribers should look beyond one-year performance",
+      "summary": "Choosing an NPS pension fund based on one-year returns can be misleading. Investors should assess rolling returns, upside and downside performance, and volatility to understand how consistently a scheme has beaten its benchmark across different market cycles.",
+      "url": "https://www.livemint.com/money/personal-finance/nps-returns-choosing-a-pension-fund-for-retirement-why-subscribers-should-look-beyond-one-year-performance-11794235842342.html",
+      "pub_date": "Mon, 09 Nov 2026 20:43:21 +0530",
+      "category": "Pension & NPS",
+      "relevance": "HIGH",
+      "relevance_score": 17,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 6,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "pension"
+      ],
+      "user_segment_tags": [
+        "retirees"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "May affect your NPS contributions, withdrawals, or pension planning",
+      "content_angle": "Educational explainer on this pension & nps development",
+      "affected_segments": [
+        "NPS subscribers",
+        "retirees",
+        "salaried"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "3c6934b9",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "pension",
+        "pension fund",
+        "retirement",
+        "nps",
+        "volatility"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 869,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "₹2,000 monthly SIP to ₹4.8 crore corpus: How a 38-year-old achieved financial independence without stock-picking",
+      "summary": "A 38-year-old investor has built a ₹4.8 crore investment portfolio after starting with a ₹2,000 monthly SIP. His wealth creation journey highlights disciplined mutual fund investing, career growth, regular savings and financial independence without individual stock-picking or IPO bets.",
+      "url": "https://www.livemint.com/money/personal-finance/rs-2-000-monthly-sip-to-rs-4-8-crore-corpus-how-a-38-year-old-achieved-financial-independence-without-stockpicking-11794214315839.html",
+      "pub_date": "Mon, 09 Nov 2026 14:57:41 +0530",
+      "category": "Mutual Funds",
+      "relevance": "HIGH",
+      "relevance_score": 8,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 6,
+      "actionability": 6,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "deposits",
+        "markets",
+        "mutual_funds",
+        "pension",
+        "tax"
+      ],
+      "user_segment_tags": [
+        "mf_investors",
+        "retirees",
+        "stock_traders",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "b3507e72",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "sip",
+        "mutual fund"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 644,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "EPFO",
+      "title": "EPF account correction: How to fix incorrect name, date of birth online in 5 steps",
+      "summary": "Wrong details in your EPF account? Follow EPFO’s 5-step joint declaration process to correct them online, plus 2.36 lakh grievances resolved in October.",
+      "url": "https://www.livemint.com/money/personal-finance/epf-account-correction-how-to-fix-wrong-name-date-of-birth-online-in-5-steps-11794210671131.html",
+      "pub_date": "Mon, 09 Nov 2026 14:11:18 +0530",
+      "category": "Deposits & Savings",
+      "relevance": "HIGH",
+      "relevance_score": 8,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 6,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "deposits",
+        "pension"
+      ],
+      "user_segment_tags": [
+        "insurance_holders",
+        "retirees"
+      ],
+      "content_tags": [
+        "explainer",
+        "reaction",
+        "checklist"
+      ],
+      "user_impact": "May impact your FD, PPF, or small savings returns",
+      "content_angle": "Calm-down content: What to do (and not do) right now",
+      "affected_segments": [
+        "conservative investors",
+        "retirees",
+        "salaried"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "26b6c65f",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "epf",
+        "epfo"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 345,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Nippon India Small Cap, Motilal Oswal Midcap among 5 equity MFs that gave up to 24% SIP returns in 10 years",
+      "summary": "​Quant Small Cap Fund delivered the highest annualised return of 23.54% on monthly SIP investments over the past 10 years.",
+      "url": "https://economictimes.indiatimes.com/mf/analysis/quant-small-cap-motilal-oswal-midcap-among-5-equity-mfs-that-gave-up-to-24-sip-returns-in-10-years/slideshow/135677861.cms",
+      "pub_date": "Mon, 09 Nov 2026 15:11:38 +0530",
+      "category": "Mutual Funds",
+      "relevance": "HIGH",
+      "relevance_score": 8,
+      "source_type": "tier1_news",
+      "source_name": "ET_MF",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "markets",
+        "mutual_funds",
+        "tax"
+      ],
+      "user_segment_tags": [
+        "mf_investors",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "c628270f",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "sip",
+        "mf"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 153,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Indian Overseas Bank launches CBDC app for Digital Rupee transactions",
+      "summary": "The IOB Digital Rupee app offers a secure, user-friendly mobile wallet for instant P2P and P2M transactions, the bank announced",
+      "url": "https://www.thehindubusinessline.com/money-and-banking/indian-overseas-bank-launches-cbdc-app-for-digital-rupee-transactions/article71681750.ece",
+      "pub_date": "Mon, 09 Nov 2026 12:48:34 +0530",
+      "category": "Macro & Economy",
+      "relevance": "HIGH",
+      "relevance_score": 8,
+      "source_type": "tier1_news",
+      "source_name": "BusinessLine_Money",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 2,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "credit",
+        "macro"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Educational explainer on this macro & economy development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "b9fe80b7",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "digital rupee",
+        "rupee",
+        "cbdc"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 228,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "EPFO",
+      "title": "Errors in your provident fund record? Here is the five-stage online route to get them fixed",
+      "summary": "EPFO members can use the Joint Declaration facility on the Member Portal to correct errors in personal and employment records, including misspelt names and incorrect dates of birth.",
+      "url": "https://www.cnbctv18.com/personal-finance/errors-in-your-provident-fund-record-here-is-the-five-stage-online-route-to-get-them-fixed-20030461.htm",
+      "pub_date": "Mon, 9 Nov 2026 16:20:52 +0530",
+      "category": "Deposits & Savings",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "tier1_news",
+      "source_name": "CNBCTV18_PF",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 3,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "deposits",
+        "mutual_funds",
+        "pension"
+      ],
+      "user_segment_tags": [
+        "insurance_holders",
+        "mf_investors",
+        "retirees"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your FD, PPF, or small savings returns",
+      "content_angle": "Educational explainer on this deposits & savings development",
+      "affected_segments": [
+        "conservative investors",
+        "retirees",
+        "salaried"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "d812a1e1",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "epfo",
+        "employment"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 314,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "SEBI",
+      "title": "PMS explained: ₹50 lakh minimum investment, fees, taxation and risks",
+      "summary": "India's Portfolio Management Services industry manages around ₹44 lakh crore. With a minimum investment of ₹50 lakh, PMS offers direct security ownership and customisation but comes with higher costs,",
+      "url": "https://www.cnbctv18.com/personal-finance/pms-explained-rs-50-lakh-minimum-investment-fees-taxation-risks-20030366.htm",
+      "pub_date": "Mon, 9 Nov 2026 15:14:19 +0530",
+      "category": "Capital Markets",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "tier1_news",
+      "source_name": "CNBCTV18_PF",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "markets",
+        "mutual_funds",
+        "protection"
+      ],
+      "user_segment_tags": [
+        "hni",
+        "mf_investors",
+        "stock_traders",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "4045deb7",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": [
+        "pms",
+        "portfolio management service"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 841,
+      "fulltext_keywords": [
+        "mutual funds"
+      ]
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Stock markets end higher amid easing crude oil prices, buying in banks",
+      "summary": "Sensex climbed 107.25 points, or 0.13%, to settle at 81,106.65; NSE Nifty rose 58.25 points, or 0.23%, to close at 25,044.65",
+      "url": "https://www.thehindu.com/business/markets/stock-markets-end-higher-amid-easing-crude-oil-prices-buying-in-banks/article71682332.ece",
+      "pub_date": "Mon, 09 Nov 2026 16:58:56 +0530",
+      "category": "Macro & Economy",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "tier2_news",
+      "source_name": "Hindu_Business",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "macro",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Educational explainer on this macro & economy development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "5b13e107",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "oil price",
+        "stock market",
+        "crude oil"
+      ],
+      "fulltext_status": "paywalled",
+      "word_count": 538,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Rupee extends winning streak, breaks below 94 against dollar: What's next",
+      "summary": "The rupee has gained strength for the second consecutive session, dipping below the 94-per-dollar mark. This positive movement can be attributed to declining crude oil prices and an uptick in foreign fund inflows. Additionally, prospects for better diplomatic ties in the Middle East have bolstered optimism in the forex market.",
+      "url": "https://timesofindia.indiatimes.com/business/india-business/rupee-extends-winning-streak-breaks-below-94-against-dollar-whats-next/articleshow/135670806.cms",
+      "pub_date": "2026-11-09T10:22:07+05:30",
+      "category": "Macro & Economy",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "tier2_news",
+      "source_name": "TOI_Business",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "credit",
+        "insurance",
+        "macro",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "comparison"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Educational explainer on this macro & economy development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "45851814",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "rupee",
+        "oil price",
+        "crude oil"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 466,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "RBI",
+      "title": "Bond yields fall as oil prices soften amid easing geopolitical concerns",
+      "summary": "The benchmark 10-year government bond yield fell nearly 4 basis points to 7.15 per cent as Brent crude prices declined, while the rupee weakened against the dollar on Monday.",
+      "url": "https://www.business-standard.com/economy/news/bond-yields-decline-as-crude-oil-prices-ease-amid-geopolitical-optimism-126110901238_1.html",
+      "pub_date": "Mon, 09 Nov 2026 20:26:03 +0530",
+      "category": "Macro & Economy",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "BusinessStandard_Economy",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "credit",
+        "insurance",
+        "macro",
+        "rates"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "reaction"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Calm-down content: What to do (and not do) right now",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "2d1e8b27",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "rupee",
+        "oil price"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 312,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "FPI inflows into FAR G-Secs rise nearly ₹8K cr as rupee gains, yields ease",
+      "summary": "FPI holdings in FAR government securities rose to ₹3.65 lakh crore on November 9, supported by a stronger rupee and easing bond yields.",
+      "url": "https://www.business-standard.com/economy/news/fpi-inflows-into-far-g-secs-rise-nearly-8k-cr-as-rupee-gains-yields-ease-126110900736_1.html",
+      "pub_date": "Mon, 09 Nov 2026 16:56:18 +0530",
+      "category": "Macro & Economy",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "BusinessStandard_Economy",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "macro"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Educational explainer on this macro & economy development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "6fb83e8c",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "fpi",
+        "rupee"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 324,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Ashok Leyland, Paytm down after 6-day rally; analyst flags positive charts",
+      "summary": "Ashok Leyland and Paytm were down up to 3% in Friday's intraday trades, having rallied up to 23% in the preceding six trading sessions.",
+      "url": "https://www.business-standard.com/markets/news/ashok-leyland-paytm-down-after-6-day-rally-analyst-flags-positive-charts-126110900526_1.html",
+      "pub_date": "Mon, 09 Nov 2026 14:17:44 +0530",
+      "category": "Macro & Economy",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "BusinessStandard_Markets",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "markets"
+      ],
+      "user_segment_tags": [
+        "insurance_holders",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Educational explainer on this macro & economy development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "9b159995",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "trading",
+        "intraday"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 411,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "RBI",
+      "title": "RBI's $239 bn forward dollar position to limit rupee gains: Report",
+      "summary": "The Reserve Bank of India's net short position of USD 239 billion in the forward market is likely to limit the rupee's appreciation despite a recovery in foreign portfolio investor (FPI) inflows, according to a report. The Reserve Bank of India's (RBI) forward book stood at a net dollar short position of USD 239 billion as of September 2026, reflecting its commitment to provide dollars when buy-sell swaps mature. This will require the central bank to accumulate dollars as capital inflows improve",
+      "url": "https://www.business-standard.com/finance/news/rbi-s-239-bn-forward-dollar-position-to-limit-rupee-gains-report-126110900571_1.html",
+      "pub_date": "Mon, 09 Nov 2026 15:10:53 +0530",
+      "category": "Macro & Economy",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "BusinessStandard_Finance",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 1,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "macro"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Impact analysis: How this rate change affects your money",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 5,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "ea0c5388",
+      "also_covered_by": [
+        "CNBCTV18_Economy"
+      ],
+      "source_tier": "tier1_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "fpi",
+        "rupee"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 580,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Nifty 50 ETFs or index funds? Compare returns, expense ratios and tracking errors before choosing where to invest",
+      "summary": "Nifty 50 ETFs and index funds track the same benchmark but differ in trading, liquidity and investment convenience. Anand Rathi Wealth's Protima Dhawan explains five parameters to compare and why she prefers actively managed equity funds.",
+      "url": "https://www.livemint.com/money/personal-finance/nifty-50-etfs-or-index-funds-compare-returns-expense-ratios-and-tracking-errors-before-choosing-where-to-invest-11794214691739.html",
+      "pub_date": "Mon, 09 Nov 2026 16:06:33 +0530",
+      "category": "Mutual Funds",
+      "relevance": "HIGH",
+      "relevance_score": 13,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 2,
+      "retail_user_impact": 0,
+      "actionability": 8,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "markets",
+        "mutual_funds",
+        "protection"
+      ],
+      "user_segment_tags": [
+        "first_time",
+        "mf_investors",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "push_notification",
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "c35dcb3d",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "trading",
+        "index fund",
+        "etf",
+        "expense ratio"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 751,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "CII recommends regulatory relaxations for NBFCs in reform agenda submitted to Finance Ministry",
+      "summary": "CII submitted a Reform Agenda to the Finance Minister, recommending regulatory relaxations for NBFCs including long-term capital flexibility, ECB easing, and a review of gold loan risk weightage.",
+      "url": "https://www.cnbctv18.com/economy/cii-recommends-regulatory-relaxations-nbfcs-reform-agenda-to-finance-ministry20030393-20030393.htm",
+      "pub_date": "Mon, 9 Nov 2026 15:11:45 +0530",
+      "category": "Credit & Lending",
+      "relevance": "HIGH",
+      "relevance_score": 9,
+      "source_type": "tier1_news",
+      "source_name": "CNBCTV18_Economy",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "credit",
+        "gold",
+        "insurance",
+        "markets",
+        "pension",
+        "real_estate"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders",
+        "retirees",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your loan eligibility, credit score, or EMIs",
+      "content_angle": "Educational explainer on this credit & lending development",
+      "affected_segments": [
+        "borrowers",
+        "credit card users"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "4c9503c5",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "loan",
+        "nbfc",
+        "cii"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 192,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "India could benefit from US midterm outcome via lower oil prices and yields: Axis MF",
+      "summary": "Democratic gains may ease geopolitical tensions and support FPI flows, though earnings growth remains key for markets",
+      "url": "https://www.thehindubusinessline.com/economy/india-could-benefit-from-us-midterm-outcome-via-lower-oil-prices-and-yields-axis-mf/article71681350.ece",
+      "pub_date": "Mon, 09 Nov 2026 09:59:31 +0530",
+      "category": "Mutual Funds",
+      "relevance": "HIGH",
+      "relevance_score": 9,
+      "source_type": "tier1_news",
+      "source_name": "BusinessLine_Economy",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "macro",
+        "mutual_funds"
+      ],
+      "user_segment_tags": [
+        "mf_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "63cb527f",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "fpi",
+        "oil price",
+        "mf"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 496,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "RBI",
+      "title": "Festive EMIs and credit card bills: How to prioritise repayments, cut costs",
+      "summary": "Prioritise repayment of secured and high-cost loans, and consider refinancing or consolidation to cut interest costs",
+      "url": "https://www.business-standard.com/finance/personal-finance/festive-emis-and-credit-card-bills-how-to-prioritise-repayments-cut-costs-126110900795_1.html",
+      "pub_date": "Mon, 09 Nov 2026 17:19:13 +0530",
+      "category": "Credit & Lending",
+      "relevance": "HIGH",
+      "relevance_score": 8,
+      "source_type": "tier1_news",
+      "source_name": "BusinessStandard_Finance",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "credit",
+        "gold",
+        "mutual_funds",
+        "real_estate"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "families",
+        "mf_investors",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "May affect your loan eligibility, credit score, or EMIs",
+      "content_angle": "Educational explainer on this credit & lending development",
+      "affected_segments": [
+        "borrowers",
+        "credit card users"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "09b27ac3",
+      "also_covered_by": [
+        "BusinessStandard_PF"
+      ],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "credit card",
+        "loan",
+        "emi"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 1117,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Rupee rises 24 paise to 93.74 against US dollar during early trade",
+      "summary": "The rupee appreciated 24 paise to 93.74 against the US dollar in early trade on Monday, supported by lower crude prices, improving foreign flows and hopes of de-escalation in the Middle East. Forex traders said the overall outlook for the rupee remains positive as any progress towards peace in the Middle East reduces the risk premium in crude oil and provides further support to the rupee. Over the weekend, encouraging news came from the Middle East, as President Donald Trump indicated that fresh",
+      "url": "https://www.business-standard.com/finance/news/rupee-rises-24-paise-to-93-74-against-us-dollar-during-early-trade-126110900195_1.html",
+      "pub_date": "Mon, 09 Nov 2026 10:06:05 +0530",
+      "category": "Insurance",
+      "relevance": "HIGH",
+      "relevance_score": 8,
+      "source_type": "tier1_news",
+      "source_name": "BusinessStandard_Finance",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "credit",
+        "insurance",
+        "macro",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "14eaaf69",
+      "also_covered_by": [
+        "Hindu_Business"
+      ],
+      "source_tier": "tier1_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "rupee",
+        "premium",
+        "crude oil"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 314,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Diwali firecracker injuries: Will health insurance cover burns, eye damage and hospital bills? Know what is covered",
+      "summary": "Firecracker injuries during Diwali can lead to significant medical bills. While health insurance covers serious burns and eye injuries requiring hospitalisation, minor outpatient treatment and consumables may be excluded.",
+      "url": "https://www.livemint.com/money/personal-finance/diwali-firecracker-injuries-will-health-insurance-cover-burns-eye-damage-and-hospital-bills-know-what-is-covered-11794214216549.html",
+      "pub_date": "Mon, 09 Nov 2026 18:39:29 +0530",
+      "category": "Insurance",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Money",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 2,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "insurance"
+      ],
+      "user_segment_tags": [
+        "insurance_holders"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "developing",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "1573ecb1",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "health insurance",
+        "insurance"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 802,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Confused between largecap, midcap, flexicap and hybrid funds? How new investors should choose",
+      "summary": "First-time mutual fund investors often struggle to choose between largecap, midcap, flexicap and hybrid funds. Financial experts explain how risk appetite, investment horizon and financial goals should guide category selection and portfolio construction.",
+      "url": "https://economictimes.indiatimes.com/mf/analysis/confused-between-largecap-midcap-flexicap-and-hybrid-funds-how-new-investors-should-choose/slideshow/135677592.cms",
+      "pub_date": "Mon, 09 Nov 2026 14:30:02 +0530",
+      "category": "Mutual Funds",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "tier1_news",
+      "source_name": "ET_MF",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "markets",
+        "mutual_funds"
+      ],
+      "user_segment_tags": [
+        "first_time",
+        "mf_investors"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "cc78dd46",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "mutual fund",
+        "hybrid fund"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 256,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Mid and smallcap stocks could see strong gains in 2027, but expect volatility, says Deepak Shenoy, Capitalmind Mutual Fund",
+      "summary": "Deepak Shenoy anticipates a stronger rally for mid and smallcap stocks in 2027, marked by volatility. He forecasts earnings growth exceeding 20% in these segments, supporting potential gains. Valuations, however, will vary based on companies meeting growth expectations or not. Global political tensions and the AI sector's challenges may influence market dynamics. Shenoy emphasizes the unpredictability of market movements and shares insights on past predictions.",
+      "url": "https://economictimes.indiatimes.com/mf/mf-news/mid-and-smallcap-stocks-could-see-strong-gains-in-2027-but-expect-volatility-says-deepak-shenoy-capitalmind-mutual-fund/articleshow/135676617.cms",
+      "pub_date": "Mon, 09 Nov 2026 14:29:37 +0530",
+      "category": "Mutual Funds",
+      "relevance": "HIGH",
+      "relevance_score": 7,
+      "source_type": "tier1_news",
+      "source_name": "ET_MF_News",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "markets",
+        "mutual_funds"
+      ],
+      "user_segment_tags": [
+        "mf_investors",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "8f65c546",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "volatility",
+        "mutual fund"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 1100,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Stock market holiday: Closed today on Tuesday 10 November 2026 on Diwali-Balipratipada; no trading in NSE, BSE exchanges",
+      "summary": "Stock market holiday: The Indian stock market will remain closed for trading on Tuesday, November 10, on account of Diwali-Balipratipada.",
+      "url": "https://www.livemint.com/market/stock-market-news/stock-market-holiday-closed-today-on-tuesday-10-november-2026-on-diwali-balipratipada-no-trading-in-nse-bse-exchanges-11794275379042.html",
+      "pub_date": "Tue, 10 Nov 2026 07:47:28 +0530",
+      "category": "Capital Markets",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "macro",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "93cead0b",
+      "also_covered_by": [
+        "TOI_Business",
+        "TOI_Business"
+      ],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "trading",
+        "stock market"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 432,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Gold vs silver vs copper vs platinum: Which metal could deliver the biggest returns in Samvat 2083?",
+      "summary": "Silver has the strongest potential among the four metals for Samvat 2083 after a steep correction, though its volatility poses significant risk. Gold may suit investors seeking resilience, thanks to central bank buying and ETF holdings.",
+      "url": "https://www.livemint.com/market/commodities/gold-vs-silver-vs-copper-vs-platinum-which-metal-could-deliver-the-biggest-returns-in-samvat-2083-11794232375711.html",
+      "pub_date": "Mon, 09 Nov 2026 19:31:28 +0530",
+      "category": "Mutual Funds",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "gold",
+        "mutual_funds"
+      ],
+      "user_segment_tags": [
+        "mf_investors"
+      ],
+      "content_tags": [
+        "reaction",
+        "comparison"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "5f07ac5a",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "volatility",
+        "etf"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 559,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "IREDA shares jump 7% despite 20% fall in one year on high trading volume | Check target, stop loss, stock performance",
+      "summary": "IREDA shares opened at ₹111.62 apiece on the NSE, against their previous close of ₹111.46, and climbed to an intraday high of ₹119.58, marking a gain of around 7.3% from the previous closing price.",
+      "url": "https://www.livemint.com/market/stock-market-news/ireda-shares-jump-7-despite-20-fall-in-one-year-on-high-trading-volume-check-target-stop-loss-stock-performance-11794214570839.html",
+      "pub_date": "Mon, 09 Nov 2026 15:04:49 +0530",
+      "category": "Capital Markets",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "credit",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "reaction"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Calm-down content: What to do (and not do) right now",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "7afe83ea",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "trading",
+        "intraday"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 461,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Is stock market closed tomorrow in India? Holiday in NSE, BSE or trading of shares allowed? Check exchange calendar",
+      "summary": "NSE and BSE will be closed on November 10 for the Diwali-Balipratipada holiday, following a special Muhurat trading session on November 8.&nbsp;",
+      "url": "https://www.livemint.com/market/stock-market-news/is-stock-market-closed-tomorrow-in-india-holiday-in-nse-bse-or-trading-of-shares-allowed-check-exchange-calendar-11794214735706.html",
+      "pub_date": "Mon, 09 Nov 2026 14:33:16 +0530",
+      "category": "Capital Markets",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "Mint_Market",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "gold",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "a39ebec8",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "trading",
+        "stock market"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 313,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Voice AI in lending: 5 things borrowers should know about EMI calls and loan collections",
+      "summary": "Voice AI is transforming lending interactions in India by handling multilingual queries and collections, though challenges remain in intent recognition, data privacy, and human oversight.",
+      "url": "https://www.cnbctv18.com/personal-finance/voice-ai-lending-borrowers-should-know-emi-calls-loan-collections-20030246.htm",
+      "pub_date": "Mon, 9 Nov 2026 13:04:11 +0530",
+      "category": "Credit & Lending",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "CNBCTV18_PF",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 2,
+      "retail_user_impact": 4,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "credit",
+        "mutual_funds"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "mf_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your loan eligibility, credit score, or EMIs",
+      "content_angle": "Educational explainer on this credit & lending development",
+      "affected_segments": [
+        "borrowers",
+        "credit card users"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "e58e23f5",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "loan",
+        "emi"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 835,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "E20 petrol: What vehicle owners should know about mileage and insurance cover",
+      "summary": "India has adopted E20 petrol. Learn how vehicle compatibility, mileage, maintenance, and insurance coverage are affected for cars and two-wheelers.",
+      "url": "https://www.cnbctv18.com/personal-finance/e20-petrol-what-vehicle-owners-should-know-about-mileage-insurance-cover-20030106.htm",
+      "pub_date": "Mon, 9 Nov 2026 10:22:47 +0530",
+      "category": "Insurance",
+      "relevance": "HIGH",
+      "relevance_score": 6,
+      "source_type": "tier1_news",
+      "source_name": "CNBCTV18_PF",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "credit",
+        "insurance",
+        "macro"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 3,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "1292677e",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "petrol",
+        "insurance"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 752,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Stock Market Holiday: Is The Stock Market Open Or Closed On November 10? Check NSE And BSE Trading Schedule",
+      "summary": "Both BSE and NSE will remain closed for trading on Tuesday, November 10, 2026.",
+      "url": "https://www.ndtvprofit.com/markets/stock-market-holiday-is-the-stock-market-open-or-closed-on-november-10-check-nse-and-bse-trading-schedule-12300549#publisher=newsstand",
+      "pub_date": "Tue, 10 Nov 2026 07:00:01 +0530",
+      "category": "Capital Markets",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "tier2_news",
+      "source_name": "NDTV_Business",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "6b5ac0b0",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "trading",
+        "stock market"
+      ],
+      "fulltext_status": "blocked",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Nvidia plunges but tech shares rebound, oil prices slump",
+      "summary": "Nvidia shares slumped more than 8% as trading got under way in New York but recovered to stand down more than 5% in early afternoon trading",
+      "url": "https://www.thehindu.com/business/markets/nvidia-plunges-but-tech-shares-rebound-oil-prices-slump/article71683988.ece",
+      "pub_date": "Tue, 10 Nov 2026 02:43:33 +0530",
+      "category": "Capital Markets",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "tier2_news",
+      "source_name": "Hindu_Business",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "credit",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "9712231a",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "trading",
+        "oil price"
+      ],
+      "fulltext_status": "paywalled",
+      "word_count": 567,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Nvidia shares drop 5.75% after company launches probe into Jensen Huang’s link to alleged Chinese spy",
+      "summary": "Nvidia-linked perpetual futures on the Hyperliquid platform and after-hours trading on the Blue Ocean Alternative Trading System (BOATS) were around USD 175.97.",
+      "url": "https://www.hindustantimes.com/business/nvidia-shares-drop-5-75-after-company-launches-probe-into-jensen-huang-s-link-to-alleged-chinese-spy-101794213168302.html",
+      "pub_date": "Mon, 09 Nov 2026 14:13:08 +0530",
+      "category": "Capital Markets",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "tier2_news",
+      "source_name": "HT_Business",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "credit",
+        "markets",
+        "mutual_funds"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "mf_investors",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "2b6db96a",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "trading",
+        "futures"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 558,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "AIF, SIF and PMS managers can now certify accredited investors",
+      "summary": "AIF, SIF and PMS managers can now certify accredited investors Cafemutual",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNM1JMQkVxLVk2YnlwVFZnRU0xQkw0YThoTGV0N2w5cGlrSExXdUZaNkpQMUJPX2RRaHk2U3RTVVdpdURMcHBDeFdCcjllSXNLQTFjaEwwN1NSV2hHQXJ4TW0xT2g5U1JFRkMwQVN1a3ZTRndUV3NxU1RWLXJ3NW1fc0xNU0F5TFhaMm90T3lRRGhIQ1RNS2R2a2RSY2lGMWpLWFJERGxvWQ?oc=5",
+      "pub_date": "Mon, 09 Nov 2026 20:17:24 GMT",
+      "category": "Credit & Lending",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "tier2_news",
+      "source_name": "Cafemutual",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 0,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "credit",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "hni",
+        "borrowers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your loan eligibility, credit score, or EMIs",
+      "content_angle": "Educational explainer on this credit & lending development",
+      "affected_segments": [
+        "borrowers",
+        "credit card users"
+      ],
+      "engagement_score": 2,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "eaa2f0f0",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "pms",
+        "aif"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "SEBI",
+      "title": "SEBI to review foreign investor hurdles; Could NRIs benefit from easier access?",
+      "summary": "SEBI to review foreign investor hurdles; Could NRIs benefit from easier access? Cafemutual",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdF9uMl8yRU1HWEJEUi1VWVNvNXRaTG1TOWRxWGJRVmxrXy14Mm9McmlDUU90eFVoQVdacU1HRGE2LTF2YkpCY3VRVDJoU2xFd2QwTXIwRG5UTnVSOUExOEFrTHZXbi1mMUhuU18yejB4OHB0aEJxV0NTdWl0cUM0enRzQmFtN09VWnhDQlBqdG1HSERHV2FSa1ktSlJBdzlwbTZPUEhsWDFwZFBmY3BLS2FZRHpnbUhaTWhjWQ?oc=5",
+      "pub_date": "Mon, 09 Nov 2026 20:16:50 GMT",
+      "category": "Capital Markets",
+      "relevance": "HIGH",
+      "relevance_score": 5,
+      "source_type": "tier2_news",
+      "source_name": "Cafemutual",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 1,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "markets"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "this_week",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "review",
+      "action_deadline": "",
+      "cluster_id": "c105f18a",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "foreign investor",
+        "sebi"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "BSE",
+      "title": "Demat Auction 752",
+      "summary": "Demat Auction 752",
+      "url": "https://www.bseindia.com/downloads/UploadDocs/Notices/20261109-38/20261109-38.pdf",
+      "pub_date": "Mon, 09 Nov 2026 16:02:47 GMT",
+      "category": "Investor Protection",
+      "relevance": "MEDIUM",
+      "relevance_score": 4,
+      "source_type": "official",
+      "source_name": "BSE_Notices",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 3,
+      "retail_user_impact": 2,
+      "actionability": 0,
+      "engagement_potential": 4,
+      "topic_tags": [
+        "protection"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Affects how your investments are protected and administered",
+      "content_angle": "Educational explainer on this investor protection development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 4,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "6d7b8f0d",
+      "also_covered_by": [
+        "BSE_Notices"
+      ],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "demat"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "NSE",
+      "title": "Settlement Calendar for Exit Offer to the Dissenting Unitholders of Oriental InfraTrust (InvIT)",
+      "summary": "Settlement Calendar for Exit Offer to the Dissenting Unitholders of Oriental InfraTrust (InvIT)",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CMPT77379.pdf",
+      "pub_date": "Mon, 9 Nov 2026 00:00:00 +0530",
+      "category": "Capital Markets",
+      "relevance": "MEDIUM",
+      "relevance_score": 4,
+      "source_type": "official",
+      "source_name": "NSE_Circulars",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 3,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 2,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "e9fe6aed",
+      "also_covered_by": [
+        "NSE_Circulars"
+      ],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "invit"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "NSE",
+      "title": "Listing & Trading of Equity Shares pursuant to Bonus Issue of Pashupati Cotspin Limited",
+      "summary": "Listing & Trading of Equity Shares pursuant to Bonus Issue of Pashupati Cotspin Limited",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CML77357.pdf",
+      "pub_date": "Mon, 9 Nov 2026 00:00:00 +0530",
+      "category": "Capital Markets",
+      "relevance": "MEDIUM",
+      "relevance_score": 4,
+      "source_type": "official",
+      "source_name": "NSE_Circulars",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 3,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "f7aab616",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "trading"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "BSE",
+      "title": "Discontinuation of Trading and Delisting of Equity shares of Elpro International Ltd (Scrip Code: 504000)",
+      "summary": "Discontinuation of Trading and Delisting of Equity shares of Elpro International Ltd (Scrip Code: 504000)",
+      "url": "https://www.bseindia.com/downloads/UploadDocs/Notices/20261109-20/20261109-20.pdf",
+      "pub_date": "Mon, 09 Nov 2026 12:16:08 GMT",
+      "category": "Capital Markets",
+      "relevance": "MEDIUM",
+      "relevance_score": 4,
+      "source_type": "official",
+      "source_name": "BSE_Notices",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 3,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect stock market trading rules or your equity investments",
+      "content_angle": "Educational explainer on this capital markets development",
+      "affected_segments": [
+        "stock traders",
+        "equity investors"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "3ab5d98b",
+      "also_covered_by": [],
+      "source_tier": "official",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "trading"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Buying gold or silver in November? 3 key dates to watch before making a purchase",
+      "summary": "Gold and silver buyers should monitor key US economic releases in November, including October CPI and PPI inflation data, and Federal Reserve policy meeting minutes.",
+      "url": "https://www.cnbctv18.com/personal-finance/buying-gold-or-silver-in-november-3-key-dates-to-watch-before-making-a-purchase-20030732.htm",
+      "pub_date": "Mon, 9 Nov 2026 23:22:03 +0530",
+      "category": "Rates & Monetary Policy",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier1_news",
+      "source_name": "CNBCTV18_PF",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "gold",
+        "macro",
+        "mutual_funds",
+        "rates"
+      ],
+      "user_segment_tags": [
+        "mf_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Educational explainer on this rates & monetary policy development",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 5,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "27efa606",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "inflation"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 379,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Corporate NPS: The one tax break the new regime didn’t take away",
+      "summary": "Corporate NPS: The one tax break the new regime didn’t take away Moneycontrol.com",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQeE1kbWdGN3pRdklZampocERTbG5mNWNzSlB6bTdYN2htS19waVVCTFJYaDE4cGJGM3pLaUY4cGdDNV9CT0twcmFKd0NqdEd5ZFBXaVJHdE5HUmZVeWloVTRfcnhMRWQtckt4YXZ6WkxpYU9vZlJqUEJBMWtrRU5TNmJpNHEwQkl0UmFhTV9zM3hrWHRlcl9VYnNsbWdFWDVTT2UwQzU5TG1PZU56X1FmVFJzU1ptSUpJeEZ5UFVyLW1tNjRUeDVlYXktajFOWE9iZnkw0gHYAUFVX3lxTE5VcFdTaWRUX0Y3dGc3dDlYNjNMSjBFSldOYmp2MklZdE9iOVhNSThMQlpFTU9TaENPWmdQenhPb0ViNUY5NmF6RnhRYVVYT3dSYmJ3enVWbmdGbTlKLS1XWEVTZlhNNDZNTUxXeWVrWDlwV2JwSWNTR0tzczA1WEE3U3Z6eDR1alBJN0lIMVh1SjlRR08wbG5FdTg0YlNtdFdIZGdpMDl3SzJ5SVRwaHlhRFVoTmxVeGxjOFM2SFE0bDE4NTZZSjc5TW0wemluOU9GV3VTVXI5Mg?oc=5",
+      "pub_date": "Tue, 10 Nov 2026 03:12:21 GMT",
+      "category": "Pension & NPS",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "Moneycontrol_PF",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 0,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "pension"
+      ],
+      "user_segment_tags": [
+        "retirees",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your NPS contributions, withdrawals, or pension planning",
+      "content_angle": "Educational explainer on this pension & nps development",
+      "affected_segments": [
+        "NPS subscribers",
+        "retirees",
+        "salaried"
+      ],
+      "engagement_score": 5,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "2873b1a7",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": [
+        "nps"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Bitcoin trims early gains, trades below $74,500 as investors await US inflation data",
+      "summary": "Bitcoin trims early gains, trades below $74,500 as investors await US inflation data Moneycontrol.com",
+      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNRGRlb0o2WThnS3FPWUxkYm90bHhPcWxLUkp0NjJRUHRicU5lVkFPNk1OQmVpWEprSU9DZnNyMm9ZUjFPSnhNeTJwOFJncVJrZUZzOENVQ3NYd0hLOTduSTJUa1Q0NWlGMmt1UkdxVU9WVFhPUWpINGVuNWZKcjJ1WlREZUE3TkY1NUQ3N2dBTjdPZGllZE1YcGdTZ29hYUdrYWxNd2pUV3dIUWJCSFlLV084alRlQjJrR29fb1NuMUN2VXAxVTZQaXlBNEVmU3NneGJqck9MSWNBdDI0NzcxOUZtUVBYdnNnT2VuUA?oc=5",
+      "pub_date": "Tue, 10 Nov 2026 03:49:29 GMT",
+      "category": "Rates & Monetary Policy",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "tier2_news",
+      "source_name": "Moneycontrol_PF",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 0,
+      "engagement_potential": 5,
+      "topic_tags": [
+        "rates"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May impact your loan EMIs, FD returns, or savings rates",
+      "content_angle": "Educational explainer on this rates & monetary policy development",
+      "affected_segments": [
+        "borrowers",
+        "FD holders",
+        "salaried"
+      ],
+      "engagement_score": 5,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "cae22d15",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "inflation"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Adani Ports, MEIL and Vishwa Samudra in race for ₹11,733-crore VOC Port outer harbour project",
+      "summary": "The three companies are competing for the Outer Harbour infrastructure contract at Thoothukudi port, which will be executed under the Hybrid Annuity Model",
+      "url": "https://www.thehindubusinessline.com/economy/logistics/adani-ports-meil-and-vishwa-samudra-in-race-for-11733-crore-voc-port-outer-harbour-project/article71681842.ece",
+      "pub_date": "Mon, 09 Nov 2026 17:14:15 +0530",
+      "category": "Pension & NPS",
+      "relevance": "MEDIUM",
+      "relevance_score": 4,
+      "source_type": "tier1_news",
+      "source_name": "BusinessLine_Economy",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 2,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 4,
+      "topic_tags": [
+        "pension"
+      ],
+      "user_segment_tags": [
+        "retirees"
+      ],
+      "content_tags": [
+        "comparison"
+      ],
+      "user_impact": "May affect your NPS contributions, withdrawals, or pension planning",
+      "content_angle": "Educational explainer on this pension & nps development",
+      "affected_segments": [
+        "NPS subscribers",
+        "retirees",
+        "salaried"
+      ],
+      "engagement_score": 4,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "0067a08e",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "annuity"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 322,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Planning a destination wedding? Know what insurance covers and what it doesn't",
+      "summary": "Wedding insurance helps cover financial losses from cancellations and disruptions, but couples must carefully check policy terms, exclusions, and claim limits before buying.",
+      "url": "https://www.cnbctv18.com/personal-finance/planning-a-destination-wedding-know-what-insurance-covers-what-it-doesnt-20030291.htm",
+      "pub_date": "Mon, 9 Nov 2026 13:58:26 +0530",
+      "category": "Insurance",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier1_news",
+      "source_name": "CNBCTV18_PF",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 8,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "insurance",
+        "mutual_funds"
+      ],
+      "user_segment_tags": [
+        "insurance_holders"
+      ],
+      "content_tags": [
+        "alert"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "push_notification",
+        "in_app_widget"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "verify",
+      "action_deadline": "",
+      "cluster_id": "ed9ce341",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "insurance"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 836,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Crypto cold wallets explained: Risks, recovery options and safety precautions",
+      "summary": "Cryptocurrency cold wallets offer offline security, but recovery phrases and proper management are critical to prevent permanent loss of digital assets.",
+      "url": "https://www.cnbctv18.com/personal-finance/crypto-cold-wallets-explained-risks-recovery-options-safety-precautions-20030148.htm",
+      "pub_date": "Mon, 9 Nov 2026 11:25:59 +0530",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier1_news",
+      "source_name": "CNBCTV18_PF",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 8,
+      "engagement_potential": 3,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "salaried"
+      ],
+      "content_tags": [
+        "explainer"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "evergreen",
+      "evergreen_or_breaking": "evergreen",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "b46b5afc",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "options"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 435,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "MCX Natural Gas Futures: Can go either way",
+      "summary": "MCX Natural Gas Futures contract has to breach the ₹290-₹291 region in order to go higher",
+      "url": "https://www.thehindubusinessline.com/portfolio/technical-analysis/commodity-calls/mcx-natural-gas-futures-can-go-either-way/article71681519.ece",
+      "pub_date": "Mon, 09 Nov 2026 11:08:29 +0530",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier1_news",
+      "source_name": "BusinessLine_Portfolio",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 2,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Educational explainer on this regulatory update development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "d541dccc",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "futures"
+      ],
+      "fulltext_status": "paywalled",
+      "word_count": 213,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Nifty Prediction Today – November 09, 2026: Nifty 50 Futures: Scope for a near-term correction; wait and watch",
+      "summary": "Nifty 50 November Futures can see a corrective fall on a break below 24,915",
+      "url": "https://www.thehindubusinessline.com/portfolio/technical-analysis/nifty-prediction-today-november-09-2026-nifty-50-futures-scope-for-a-near-term-correction-wait-and-watch/article71681466.ece",
+      "pub_date": "Mon, 09 Nov 2026 10:26:59 +0530",
+      "category": "Regulatory Update",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier1_news",
+      "source_name": "BusinessLine_Portfolio",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "markets"
+      ],
+      "user_segment_tags": [
+        "stock_traders"
+      ],
+      "content_tags": [
+        "reaction"
+      ],
+      "user_impact": "Regulatory development relevant to your finances",
+      "content_angle": "Calm-down content: What to do (and not do) right now",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "a3604efb",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "futures"
+      ],
+      "fulltext_status": "paywalled",
+      "word_count": 330,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Early November trend indicates return of FPIs into Indian equities",
+      "summary": "Provisional exchange data show that foreign institutional investors purchased Indian shares worth a net ₹45,960 crore during the five trading sessions ended on November 6, 2026",
+      "url": "https://www.thehindu.com/business/Industry/early-november-trend-indicates-return-of-fpis-into-indian-equities/article71681716.ece",
+      "pub_date": "Mon, 09 Nov 2026 13:34:02 +0530",
+      "category": "Macro & Economy",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "Hindu_Business",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "macro",
+        "markets"
+      ],
+      "user_segment_tags": [
+        "hni",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "Broader economic signal that may affect your portfolio",
+      "content_angle": "Educational explainer on this macro & economy development",
+      "affected_segments": [
+        "all investors"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "cb6857df",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "trading",
+        "fpi"
+      ],
+      "fulltext_status": "paywalled",
+      "word_count": 700,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "IRDAI",
+      "title": "General insurers seek five-year amortisation of Ind AS transition losses",
+      "summary": "The insurers, represnted by the General Insurance Council, have approached the tax authorities for the necessary approval and have already presented their case before the Arvind Shrivastava, Revenue Secretary, Ministry of Finance. New Delhi: Indian general insurance companies are seeking permission to amortise losses arising from the transition to the new Indian Accounting Standards (Ind […] The post General insurers seek five-year amortisation of Ind AS transition losses first appeared on Asia ",
+      "url": "https://asiainsurancepost.com/archives/85824",
+      "pub_date": "Mon, 09 Nov 2026 21:53:33 +0000",
+      "category": "Insurance",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "tier2_news",
+      "source_name": "AsiaInsurancePost",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 3,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "insurance"
+      ],
+      "user_segment_tags": [
+        "insurance_holders",
+        "taxpayers"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "60bcd40b",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "tax_optimization",
+      "date_parsed": true,
+      "matched_keywords": [
+        "insurance"
+      ],
+      "fulltext_status": "feed",
+      "word_count": 470,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "French bank Credit Mutuel Arkea says €100 million missing after cyberattack",
+      "summary": "The attackers used an account belonging to Credit Mutuel Arkea to carry out “fraudulent transactions,” Credit Mutuel Arkea said in a statement on Wednesday. The funds were not in the form of cryptocurrency, the bank said, but could have been converted to crypto after being stolen. French lender Credit Mutuel Arkea said on Thursday hackers […] The post French bank Credit Mutuel Arkea says €100 million missing after cyberattack first appeared on Asia Insurance Post .",
+      "url": "https://asiainsurancepost.com/archives/85766",
+      "pub_date": "Mon, 09 Nov 2026 11:56:19 +0000",
+      "category": "Insurance",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "tier2_news",
+      "source_name": "AsiaInsurancePost",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 2,
+      "retail_user_impact": 2,
+      "actionability": 0,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "credit",
+        "insurance",
+        "protection"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "fb9a841b",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "insurance"
+      ],
+      "fulltext_status": "feed",
+      "word_count": 1034,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "How should a 40-year old invest Rs. 1 Crore cash for retirement?",
+      "summary": "A reader asks, “Can the freefincal robo advisor tool handle my situation? I am 40 years old and have Rs. 1 Crore cash in the bank. I have no other investments (don’t ask why; it’s a long story!). I want to retire by age 55. How should I invest this Rs. 1 Crore for a... The post How should a 40-year old invest Rs. 1 Crore cash for retirement? appeared first on freefincal .",
+      "url": "https://freefincal.com/how-should-a-40-year-old-invest-rs-1-crore-cash-for-retirement/",
+      "pub_date": "Tue, 10 Nov 2026 00:30:12 +0000",
+      "category": "Pension & NPS",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "blog",
+      "source_name": "Freefincal",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 8,
+      "engagement_potential": 3,
+      "topic_tags": [
+        "markets",
+        "pension",
+        "rates"
+      ],
+      "user_segment_tags": [
+        "retirees"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your NPS contributions, withdrawals, or pension planning",
+      "content_angle": "Educational explainer on this pension & nps development",
+      "affected_segments": [
+        "NPS subscribers",
+        "retirees",
+        "salaried"
+      ],
+      "engagement_score": 3,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "file",
+      "action_deadline": "",
+      "cluster_id": "5a231912",
+      "also_covered_by": [],
+      "source_tier": "blog",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "retirement"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 501,
+      "fulltext_keywords": []
+    }
+  ],
+  "more_items": [
+    {
+      "regulator": "MoF/Other",
+      "title": "HSBC upgrades Indian equities to 'overweight', cuts China to 'neutral'",
+      "summary": "HSBC upgraded Indian equities to 'overweight' after a market correction, citing reasonable valuations, resilient earnings and strong credit growth, while downgrading Chinese stocks to 'neutral",
+      "url": "https://www.business-standard.com/markets/news/hsbc-upgrades-indian-equities-to-overweight-cuts-china-to-neutral-126110901244_1.html",
+      "pub_date": "Mon, 09 Nov 2026 20:37:33 +0530",
+      "category": "Credit & Lending",
+      "relevance": "MEDIUM",
+      "relevance_score": 4,
+      "source_type": "tier1_news",
+      "source_name": "BusinessStandard_Markets",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 3,
+      "engagement_potential": 2,
+      "topic_tags": [
+        "credit",
+        "insurance"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "reaction"
+      ],
+      "user_impact": "May affect your loan eligibility, credit score, or EMIs",
+      "content_angle": "Educational explainer on this credit & lending development",
+      "affected_segments": [
+        "borrowers",
+        "credit card users"
+      ],
+      "engagement_score": 2,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "088e1cb9",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "market correction"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 264,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Bank holiday for Diwali/Bali Pratipada: Are banks open or closed today on November 10, 2026?",
+      "summary": "Bank holiday today: Bank branches in few states will be closed on November 10, 2026. This closure is due to the observance of Bali Pratipada and other festivals. Customers will be unable to conduct branch transactions on this day. However, digital banking services will remain available for various transactions. Customers can utilize UPI payments, ATM cash withdrawals, and online banking facilities during the holiday.",
+      "url": "https://economictimes.indiatimes.com/wealth/save/bank-holiday-for-bali-pratipada-are-banks-open-or-closed-today-on-november-10-2026/articleshow/135626342.cms",
+      "pub_date": "Tue, 10 Nov 2026 07:00:00 +0530",
+      "category": "Credit & Lending",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier1_news",
+      "source_name": "ET_Wealth_Save",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 2,
+      "retail_user_impact": 0,
+      "actionability": 6,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "credit"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your loan eligibility, credit score, or EMIs",
+      "content_angle": "Educational explainer on this credit & lending development",
+      "affected_segments": [
+        "borrowers",
+        "credit card users"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "claim",
+      "action_deadline": "",
+      "cluster_id": "05fbcd54",
+      "also_covered_by": [],
+      "source_tier": "tier1_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "upi"
+      ],
+      "fulltext_status": "ok",
+      "word_count": 284,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "T30 race: SBI MF keeps the crown, Invesco MF wins the growth race",
+      "summary": "T30 race: SBI MF keeps the crown, Invesco MF wins the growth race Cafemutual",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPcS1Gd2RpQU9UY1hEd2JJRlQwVTRURjFKbWkyb01PRlMzV2Y0RnNhdjRWMlFvUkRoN2Zrc2tuNlRCN1lWYlFxQnFrdURjMnFlUUJrZ3VqUURDS1U5dldvc3MwUFZ1OWRpT0lrbTRnb2VNaEF4ODhXN00xS2FUOTgxSjVlY0ZlMExrNVNyTXYwazI0SklCQ29Oc1lrSDFqQmRod3A5V3FkcFY1Zw?oc=5",
+      "pub_date": "Mon, 09 Nov 2026 20:16:48 GMT",
+      "category": "Mutual Funds",
+      "relevance": "MEDIUM",
+      "relevance_score": 3,
+      "source_type": "tier2_news",
+      "source_name": "Cafemutual",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 1,
+      "topic_tags": [],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "8adab9af",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "mf"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "Planning to invest in debt funds this Diwali? Nilesh Shah and 4 others decode short-term vs long-duration strategies",
+      "summary": "Planning to invest in debt funds this Diwali? Nilesh Shah and 4 others decode short-term vs long-duration strategies Cafemutual",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQM3lPaW1BOE1kU1JiZWxKQVQyNms5RTBvbVhRWmJDV1hCRERlZmJmd3RKZUZXX0xhWWZoMWt2dkhOeGlUdE5TVWRIQzVKSi1jd3FGUUFrWENoa0NzQzZhMWRTZ19pWElvakk0Um9PanB2bVBhN1pESi1qOHZVS2RRNDJsUVZaV0NYa08taHJXNEtvM1c5QklTZk5IVkpZNjdEbkJjNU9OWjdxLTNTTFdjb0gxVURRUmVNQjJWQmNlVVNXRTRLWThsOFJfdlNxM0pFeEZ1RlkzNnQ2aW5vbWNqLUxjUEtibEdib1JOWXpNVkxTQQ?oc=5",
+      "pub_date": "Mon, 09 Nov 2026 20:28:38 GMT",
+      "category": "Mutual Funds",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "tier2_news",
+      "source_name": "Cafemutual",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "mutual_funds"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "comparison"
+      ],
+      "user_impact": "May affect your mutual fund investments or SIPs",
+      "content_angle": "Educational explainer on this mutual funds development",
+      "affected_segments": [
+        "MF investors",
+        "SIP holders"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "d9b9cf1f",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "portfolio_review",
+      "date_parsed": true,
+      "matched_keywords": [
+        "debt fund"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "IRDAI",
+      "title": "Brokers meet Sitharaman and PMO officials, seek intervention against IRDAI’s Distribution reforms proposals",
+      "summary": "Brokers meet Sitharaman and PMO officials, seek intervention against IRDAI’s Distribution reforms proposals Cafemutual",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOR0ZjOXhtNUFVcDFaZGZsTUROcDQ5dGM2QkdYdzVTTHgzMWRYMUlva1JlbHJzQ3daQmFRYWl6UnVuWFR6dGVRcVBIdjEtMURNOFNnbXJObjd6dmZndTQ0REFkZVc0WUZ3Z3Joem5tYnRzc2N5cUxFVl9OOGI4UHdBTWI4TnZYbjdUMFJnRGpXM2ZGUDc3QXlSektjZU1UUmxHR3c1cmJsdUVaSWpEOWpsQXUweG5waEVoMXRLSmw2cV9pVG1FTUtUWUZxR0R2MmIyYWM1ZDV4VnJJeWwwZktnTmczcGY?oc=5",
+      "pub_date": "Mon, 09 Nov 2026 20:28:38 GMT",
+      "category": "Insurance",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "tier2_news",
+      "source_name": "Cafemutual",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 1,
+      "retail_user_impact": 0,
+      "actionability": 0,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "insurance"
+      ],
+      "user_segment_tags": [
+        "all_investors"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "5ca6c953",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "irdai"
+      ],
+      "fulltext_status": "",
+      "word_count": 0,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "COP31 Summit leaders urge crisis-wracked world to move faster on climate",
+      "summary": "This year is on track to be one of the four hottest on record, as a powerful El Nino has compounded the impact of global warming, a UN report showed on Monday. The year has been marked by a series of extreme heatwaves across Western Europe and a glacier collapse in Nepal. The resulting flood […] The post COP31 Summit leaders urge crisis-wracked world to move faster on climate first appeared on Asia Insurance Post .",
+      "url": "https://asiainsurancepost.com/archives/85821",
+      "pub_date": "Mon, 09 Nov 2026 21:11:39 +0000",
+      "category": "Insurance",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "tier2_news",
+      "source_name": "AsiaInsurancePost",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 2,
+      "retail_user_impact": 2,
+      "actionability": 8,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "credit",
+        "insurance",
+        "rates"
+      ],
+      "user_segment_tags": [
+        "borrowers",
+        "insurance_holders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "update",
+      "action_deadline": "",
+      "cluster_id": "dcf80ff0",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "insurance"
+      ],
+      "fulltext_status": "feed",
+      "word_count": 860,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "France blames Iran for last month’s cyberattack on supermarket fridges",
+      "summary": "France’s national cybersecurity agency, ANSSI, attributed the attack to the Shahid Kaveh group, described as a “cyber unit” affiliated with Iran’s Islamic Revolutionary Guard Corps. The investigation targets the leader of the group as well as his two deputies and any other individuals who might be identified in connection with the case, Beccuau said. Paris: […] The post France blames Iran for last month’s cyberattack on supermarket fridges first appeared on Asia Insurance Post .",
+      "url": "https://asiainsurancepost.com/archives/85817",
+      "pub_date": "Mon, 09 Nov 2026 20:25:34 +0000",
+      "category": "Insurance",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "tier2_news",
+      "source_name": "AsiaInsurancePost",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 4,
+      "actionability": 0,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "insurance"
+      ],
+      "user_segment_tags": [
+        "insurance_holders"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "7959f93c",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "insurance"
+      ],
+      "fulltext_status": "feed",
+      "word_count": 387,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "The fridge hack: a cyber event, a property loss. So which policy pays?",
+      "summary": "The attackers accessed refrigeration controllers reachable from the internet. They switched units to defrost or heating mode and, in some cases, moved the setting from -27°C to over 50°C. By the time staff arrived, the stock was ruined.There was no ransom demand and no data was taken. It was pure sabotage. So where does the […] The post The fridge hack: a cyber event, a property loss. So which policy pays? first appeared on Asia Insurance Post .",
+      "url": "https://asiainsurancepost.com/archives/85810",
+      "pub_date": "Mon, 09 Nov 2026 13:07:24 +0000",
+      "category": "Insurance",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "tier2_news",
+      "source_name": "AsiaInsurancePost",
+      "circular_ref": "",
+      "action_required": true,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 6,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "insurance"
+      ],
+      "user_segment_tags": [
+        "insurance_holders",
+        "stock_traders"
+      ],
+      "content_tags": [
+        "comparison"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "push_notification"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "switch",
+      "action_deadline": "",
+      "cluster_id": "9e0ffc57",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "insurance"
+      ],
+      "fulltext_status": "feed",
+      "word_count": 586,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "MSIG UK expands London Market offering with launch of Construction and Marine Cargo classes",
+      "summary": "The new capabilities will complement MSIG UK’s existing Property and Casualty offerings, which were launched last year, and represent the next phase of the company’s growth in the UK and London Market. London: MSIG UK today announced the expansion of its London Market and UK product capabilities through the launch of dedicated Construction and Marine […] The post MSIG UK expands London Market offering with launch of Construction and Marine Cargo classes first appeared on Asia Insurance Post .",
+      "url": "https://asiainsurancepost.com/archives/85807",
+      "pub_date": "Mon, 09 Nov 2026 12:27:46 +0000",
+      "category": "Insurance",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "tier2_news",
+      "source_name": "AsiaInsurancePost",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 0,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "insurance"
+      ],
+      "user_segment_tags": [
+        "insurance_holders"
+      ],
+      "content_tags": [
+        "comparison"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "8d255bb0",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "wealth_checkup",
+      "date_parsed": true,
+      "matched_keywords": [
+        "insurance"
+      ],
+      "fulltext_status": "feed",
+      "word_count": 389,
+      "fulltext_keywords": []
+    },
+    {
+      "regulator": "MoF/Other",
+      "title": "From Mortality to Longevity: Reimagining the Future of Life Insurance",
+      "summary": "The shift towards customer-centric offerings that address mortality risk while rewarding healthier behaviours has the potential to transform the relationship between insurers and customers. As people live longer, insurers have an opportunity to engage earlier, promote greater financial awareness and preparedness, and support customers in building long-term savings for the next phase of life. Ajai […] The post From Mortality to Longevity: Reimagining the Future of Life Insurance first appeared on",
+      "url": "https://asiainsurancepost.com/archives/85800",
+      "pub_date": "Mon, 09 Nov 2026 10:01:56 +0000",
+      "category": "Insurance",
+      "relevance": "MEDIUM",
+      "relevance_score": 2,
+      "source_type": "tier2_news",
+      "source_name": "AsiaInsurancePost",
+      "circular_ref": "",
+      "action_required": false,
+      "regulatory_importance": 0,
+      "retail_user_impact": 2,
+      "actionability": 3,
+      "engagement_potential": 1,
+      "topic_tags": [
+        "insurance",
+        "pension"
+      ],
+      "user_segment_tags": [
+        "insurance_holders",
+        "retirees"
+      ],
+      "content_tags": [
+        "informational"
+      ],
+      "user_impact": "May affect your insurance premiums, claims, or policy terms",
+      "content_angle": "Educational explainer on this insurance development",
+      "affected_segments": [
+        "insurance holders",
+        "health insurance buyers"
+      ],
+      "engagement_score": 1,
+      "urgency": "awareness",
+      "possible_content_formats": [
+        "blog"
+      ],
+      "story_maturity": "confirmed",
+      "evergreen_or_breaking": "breaking",
+      "action_type": "none",
+      "action_deadline": "",
+      "cluster_id": "5fe5b4d6",
+      "also_covered_by": [],
+      "source_tier": "tier2_news",
+      "nw_angle": "risk_education",
+      "date_parsed": true,
+      "matched_keywords": [
+        "insurance"
+      ],
+      "fulltext_status": "feed",
+      "word_count": 1257,
+      "fulltext_keywords": []
+    }
+  ],
+  "low_items": [],
+  "uncertain_date_items": [],
+  "exclusion_log": [
+    {
+      "title": "Auction of Government of India Dated Security",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63952",
+      "reason": "not_relevant",
+      "source": "RBI_PressReleases"
+    },
+    {
+      "title": "Supersession of Board of Directors of Abhyudaya Co-operative Bank Ltd., Mumbai - Extension of period",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63951",
+      "reason": "not_relevant",
+      "source": "RBI_PressReleases"
+    },
+    {
+      "title": "State Government Securities - Full Auction Result",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63950",
+      "reason": "not_relevant",
+      "source": "RBI_PressReleases"
+    },
+    {
+      "title": "Reserve Bank cancels Certificate of Registration of Gandhinagar Leasing and Finance Ltd.",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63949",
+      "reason": "noise_pattern",
+      "source": "RBI_PressReleases"
+    },
+    {
+      "title": "Result of Yield/Price Based Auction of State Government Securities",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63948",
+      "reason": "noise_pattern",
+      "source": "RBI_PressReleases"
+    },
+    {
+      "title": "Money Market Operations as on November 08, 2026",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63947",
+      "reason": "noise_pattern",
+      "source": "RBI_PressReleases"
+    },
+    {
+      "title": "Money Market Operations as on November 07, 2026",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63946",
+      "reason": "noise_pattern",
+      "source": "RBI_PressReleases"
+    },
+    {
+      "title": "Result of the 4-day Variable Rate Repo (VRR) auction held on November 09, 2026",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63945",
+      "reason": "noise_pattern",
+      "source": "RBI_PressReleases"
+    },
+    {
+      "title": "Money Market Operations as on November 06, 2026",
+      "url": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63944",
+      "reason": "noise_pattern",
+      "source": "RBI_PressReleases"
+    },
+    {
+      "title": "Listing of further issues of securities",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CML77378.pdf",
+      "reason": "not_relevant",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Reversal of action initiated against SPEL Semiconductor Limited (Symbol - SPELS) on account of payment of Annual Listing",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CML77377.pdf",
+      "reason": "not_relevant",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Algo Provider Empanelment for Providing Algorithmic Trading Solutions",
+      "url": "https://nsearchives.nseindia.com/content/circulars/INVG77376.pdf",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Applicability of Short-Term Additional Surveillance Measure (ST-ASM)",
+      "url": "https://nsearchives.nseindia.com/content/circulars/SURV77374.zip",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Applicability of Additional Surveillance Measure (ASM)",
+      "url": "https://nsearchives.nseindia.com/content/circulars/SURV77373.zip",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Trade for Trade - Vedant Poly Fabs Limited (SME IPO)",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CML77372.pdf",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Change in series of Equity shares of Investment Companies (ICs) and Investment Holding Companies (IHCs)",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CML77371.pdf",
+      "reason": "not_relevant",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Suspension of trading in Non-Convertible Securities (Privately Placed)",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CML77370.pdf",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Applicability of Enhanced Surveillance Measure (ESM)",
+      "url": "https://nsearchives.nseindia.com/content/circulars/SURV77369.zip",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Listing of units issued by ICICI Prudential Asset Management Company Limited (ICICI Prudential BSE Power ETF)",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CML77368.pdf",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Trade for Trade",
+      "url": "https://nsearchives.nseindia.com/content/circulars/SURV77367.zip",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Listing of units issued by AlphaGrep Investment Management Private Limited (Eminence Hybrid Long-Short Fund)",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CML77366.pdf",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Suspension of trading in securities",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CML77365.pdf",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Listing of privately placed securities on the debt market segment of the Exchange",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CML77364.pdf",
+      "reason": "not_relevant",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Listing of privately placed securities on capital market segment",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CML77363.pdf",
+      "reason": "not_relevant",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Availability of SELECT EQUITY EX-TOP 100 LONG-SHORT FUND under Specialized Investment Fund (SIF) on NSE MF Invest Platfo",
+      "url": "https://nsearchives.nseindia.com/content/circulars/NMF77362.pdf",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Availability of Samco Equity Savings Fund on NSE MF Invest Platform",
+      "url": "https://nsearchives.nseindia.com/content/circulars/NMF77361.pdf",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Listing of further issues of securities",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CML77359.pdf",
+      "reason": "not_relevant",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Revised Settlement Calendar for Delisting Offer under Tender Offer scheme by Jindal Photo Limited.",
+      "url": "https://nsearchives.nseindia.com/content/circulars/CMPT77358.pdf",
+      "reason": "noise_pattern",
+      "source": "NSE_Circulars"
+    },
+    {
+      "title": "Prime Minister extends greetings on the occasion of Nutan Varsh",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334500",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "Prime Minister extends greetings to citizens on Govardhan Puja",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334499",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "Shilp Samagam Mela 2026 at Dilli Haat Records Cumulative Sales of Over ₹ 55.46 Lakh, Reflecting Strong Public Response a",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334470",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "Union Minister of Minority Affairs & Parliamentary Affairs, Shri Kiren Rijiju visits Kingdom of Saudi Arabia.",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334463",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "From Financial Challenges to Global Research Opportunities",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334453",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "From Addiction to Recovery",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334440",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "From Educational Support to Academic Excellence Through the NFSC Fellowship",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334438",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "Prime Minister speaks with President Volodymyr Zelenskyy",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334434",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "Union Home Minister and Minister of Cooperation Shri Amit Shah inaugurates and lays foundation stones for various develo",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334427",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "MY Bharat-NSS Organises Nationwide ‘Diwali Sneh Milan’ to Promote Substance Abuse-Free Festive Celebrations",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334417",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "National Entrepreneurship Day",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334411",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "Indian Railways Successfully Concludes Special Campaign 6; Over 1 Lakh Cleanliness Drives Conducted",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334410",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "Department of Agriculture & Farmers Welfare actively undertakes various activities under special campaign 6",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334407",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "Delhi Set to Get Its First Recreational Yamuna Cruise Service",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334385",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "INDIAN NAVY TO CONDUCT PASSING OUT PARADE OF LARGEST BATCH OF AGNIVEERS AT INS CHILKA",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334375",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "Ministry of Power Successfully Concludes Special Campaign 6 for Disposal of Pending Matters and Cleanliness Drive",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334371",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "Ministry of New and Renewable Energy Successfully Concludes Special Campaign 6",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334368",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "TRAI releases “The Telecommunication Interconnection (Port Charges) (Third Amendment) Regulations, 2026”",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334365",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "TRAI Assesses Mobile Network Quality across Railway route between New Tinsukia Railway station and Guwahati Railway stat",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334364",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "INS SURAT AT MUSCAT, OMAN",
+      "url": "https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2334344",
+      "reason": "not_relevant",
+      "source": "PIB"
+    },
+    {
+      "title": "Bank holiday today, 10 Nov Tuesday: Bank branches closed in Ahmedabad, Bengaluru, Mumbai and 4 other cities; here's why",
+      "url": "https://www.livemint.com/money/personal-finance/bank-holiday-today-10-nov-tuesday-bank-branches-closed-in-ahmedabad-bengaluru-mumbai-and-3-other-cities-heres-why-11794270057057.html",
+      "reason": "not_relevant",
+      "source": "Mint_Money"
+    },
+    {
+      "title": "Bank locker found surrendered, jewellery missing? How to protect your valuables, avoid costly dispute | Experts explain",
+      "url": "https://www.livemint.com/money/personal-finance/bank-locker-found-surrendered-jewellery-missing-how-to-protect-your-valuables-avoid-costly-dispute-experts-explain-11794236376468.html",
+      "reason": "not_relevant",
+      "source": "Mint_Money"
+    }
+  ],
+  "official_items": 8,
+  "scraper_meta": {
+    "sources_configured": 77,
+    "sources_ok": 68,
+    "official_sources": 17,
+    "news_sources": 60,
+    "fulltext": {
+      "ok": 46,
+      "paywalled": 9,
+      "blocked": 1,
+      "feed": 7
+    },
+    "source_alerts": [
+      {
+        "source": "ET_Wealth_Borrow",
+        "group": "News",
+        "status": "stale",
+        "http": 200,
+        "days_failing": 24,
+        "dead": true,
+        "detail": "newest item is from 2026-09-16"
+      },
+      {
+        "source": "ET_Wealth_Spend",
+        "group": "News",
+        "status": "stale",
+        "http": 200,
+        "days_failing": 10,
+        "dead": true,
+        "detail": "newest item is from 2026-09-30"
+      },
+      {
+        "source": "FinancialExpress_Money",
+        "group": "News",
+        "status": "http_error",
+        "http": 403,
+        "days_failing": 31,
+        "dead": true,
+        "detail": "HTTP 403"
+      },
+      {
+        "source": "FinancialExpress_Tax",
+        "group": "News",
+        "status": "http_error",
+        "http": 403,
+        "days_failing": 31,
+        "dead": true,
+        "detail": "HTTP 403"
+      },
+      {
+        "source": "FinancialExpress_MF",
+        "group": "News",
+        "status": "http_error",
+        "http": 403,
+        "days_failing": 31,
+        "dead": true,
+        "detail": "HTTP 403"
+      },
+      {
+        "source": "FinancialExpress_Insurance",
+        "group": "News",
+        "status": "http_error",
+        "http": 403,
+        "days_failing": 31,
+        "dead": true,
+        "detail": "HTTP 403"
+      },
+      {
+        "source": "Moneycontrol_MF",
+        "group": "News",
+        "status": "empty",
+        "http": 200,
+        "days_failing": 6,
+        "dead": true,
+        "detail": "page loaded but no items found (layout or feed URL may have changed)"
+      },
+      {
+        "source": "IndianExpress_Business",
+        "group": "News",
+        "status": "http_error",
+        "http": 403,
+        "days_failing": 31,
+        "dead": true,
+        "detail": "HTTP 403"
+      },
+      {
+        "source": "IndianExpress_Banking",
+        "group": "News",
+        "status": "http_error",
+        "http": 403,
+        "days_failing": 31,
+        "dead": true,
+        "detail": "HTTP 403"
+      }
+    ],
+    "per_source": {
+      "SEBI_Circulars": {
+        "fetched": 25,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "SEBI_MasterCirculars": {
+        "fetched": 25,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "SEBI_PressReleases": {
+        "fetched": 25,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "SEBI_ConsultationPapers": {
+        "fetched": 25,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "RBI_PressReleases": {
+        "fetched": 10,
+        "recent": 9,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "RBI_Notifications": {
+        "fetched": 10,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "RBI_Speeches": {
+        "fetched": 10,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "CBDT_EFiling_News": {
+        "fetched": 10,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "IRDAI_Circulars": {
+        "fetched": 21,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "IRDAI_PressReleases": {
+        "fetched": 42,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "PFRDA_Circulars": {
+        "fetched": 10,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "PFRDA_PressReleases": {
+        "fetched": 10,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "NPSTrust_Circulars": {
+        "fetched": 20,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "AMFI_Circulars": {
+        "fetched": 46,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "PIB": {
+        "fetched": 20,
+        "recent": 20,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "NSE_Circulars": {
+        "fetched": 24,
+        "recent": 24,
+        "relevant": 5,
+        "status": "ok"
+      },
+      "BSE_Notices": {
+        "fetched": 40,
+        "recent": 40,
+        "relevant": 8,
+        "status": "ok"
+      },
+      "Mint_Money": {
+        "fetched": 35,
+        "recent": 29,
+        "relevant": 19,
+        "status": "ok"
+      },
+      "Mint_Economy": {
+        "fetched": 35,
+        "recent": 3,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "Mint_Market": {
+        "fetched": 35,
+        "recent": 35,
+        "relevant": 6,
+        "status": "ok"
+      },
+      "Mint_Insurance": {
+        "fetched": 35,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "ET_Wealth": {
+        "fetched": 50,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "ET_Wealth_Tax": {
+        "fetched": 50,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "ET_Wealth_Invest": {
+        "fetched": 50,
+        "recent": 1,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "ET_Wealth_Save": {
+        "fetched": 50,
+        "recent": 1,
+        "relevant": 1,
+        "status": "ok"
+      },
+      "ET_Wealth_Borrow": {
+        "fetched": 50,
+        "recent": 0,
+        "relevant": 0,
+        "status": "stale"
+      },
+      "ET_Wealth_Spend": {
+        "fetched": 20,
+        "recent": 0,
+        "relevant": 0,
+        "status": "stale"
+      },
+      "ET_Wealth_PFNews": {
+        "fetched": 50,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "ET_MF": {
+        "fetched": 50,
+        "recent": 3,
+        "relevant": 2,
+        "status": "ok"
+      },
+      "ET_MF_News": {
+        "fetched": 50,
+        "recent": 1,
+        "relevant": 1,
+        "status": "ok"
+      },
+      "ET_Banking_Finance": {
+        "fetched": 49,
+        "recent": 1,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "ET_BFSI": {
+        "fetched": 10,
+        "recent": 4,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "BusinessStandard_Economy": {
+        "fetched": 35,
+        "recent": 7,
+        "relevant": 2,
+        "status": "ok"
+      },
+      "BusinessStandard_Markets": {
+        "fetched": 35,
+        "recent": 24,
+        "relevant": 4,
+        "status": "ok"
+      },
+      "BusinessStandard_Finance": {
+        "fetched": 35,
+        "recent": 11,
+        "relevant": 3,
+        "status": "ok"
+      },
+      "BusinessStandard_PF": {
+        "fetched": 35,
+        "recent": 7,
+        "relevant": 1,
+        "status": "ok"
+      },
+      "BusinessStandard_Insurance": {
+        "fetched": 35,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "BusinessStandard_Investment": {
+        "fetched": 21,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "BusinessStandard_Banking": {
+        "fetched": 35,
+        "recent": 2,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "CNBCTV18_PF": {
+        "fetched": 200,
+        "recent": 9,
+        "relevant": 8,
+        "status": "ok"
+      },
+      "CNBCTV18_Economy": {
+        "fetched": 200,
+        "recent": 8,
+        "relevant": 2,
+        "status": "ok"
+      },
+      "BusinessLine_Money": {
+        "fetched": 60,
+        "recent": 7,
+        "relevant": 1,
+        "status": "ok"
+      },
+      "BusinessLine_Portfolio": {
+        "fetched": 60,
+        "recent": 2,
+        "relevant": 2,
+        "status": "ok"
+      },
+      "BusinessLine_Economy": {
+        "fetched": 60,
+        "recent": 14,
+        "relevant": 2,
+        "status": "ok"
+      },
+      "FinancialExpress_Money": {
+        "fetched": 0,
+        "recent": 0,
+        "relevant": 0,
+        "status": "http_error"
+      },
+      "FinancialExpress_Tax": {
+        "fetched": 0,
+        "recent": 0,
+        "relevant": 0,
+        "status": "http_error"
+      },
+      "FinancialExpress_MF": {
+        "fetched": 0,
+        "recent": 0,
+        "relevant": 0,
+        "status": "http_error"
+      },
+      "FinancialExpress_Insurance": {
+        "fetched": 0,
+        "recent": 0,
+        "relevant": 0,
+        "status": "http_error"
+      },
+      "Moneycontrol_PF": {
+        "fetched": 3,
+        "recent": 3,
+        "relevant": 2,
+        "status": "ok"
+      },
+      "Moneycontrol_MF": {
+        "fetched": 0,
+        "recent": 0,
+        "relevant": 0,
+        "status": "empty"
+      },
+      "NDTV_Business": {
+        "fetched": 20,
+        "recent": 20,
+        "relevant": 1,
+        "status": "ok"
+      },
+      "Hindu_Business": {
+        "fetched": 60,
+        "recent": 15,
+        "relevant": 4,
+        "status": "ok"
+      },
+      "IndianExpress_Business": {
+        "fetched": 0,
+        "recent": 0,
+        "relevant": 0,
+        "status": "http_error"
+      },
+      "IndianExpress_Banking": {
+        "fetched": 0,
+        "recent": 0,
+        "relevant": 0,
+        "status": "http_error"
+      },
+      "HT_Business": {
+        "fetched": 12,
+        "recent": 6,
+        "relevant": 2,
+        "status": "ok"
+      },
+      "TOI_Business": {
+        "fetched": 20,
+        "recent": 14,
+        "relevant": 4,
+        "status": "ok"
+      },
+      "BusinessToday": {
+        "fetched": 119,
+        "recent": 37,
+        "relevant": 2,
+        "status": "ok"
+      },
+      "VROnline": {
+        "fetched": 20,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "Morningstar_Insights": {
+        "fetched": 15,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "Cafemutual": {
+        "fetched": 8,
+        "recent": 8,
+        "relevant": 5,
+        "status": "ok"
+      },
+      "Freefincal": {
+        "fetched": 20,
+        "recent": 2,
+        "relevant": 2,
+        "status": "ok"
+      },
+      "PrimeInvestor": {
+        "fetched": 150,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "Zerodha_ZConnect": {
+        "fetched": 50,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "Zerodha_Varsity": {
+        "fetched": 15,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "ETMoney_Learn": {
+        "fetched": 500,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "Finshots": {
+        "fetched": 15,
+        "recent": 1,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "Jagoinvestor": {
+        "fetched": 100,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "BasuNivesh": {
+        "fetched": 8,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "Relakhs": {
+        "fetched": 10,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "StableInvestor": {
+        "fetched": 10,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "TaxGuru_IncomeTax": {
+        "fetched": 75,
+        "recent": 11,
+        "relevant": 1,
+        "status": "ok"
+      },
+      "TaxGuru": {
+        "fetched": 75,
+        "recent": 38,
+        "relevant": 1,
+        "status": "ok"
+      },
+      "Taxscan": {
+        "fetched": 50,
+        "recent": 21,
+        "relevant": 1,
+        "status": "ok"
+      },
+      "AsiaInsurancePost": {
+        "fetched": 10,
+        "recent": 7,
+        "relevant": 7,
+        "status": "ok"
+      },
+      "CardExpert": {
+        "fetched": 10,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "CardInsider": {
+        "fetched": 12,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      },
+      "LiveFromALounge": {
+        "fetched": 10,
+        "recent": 0,
+        "relevant": 0,
+        "status": "ok"
+      }
+    }
+  }
+}
