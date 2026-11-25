@@ -1,15 +1,4 @@
 {
-  "2026-10-25": {
-    "SEBI": 0,
-    "RBI": -1,
-    "CBDT": 0,
-    "IRDAI": 0,
-    "PFRDA": 0,
-    "AMFI": 0,
-    "PIB": 1,
-    "Exchanges": 0,
-    "News": 75
-  },
   "2026-10-26": {
     "SEBI": 0,
     "RBI": 0,
@@ -339,5 +328,16 @@
     "PIB": 0,
     "Exchanges": 15,
     "News": 126
+  },
+  "2026-11-25": {
+    "SEBI": 0,
+    "RBI": 0,
+    "CBDT": 0,
+    "IRDAI": 2,
+    "PFRDA": 0,
+    "AMFI": 0,
+    "PIB": 0,
+    "Exchanges": 0,
+    "News": 115
   }
 }
